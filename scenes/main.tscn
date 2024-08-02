@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bc8tfn4e1spe6"]
+
+[node name="Root" type="Node2D"]
+
+[node name="LevelScene" type="Node2D" parent="."]
+
+[node name="SceneManager" type="Node" parent="."]
