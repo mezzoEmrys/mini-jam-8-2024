@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://dvkqbwaa5ros2"]
 
 [ext_resource type="Script" path="res://scripts/character_controller.gd" id="1_3lhdl"]
-[ext_resource type="SpriteFrames" uid="uid://3ld6ewvvily8" path="res://sprites/gorp_animation/gorp.tres" id="2_d13h2"]
-[ext_resource type="PackedScene" uid="uid://bann2av5t0nue" path="res://scenes/held_item.tscn" id="3_64oph"]
+[ext_resource type="SpriteFrames" path="res://sprites/gorp_animation/gorp.tres" id="2_d13h2"]
+[ext_resource type="PackedScene" uid="uid://bgywax4t1ifyd" path="res://scenes/held_item.tscn" id="3_64oph"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iet7c"]
 radius = 150.0
@@ -155,7 +155,8 @@ script = ExtResource("1_3lhdl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_d13h2")
-animation = &"fall"
+animation = &"float"
+frame_progress = 0.956487
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10, -70)

@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://bann2av5t0nue"]
+[gd_scene load_steps=9 format=3 uid="uid://bgywax4t1ifyd"]
 
-[ext_resource type="Script" path="res://scripts/held_item.gd" id="1_2elq8"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_ns88y"]
 [ext_resource type="Texture2D" uid="uid://cy1sx6ny5j0xe" path="res://sprites/items/Tail-cicle.png" id="4_g45ed"]
 [ext_resource type="Texture2D" uid="uid://derp0khjsce2m" path="res://sprites/items/Haunted Ginger.png" id="5_c3tn2"]
@@ -67,7 +66,6 @@ animations = [{
 show_behind_parent = true
 position = Vector2(-500, 0)
 scale = Vector2(2.665, 2.665)
-script = ExtResource("1_2elq8")
 
 [node name="catmint" type="Sprite2D" parent="."]
 
