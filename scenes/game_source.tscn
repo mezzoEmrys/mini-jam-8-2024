@@ -1,13 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://xcwtrlt0bjol"]
+[gd_scene load_steps=22 format=3 uid="uid://xcwtrlt0bjol"]
 
 [ext_resource type="Texture2D" uid="uid://bp4t6666mih5g" path="res://sprites/gorp sprite.png" id="1_ab5ci"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_qaw0b"]
 [ext_resource type="Script" path="res://scripts/ingredient.gd" id="3_s48ag"]
-[ext_resource type="Texture2D" uid="uid://bd48k2ndp1cus" path="res://sprites/cauldron.png" id="5_7afyx"]
 [ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="6_io2bp"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="6_t2vxu"]
-[ext_resource type="Script" path="res://scripts/cauldron.gd" id="7_vg0hp"]
+[ext_resource type="PackedScene" uid="uid://cew3lwh3xlxk" path="res://scenes/cauldron.tscn" id="7_1j74d"]
 [ext_resource type="PackedScene" uid="uid://c17ypfkmkit6" path="res://scenes/item_scenes/pepper.tscn" id="7_yybtt"]
+[ext_resource type="Texture2D" uid="uid://bvfaeskkasoiu" path="res://sprites/hazards_animation/fire/fire_medium/1.png" id="8_khvsj"]
+[ext_resource type="Texture2D" uid="uid://bmdomabfsk1me" path="res://sprites/hazards_animation/fire/fire_medium/2.png" id="9_n2yvs"]
+[ext_resource type="Texture2D" uid="uid://8tj0jyx205d6" path="res://sprites/hazards_animation/fire/fire_medium/3.png" id="10_7jxwd"]
+[ext_resource type="Texture2D" uid="uid://3jk7r10f0sy7" path="res://sprites/hazards_animation/fire/fire_medium/4.png" id="11_wo6rl"]
+[ext_resource type="Texture2D" uid="uid://cpnlt3141w2yx" path="res://sprites/hazards_animation/fire/fire_medium/5.png" id="12_7idwg"]
+[ext_resource type="Texture2D" uid="uid://sih5f858n0uv" path="res://sprites/hazards_animation/fire/fire_medium/6.png" id="13_5cv0n"]
+[ext_resource type="Texture2D" uid="uid://dh8wribcblxe7" path="res://sprites/hazards_animation/fire/fire_medium/7.png" id="14_3yrhv"]
+[ext_resource type="Texture2D" uid="uid://c20tqo15khwny" path="res://sprites/hazards_animation/fire/fire_medium/8.png" id="15_0xpeo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
 size = Vector2(760.25, 87.5)
@@ -15,8 +22,60 @@ size = Vector2(760.25, 87.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_skw3a"]
 radius = 33.0151
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3y4q"]
-size = Vector2(118, 116)
+[sub_resource type="SpriteFrames" id="SpriteFrames_1d32k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_khvsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n2yvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7jxwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wo6rl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7idwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5cv0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3yrhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0xpeo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_cflt0"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cd6if"]
+_data = {
+"default": SubResource("Animation_cflt0")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63r76"]
+size = Vector2(79.012, 1263)
 
 [node name="GameSource" type="Node2D"]
 
@@ -66,17 +125,25 @@ position = Vector2(1040, 414)
 [node name="pepper" parent="." instance=ExtResource("7_yybtt")]
 position = Vector2(742, 471)
 
-[node name="cauldron" type="Area2D" parent="."]
-z_index = -2
-position = Vector2(322, 494)
-script = ExtResource("7_vg0hp")
+[node name="cauldron" parent="." instance=ExtResource("7_1j74d")]
 
-[node name="cauldronsprite" type="Sprite2D" parent="cauldron"]
-scale = Vector2(0.235, 0.235)
-texture = ExtResource("5_7afyx")
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(84, 546)
+scale = Vector2(0.285, 0.285)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cauldron"]
-shape = SubResource("RectangleShape2D_a3y4q")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(0, -505.7)
+sprite_frames = SubResource("SpriteFrames_1d32k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+libraries = {
+"": SubResource("AnimationLibrary_cd6if")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.00004, -133.494)
+rotation = -3.14159
+scale = Vector2(12.631, 0.251)
+shape = SubResource("RectangleShape2D_63r76")
 
 [connection signal="body_entered" from="catmint" to="catmint" method="_on_body_entered"]
-[connection signal="body_entered" from="cauldron" to="cauldron" method="_on_body_entered"]
