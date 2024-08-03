@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=22 format=3 uid="uid://3ld6ewvvily8"]
+[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://3ld6ewvvily8"]
 
 [ext_resource type="Texture2D" uid="uid://bdm1pbhyb27ly" path="res://sprites/gorp_animation/fall/gorp_fall_1.png" id="1_twrrq"]
 [ext_resource type="Texture2D" uid="uid://lq2jn5a2dt05" path="res://sprites/gorp_animation/fall/gorp_fall_2.png" id="2_2iq6r"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://do5a0rlvq0145" path="res://sprites/gorp_animation/float/gorp_float_4.png" id="8_wsilw"]
 [ext_resource type="Texture2D" uid="uid://bb60gphusul1x" path="res://sprites/gorp_animation/idle/gorp_idle_1.png" id="9_s7rab"]
 [ext_resource type="Texture2D" uid="uid://cn5pychlov248" path="res://sprites/gorp_animation/idle/gorp_idle_2.png" id="10_hr4ys"]
-[ext_resource type="Texture2D" uid="uid://cdw0sdg4u4bo2" path="res://sprites/gorp_animation/idle/gorp_idle_3.png" id="11_6wacl"]
 [ext_resource type="Texture2D" uid="uid://bst82fa6kth5t" path="res://sprites/gorp_animation/idle/gorp_idle_4.png" id="12_j33wo"]
 [ext_resource type="Texture2D" uid="uid://be08154sq8hxg" path="res://sprites/gorp_animation/land/gorp_land_1.png" id="13_kanv0"]
 [ext_resource type="Texture2D" uid="uid://cd7gj6lc0eya8" path="res://sprites/gorp_animation/land/gorp_land_2.png" id="14_spjco"]
@@ -39,7 +38,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"fall",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -56,7 +55,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"float",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -64,15 +63,17 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_hr4ys")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
 }, {
-"duration": 1.0,
-"texture": ExtResource("11_6wacl")
-}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("12_j33wo")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idle_blink",
 "speed": 5.0
 }, {
 "frames": [{
@@ -82,9 +83,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("14_spjco")
 }],
-"loop": true,
+"loop": false,
 "name": &"land",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -97,17 +98,17 @@ animations = [{
 "texture": ExtResource("17_x002c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_jfp8s")
+"texture": ExtResource("19_01dxk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_01dxk")
+"texture": ExtResource("18_jfp8s")
 }, {
 "duration": 1.0,
 "texture": ExtResource("20_plqra")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
