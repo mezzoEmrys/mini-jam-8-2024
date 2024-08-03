@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://66q3woj4tow1"]
+
+[ext_resource type="Script" path="res://scenes/character_controller.gd" id="1_3lhdl"]
+[ext_resource type="SpriteFrames" uid="uid://3ld6ewvvily8" path="res://sprites/gorp_animation/gorp.tres" id="2_d13h2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iet7c"]
+radius = 150.0
+height = 580.0
+
+[sub_resource type="Animation" id="Animation_e2yay"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_xfkf8"]
+resource_name = "walking"
+
+[sub_resource type="Animation" id="Animation_ribtb"]
+resource_name = "jumping"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7fasp"]
+_data = {
+"idle": SubResource("Animation_e2yay"),
+"jumping": SubResource("Animation_ribtb"),
+"walking": SubResource("Animation_xfkf8")
+}
+
+[node name="Gorp" type="CharacterBody2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_3lhdl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1, 1)
+sprite_frames = ExtResource("2_d13h2")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_iet7c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7fasp")
+}
