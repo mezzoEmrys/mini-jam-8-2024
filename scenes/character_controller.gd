@@ -12,15 +12,9 @@ var is_jumping : bool = false
 var jump_timer : float = 0
 var coyote_timer : float = 0
 
-#@onready var sprite_2d = $GorpSprite
 @onready var item_sprite = $held_item
-
 @onready var item_held = false
 @onready var item = ""
-
-#func _ready() -> void():
-	#connect("item_pickup", self, "")
-
 
 var is_charging : bool = false
 @onready var sprite_2d = $AnimatedSprite2D
@@ -29,6 +23,9 @@ var is_charging : bool = false
 func finish_charge():
 	is_charging = false
 	velocity.y = jump_force * 2
+
+#func _ready() -> void():
+	#connect("item_pickup", self, "")
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -79,3 +76,7 @@ func _physics_process(delta):
 		anim_player.play("falling")
 	
 			
+
+
+func _on_area_2d_body_entered(body):
+	print(body.name)
