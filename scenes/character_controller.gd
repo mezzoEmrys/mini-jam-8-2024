@@ -22,7 +22,6 @@ var is_charging : bool = false
 
 func finish_charge():
 	is_charging = false
-	velocity.y = jump_force * 2
 
 #func _ready() -> void():
 	#connect("item_pickup", self, "")
@@ -32,11 +31,11 @@ func _physics_process(delta):
 	if not is_on_floor() and not is_jumping:
 		velocity.y += gravity * delta
 		coyote_timer += delta
-	else:
+	elif is_on_floor():
 		coyote_timer = 0
 		
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote_timer < coyote_time):
+	if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote_timer < coyote_time) and not is_jumping:
 		is_charging = true
 		is_jumping = true
 	elif Input.is_action_pressed("jump") and not is_charging and is_jumping:
@@ -74,9 +73,6 @@ func _physics_process(delta):
 			anim_player.play("walking")
 	elif not is_jumping : 
 		anim_player.play("falling")
-	
-			
-
 
 func _on_area_2d_body_entered(body):
 	print(body.name)
