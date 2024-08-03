@@ -15,8 +15,7 @@ func _process(delta):
 func _on_body_entered(body):
 	print(body.name)
 	print(body.get_script())
-	emit_signal("item_pickup", ["catmint"])
-	body.get_script().pickup_item(spr, "Catmint")
+	print(get_node("/root/GameSource/Gorp"))
 	if body.name == 'Gorp':
 		print("Gorp")
 		queue_free()
