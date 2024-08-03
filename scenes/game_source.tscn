@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bp4t6666mih5g" path="res://sprites/gorp sprite.png" id="1_ab5ci"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_qaw0b"]
-[ext_resource type="Script" path="res://scenes/ingredient.gd" id="3_s48ag"]
+[ext_resource type="Script" path="res://scripts/ingredient.gd" id="3_s48ag"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="6_t2vxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
