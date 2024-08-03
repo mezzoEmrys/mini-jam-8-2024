@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgywax4t1ifyd"]
+
+[ext_resource type="Script" path="res://scenes/held_item.gd" id="1_5nge0"]
+[ext_resource type="Script" path="res://scenes/held_ingredient.gd" id="2_i5qoa"]
+[ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_ns88y"]
+[ext_resource type="Texture2D" uid="uid://cy1sx6ny5j0xe" path="res://sprites/items/Tail-cicle.png" id="4_g45ed"]
+[ext_resource type="Texture2D" uid="uid://derp0khjsce2m" path="res://sprites/items/Haunted Ginger.png" id="5_c3tn2"]
+[ext_resource type="Texture2D" uid="uid://nxu3ldtbu3pa" path="res://sprites/items/Lemon Battery.png" id="6_vfbjl"]
+[ext_resource type="Texture2D" uid="uid://eeoqyg4grk5g" path="res://sprites/items/Tea Leaf.png" id="7_whqcx"]
+
+[sub_resource type="Animation" id="Animation_x4vb0"]
+resource_name = "catmint"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bi7ji"]
+_data = {
+"catmint": SubResource("Animation_x4vb0")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2jrq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ns88y")
+}],
+"loop": true,
+"name": &"catmint",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_g45ed")
+}],
+"loop": true,
+"name": &"cicle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_c3tn2")
+}],
+"loop": true,
+"name": &"ginger",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vfbjl")
+}],
+"loop": true,
+"name": &"lemon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_whqcx")
+}],
+"loop": true,
+"name": &"tea",
+"speed": 5.0
+}]
+
+[node name="held_item" type="Node2D"]
+show_behind_parent = true
+position = Vector2(-500, 0)
+scale = Vector2(2.665, 2.665)
+script = ExtResource("1_5nge0")
+
+[node name="catmint" type="Sprite2D" parent="."]
+script = ExtResource("2_i5qoa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_bi7ji")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x2jrq")
+animation = &"catmint"
