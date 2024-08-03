@@ -11,7 +11,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_jumping : bool = false
 var jump_timer : float = 0
 var coyote_timer : float = 0
-<<<<<<< HEAD
+
 #@onready var sprite_2d = $GorpSprite
 @onready var item_sprite = $held_item
 
@@ -21,8 +21,7 @@ var coyote_timer : float = 0
 #func _ready() -> void():
 	#connect("item_pickup", self, "")
 
-=======
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
+
 var is_charging : bool = false
 @onready var sprite_2d = $AnimatedSprite2D
 @onready var anim_player = $AnimationPlayer
@@ -64,11 +63,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 			
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 	if direction != 0:
 		sprite_2d.flip_h = direction < 0
 	move_and_slide()

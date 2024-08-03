@@ -1,26 +1,16 @@
-<<<<<<< HEAD
 [gd_scene load_steps=7 format=3 uid="uid://k1i2tyrw87mt"]
 
 [ext_resource type="Texture2D" uid="uid://bp4t6666mih5g" path="res://sprites/gorp sprite.png" id="1_ab5ci"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_qaw0b"]
 [ext_resource type="Script" path="res://scenes/ingredient.gd" id="3_s48ag"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="6_t2vxu"]
-=======
-[gd_scene load_steps=4 format=3 uid="uid://bk2vx21a3v4hb"]
-
-[ext_resource type="Texture2D" uid="uid://bp4t6666mih5g" path="res://sprites/gorp sprite.png" id="1_ab5ci"]
-[ext_resource type="PackedScene" uid="uid://66q3woj4tow1" path="res://scenes/gorp.tscn" id="2_fs8iv"]
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
 size = Vector2(760.25, 87.5)
 
-<<<<<<< HEAD
 [sub_resource type="CircleShape2D" id="CircleShape2D_skw3a"]
 radius = 33.0151
 
-=======
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 [node name="GameSource" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
@@ -47,7 +37,6 @@ position = Vector2(0.230957, 0.900269)
 scale = Vector2(1.17206, 0.131944)
 texture = ExtResource("1_ab5ci")
 
-<<<<<<< HEAD
 [node name="Catmint" type="Area2D" parent="."]
 script = ExtResource("3_s48ag")
 
@@ -61,7 +50,3 @@ position = Vector2(924, 485)
 shape = SubResource("CircleShape2D_skw3a")
 
 [node name="Gorp" parent="." instance=ExtResource("6_t2vxu")]
-=======
-[node name="Gorp" parent="." instance=ExtResource("2_fs8iv")]
-position = Vector2(522, 501)
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989

@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 [gd_scene load_steps=10 format=3 uid="uid://dvkqbwaa5ros2"]
 
 [ext_resource type="Script" path="res://scenes/character_controller.gd" id="1_3lhdl"]
 [ext_resource type="SpriteFrames" path="res://sprites/gorp_animation/gorp.tres" id="2_d13h2"]
 [ext_resource type="PackedScene" uid="uid://bgywax4t1ifyd" path="res://scenes/held_item.tscn" id="3_64oph"]
-=======
-[gd_scene load_steps=9 format=3 uid="uid://66q3woj4tow1"]
-
-[ext_resource type="Script" path="res://scenes/character_controller.gd" id="1_3lhdl"]
-[ext_resource type="SpriteFrames" uid="uid://3ld6ewvvily8" path="res://sprites/gorp_animation/gorp.tres" id="2_d13h2"]
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iet7c"]
 radius = 150.0
 height = 580.0
 
-<<<<<<< HEAD
 [sub_resource type="Animation" id="Animation_8yxjy"]
 resource_name = "falling"
 tracks/0/type = "value"
@@ -45,8 +37,6 @@ tracks/1/keys = {
 }]
 }
 
-=======
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 [sub_resource type="Animation" id="Animation_e2yay"]
 resource_name = "idle"
 length = 1.4
@@ -78,39 +68,6 @@ tracks/1/keys = {
 }]
 }
 
-<<<<<<< HEAD
-=======
-[sub_resource type="Animation" id="Animation_xfkf8"]
-resource_name = "walking"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"walk"]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"", 1.0, false],
-"method": &"play"
-}]
-}
-
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 [sub_resource type="Animation" id="Animation_ribtb"]
 resource_name = "jumping"
 tracks/0/type = "value"
@@ -154,14 +111,9 @@ tracks/2/keys = {
 }]
 }
 
-<<<<<<< HEAD
 [sub_resource type="Animation" id="Animation_xfkf8"]
 resource_name = "walking"
 loop_mode = 1
-=======
-[sub_resource type="Animation" id="Animation_8yxjy"]
-resource_name = "falling"
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -172,11 +124,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-<<<<<<< HEAD
 "values": [&"walk"]
-=======
-"values": [&"fall"]
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -206,10 +154,6 @@ scale = Vector2(0.1, 0.1)
 script = ExtResource("1_3lhdl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-<<<<<<< HEAD
-=======
-scale = Vector2(1, 1)
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
 sprite_frames = ExtResource("2_d13h2")
 animation = &"float"
 frame_progress = 0.956487
@@ -222,8 +166,5 @@ shape = SubResource("CapsuleShape2D_iet7c")
 libraries = {
 "": SubResource("AnimationLibrary_7fasp")
 }
-<<<<<<< HEAD
 
 [node name="held_item" parent="." instance=ExtResource("3_64oph")]
-=======
->>>>>>> 720f840ae320081de5640be0c965f01c2831e989
