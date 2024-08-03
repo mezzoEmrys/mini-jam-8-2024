@@ -73,6 +73,12 @@ func _physics_process(delta):
 			anim_player.play("walking")
 	elif not is_jumping : 
 		anim_player.play("falling")
+<<<<<<< Updated upstream:scripts/character_controller.gd
 
 func _on_area_2d_body_entered(body):
 	print(body.name)
+=======
+	
+			
+
+>>>>>>> Stashed changes:scenes/character_controller.gd

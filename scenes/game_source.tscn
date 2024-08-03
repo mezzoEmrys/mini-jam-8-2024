@@ -38,6 +38,7 @@ scale = Vector2(1.17206, 0.131944)
 texture = ExtResource("1_ab5ci")
 
 [node name="Catmint" type="Area2D" parent="."]
+collision_layer = 2
 script = ExtResource("3_s48ag")
 
 [node name="Sprite2D" type="Sprite2D" parent="Catmint"]
@@ -51,3 +52,5 @@ shape = SubResource("CircleShape2D_skw3a")
 
 [node name="Gorp" parent="." instance=ExtResource("6_t2vxu")]
 position = Vector2(466, 407)
+
+[connection signal="body_entered" from="Catmint" to="Catmint" method="_on_body_entered"]
