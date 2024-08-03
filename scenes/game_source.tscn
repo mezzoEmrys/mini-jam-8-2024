@@ -67,6 +67,7 @@ position = Vector2(1040, 414)
 position = Vector2(742, 471)
 
 [node name="cauldron" type="Area2D" parent="."]
+z_index = -2
 position = Vector2(322, 494)
 script = ExtResource("7_vg0hp")
 
