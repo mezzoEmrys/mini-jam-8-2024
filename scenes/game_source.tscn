@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://k1i2tyrw87mt"]
+
+[ext_resource type="Texture2D" uid="uid://bp4t6666mih5g" path="res://sprites/gorp sprite.png" id="1_ab5ci"]
+[ext_resource type="Script" path="res://scenes/character_controller.gd" id="2_b5whw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
+size = Vector2(760.25, 87.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iet7c"]
+radius = 150.0
+height = 580.0
+
+[node name="GameSource" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(552, 597)
+shape = SubResource("RectangleShape2D_u18qv")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(554.5, 592)
+scale = Vector2(1.17206, 0.131944)
+texture = ExtResource("1_ab5ci")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(1052, 563)
+shape = SubResource("RectangleShape2D_u18qv")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2/CollisionShape2D"]
+position = Vector2(0.230957, 0.900269)
+scale = Vector2(1.17206, 0.131944)
+texture = ExtResource("1_ab5ci")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(562, 319)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("2_b5whw")
+
+[node name="GorpSprite" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_ab5ci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(40, 0)
+shape = SubResource("CapsuleShape2D_iet7c")
