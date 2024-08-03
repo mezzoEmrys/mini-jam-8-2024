@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bd48k2ndp1cus" path="res://sprites/cauldron.png" id="5_7afyx"]
 [ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="6_io2bp"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="6_t2vxu"]
-[ext_resource type="Script" path="res://scenes/cauldron.gd" id="7_vg0hp"]
+[ext_resource type="Script" path="res://scripts/cauldron.gd" id="7_vg0hp"]
 [ext_resource type="PackedScene" uid="uid://c17ypfkmkit6" path="res://scenes/item_scenes/pepper.tscn" id="7_yybtt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
