@@ -1,17 +1,127 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgywax4t1ifyd"]
+[gd_scene load_steps=17 format=3 uid="uid://bgywax4t1ifyd"]
 
+[ext_resource type="Script" path="res://scripts/held_item.gd" id="1_v1t6r"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_ns88y"]
 [ext_resource type="Texture2D" uid="uid://cy1sx6ny5j0xe" path="res://sprites/items/Tail-cicle.png" id="4_g45ed"]
 [ext_resource type="Texture2D" uid="uid://derp0khjsce2m" path="res://sprites/items/Haunted Ginger.png" id="5_c3tn2"]
+[ext_resource type="Texture2D" uid="uid://b4nan1vsp3rjm" path="res://sprites/items/Hot Pepper.png" id="6_6gaeg"]
 [ext_resource type="Texture2D" uid="uid://nxu3ldtbu3pa" path="res://sprites/items/Lemon Battery.png" id="6_vfbjl"]
 [ext_resource type="Texture2D" uid="uid://eeoqyg4grk5g" path="res://sprites/items/Tea Leaf.png" id="7_whqcx"]
 
 [sub_resource type="Animation" id="Animation_x4vb0"]
 resource_name = "catmint"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"catmint"]
+}
+
+[sub_resource type="Animation" id="Animation_oh8m6"]
+resource_name = "lemon"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lemon"]
+}
+
+[sub_resource type="Animation" id="Animation_b6ngn"]
+resource_name = "ginger"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"ginger"]
+}
+
+[sub_resource type="Animation" id="Animation_bmbo1"]
+resource_name = "ice"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"cicle"]
+}
+
+[sub_resource type="Animation" id="Animation_22qej"]
+resource_name = "pepper"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"pepper"]
+}
+
+[sub_resource type="Animation" id="Animation_xcyga"]
+resource_name = "tea"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"tea"]
+}
+
+[sub_resource type="Animation" id="Animation_vr2eh"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bi7ji"]
 _data = {
-"catmint": SubResource("Animation_x4vb0")
+"catmint": SubResource("Animation_x4vb0"),
+"default": SubResource("Animation_vr2eh"),
+"ginger": SubResource("Animation_b6ngn"),
+"ice": SubResource("Animation_bmbo1"),
+"lemon": SubResource("Animation_oh8m6"),
+"pepper": SubResource("Animation_22qej"),
+"tea": SubResource("Animation_xcyga")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x2jrq"]
@@ -55,6 +165,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_6gaeg")
+}],
+"loop": true,
+"name": &"pepper",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("7_whqcx")
 }],
 "loop": true,
@@ -66,6 +184,7 @@ animations = [{
 show_behind_parent = true
 position = Vector2(-500, 0)
 scale = Vector2(2.665, 2.665)
+script = ExtResource("1_v1t6r")
 
 [node name="catmint" type="Sprite2D" parent="."]
 
@@ -77,4 +196,3 @@ libraries = {
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x2jrq")
-animation = &"catmint"

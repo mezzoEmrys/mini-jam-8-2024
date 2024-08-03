@@ -1,15 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://xcwtrlt0bjol"]
+[gd_scene load_steps=12 format=3 uid="uid://xcwtrlt0bjol"]
 
 [ext_resource type="Texture2D" uid="uid://bp4t6666mih5g" path="res://sprites/gorp sprite.png" id="1_ab5ci"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_qaw0b"]
 [ext_resource type="Script" path="res://scripts/ingredient.gd" id="3_s48ag"]
+[ext_resource type="Texture2D" uid="uid://bd48k2ndp1cus" path="res://sprites/cauldron.png" id="5_7afyx"]
+[ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="6_io2bp"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="6_t2vxu"]
+[ext_resource type="Script" path="res://scenes/cauldron.gd" id="7_vg0hp"]
+[ext_resource type="PackedScene" uid="uid://c17ypfkmkit6" path="res://scenes/item_scenes/pepper.tscn" id="7_yybtt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
 size = Vector2(760.25, 87.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_skw3a"]
 radius = 33.0151
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3y4q"]
+size = Vector2(118, 116)
 
 [node name="GameSource" type="Node2D"]
 
@@ -37,20 +44,38 @@ position = Vector2(0.230957, 0.900269)
 scale = Vector2(1.17206, 0.131944)
 texture = ExtResource("1_ab5ci")
 
-[node name="Catmint" type="Area2D" parent="."]
+[node name="catmint" type="Area2D" parent="."]
 collision_layer = 2
 script = ExtResource("3_s48ag")
 
-[node name="Sprite2D" type="Sprite2D" parent="Catmint"]
+[node name="Sprite2D" type="Sprite2D" parent="catmint"]
 position = Vector2(924, 485)
 scale = Vector2(0.275, 0.275)
 texture = ExtResource("3_qaw0b")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Catmint"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="catmint"]
 position = Vector2(924, 485)
 shape = SubResource("CircleShape2D_skw3a")
 
 [node name="Gorp" parent="." instance=ExtResource("6_t2vxu")]
 position = Vector2(466, 407)
 
-[connection signal="body_entered" from="Catmint" to="Catmint" method="_on_body_entered"]
+[node name="tea" parent="." instance=ExtResource("6_io2bp")]
+position = Vector2(1040, 414)
+
+[node name="pepper" parent="." instance=ExtResource("7_yybtt")]
+position = Vector2(742, 471)
+
+[node name="cauldron" type="Area2D" parent="."]
+position = Vector2(322, 494)
+script = ExtResource("7_vg0hp")
+
+[node name="cauldronsprite" type="Sprite2D" parent="cauldron"]
+scale = Vector2(0.235, 0.235)
+texture = ExtResource("5_7afyx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cauldron"]
+shape = SubResource("RectangleShape2D_a3y4q")
+
+[connection signal="body_entered" from="catmint" to="catmint" method="_on_body_entered"]
+[connection signal="body_entered" from="cauldron" to="cauldron" method="_on_body_entered"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://61jiqhynx030"]
+
+[ext_resource type="Script" path="res://scripts/ingredient.gd" id="1_ogbm3"]
+[ext_resource type="Texture2D" uid="uid://nxu3ldtbu3pa" path="res://sprites/items/Lemon Battery.png" id="2_rvsof"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_skw3a"]
+radius = 33.0151
+
+[node name="lemon" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_ogbm3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.275, 0.275)
+texture = ExtResource("2_rvsof")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_skw3a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

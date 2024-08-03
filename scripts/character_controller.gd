@@ -75,3 +75,6 @@ func _physics_process(delta):
 	elif not is_jumping : 
 		anim_player.play("falling")
 
+
+func has_item():
+	return item_held

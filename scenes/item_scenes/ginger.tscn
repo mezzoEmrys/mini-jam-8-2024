@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c771exwyn8uuo"]
+
+[ext_resource type="Script" path="res://scripts/ingredient.gd" id="1_ymeh8"]
+[ext_resource type="Texture2D" uid="uid://derp0khjsce2m" path="res://sprites/items/Haunted Ginger.png" id="2_2kic2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_skw3a"]
+radius = 33.0151
+
+[node name="ginger" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_ymeh8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.275, 0.275)
+texture = ExtResource("2_2kic2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_skw3a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
