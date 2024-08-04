@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7doh3v3nbfkn"]
+
+[ext_resource type="Texture2D" uid="uid://0um1v1nbj22e" path="res://sprites/platforms/trunk_platform.png" id="1_a46l8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(254, 231.5)
+
+[node name="Trunk" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a46l8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -4.75)
+shape = SubResource("RectangleShape2D_fpfvw")

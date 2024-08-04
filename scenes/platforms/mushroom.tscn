@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4nl4h12qdjj5"]
+
+[ext_resource type="Texture2D" uid="uid://dhkvxuj8n45yj" path="res://sprites/platforms/mushroom_platform.png" id="1_dvydw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(322.5, 237.5)
+
+[node name="Mushroom" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dvydw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-24.25, 74.25)
+shape = SubResource("RectangleShape2D_fpfvw")

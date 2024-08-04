@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d31d1ni8nwdrs"]
+
+[ext_resource type="Texture2D" uid="uid://du3gkm4lk6can" path="res://sprites/platforms/toy_platform.png" id="1_jhgn8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(398, 51.5)
+
+[node name="Toy" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jhgn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 34.25)
+shape = SubResource("RectangleShape2D_fpfvw")

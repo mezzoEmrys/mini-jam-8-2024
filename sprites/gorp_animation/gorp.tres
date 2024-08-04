@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://3ld6ewvvily8"]
+[gd_resource type="SpriteFrames" load_steps=22 format=3 uid="uid://3ld6ewvvily8"]
 
 [ext_resource type="Texture2D" uid="uid://bdm1pbhyb27ly" path="res://sprites/gorp_animation/fall/gorp_fall_1.png" id="1_twrrq"]
 [ext_resource type="Texture2D" uid="uid://lq2jn5a2dt05" path="res://sprites/gorp_animation/fall/gorp_fall_2.png" id="2_2iq6r"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bb60gphusul1x" path="res://sprites/gorp_animation/idle/gorp_idle_1.png" id="9_s7rab"]
 [ext_resource type="Texture2D" uid="uid://cn5pychlov248" path="res://sprites/gorp_animation/idle/gorp_idle_2.png" id="10_hr4ys"]
 [ext_resource type="Texture2D" uid="uid://bst82fa6kth5t" path="res://sprites/gorp_animation/idle/gorp_idle_4.png" id="12_j33wo"]
+[ext_resource type="Texture2D" uid="uid://dgpfbno1wrp3d" path="res://sprites/gorp_animation/injured/gorp_injured_1.png" id="12_ou0ns"]
 [ext_resource type="Texture2D" uid="uid://be08154sq8hxg" path="res://sprites/gorp_animation/land/gorp_land_1.png" id="13_kanv0"]
 [ext_resource type="Texture2D" uid="uid://cd7gj6lc0eya8" path="res://sprites/gorp_animation/land/gorp_land_2.png" id="14_spjco"]
 [ext_resource type="Texture2D" uid="uid://b5eh2k2okedct" path="res://sprites/gorp_animation/walk/gorp_walk_1.png" id="15_tjcey"]
@@ -78,12 +79,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_ou0ns")
+}],
+"loop": true,
+"name": &"injured",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("13_kanv0")
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_spjco")
 }],
-"loop": false,
+"loop": true,
 "name": &"land",
 "speed": 8.0
 }, {

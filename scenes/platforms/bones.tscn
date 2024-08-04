@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://0j8enel2adj2"]
+
+[ext_resource type="Texture2D" uid="uid://botvw30qsimqd" path="res://sprites/platforms/bones_platform.png" id="1_4h2hw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(293, 193)
+
+[node name="Bones" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4h2hw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10.5, 5.5)
+shape = SubResource("RectangleShape2D_fpfvw")

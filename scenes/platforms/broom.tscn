@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvvw5g6h0i7w8"]
+
+[ext_resource type="Texture2D" uid="uid://c1cq7lhk3qonp" path="res://sprites/platforms/broom_platform.png" id="1_0th41"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(405, 26)
+
+[node name="Broom" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0th41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, -99)
+shape = SubResource("RectangleShape2D_fpfvw")

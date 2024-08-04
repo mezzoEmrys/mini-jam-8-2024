@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhst8m6e8ae76"]
+
+[ext_resource type="Texture2D" uid="uid://d2d6bvuqyxq60" path="res://sprites/platforms/lemon_platform.png" id="1_lr6gw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(339, 213)
+
+[node name="Lemon" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lr6gw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -43.5)
+shape = SubResource("RectangleShape2D_fpfvw")

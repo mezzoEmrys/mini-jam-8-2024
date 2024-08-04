@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bicf2dlhiw2fk"]
+
+[ext_resource type="Texture2D" uid="uid://uphp3ivwxsbi" path="res://sprites/platforms/electrical_platform.png" id="1_jxtcu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(349, 345)
+
+[node name="Electrical" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jxtcu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.5, 1.5)
+shape = SubResource("RectangleShape2D_fpfvw")

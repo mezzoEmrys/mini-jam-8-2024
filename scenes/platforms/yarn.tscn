@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bekdmvh1ag8qy"]
+
+[ext_resource type="Texture2D" uid="uid://ct40g77p05irg" path="res://sprites/platforms/yarn_platformer.png" id="1_213hy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(303, 274)
+
+[node name="Yarn" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_213hy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -11)
+shape = SubResource("RectangleShape2D_fpfvw")

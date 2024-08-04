@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://djk4ueqrjq7ri"]
+
+[ext_resource type="Texture2D" uid="uid://cmxhcuhd4ltnh" path="res://sprites/platforms/spice_bottle_a_platform.png" id="1_7fpes"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(129, 267)
+
+[node name="Spice Bottle" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7fpes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-15.5, -4.5)
+shape = SubResource("RectangleShape2D_fpfvw")

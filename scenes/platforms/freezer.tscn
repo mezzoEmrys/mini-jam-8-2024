@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjhtj8d53aic8"]
+
+[ext_resource type="Texture2D" uid="uid://b6igvm4xnjv1d" path="res://sprites/platforms/freezer_platform.png" id="1_bshdq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(442, 346)
+
+[node name="Freezer" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bshdq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 29)
+shape = SubResource("RectangleShape2D_fpfvw")

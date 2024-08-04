@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddxkiwbdjhd2d"]
+
+[ext_resource type="Texture2D" uid="uid://dsim44crr0ujb" path="res://sprites/platforms/skull_platform.png" id="1_k62v7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(300, 180)
+
+[node name="Skull" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k62v7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, -10)
+shape = SubResource("RectangleShape2D_fpfvw")

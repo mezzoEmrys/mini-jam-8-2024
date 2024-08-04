@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://oym303ilumtr"]
+
+[ext_resource type="Texture2D" uid="uid://btxmth640dlds" path="res://sprites/platforms/catfood_platform.png" id="1_vpnxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(282, 132)
+
+[node name="Catfood" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vpnxx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 34)
+shape = SubResource("RectangleShape2D_fpfvw")

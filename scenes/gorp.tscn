@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvkqbwaa5ros2"]
+[gd_scene load_steps=11 format=3 uid="uid://dvkqbwaa5ros2"]
 
 [ext_resource type="Script" path="res://scripts/character_controller.gd" id="1_3lhdl"]
-[ext_resource type="SpriteFrames" path="res://sprites/gorp_animation/gorp.tres" id="2_d13h2"]
+[ext_resource type="SpriteFrames" uid="uid://3ld6ewvvily8" path="res://sprites/gorp_animation/gorp.tres" id="2_d13h2"]
 [ext_resource type="PackedScene" uid="uid://bgywax4t1ifyd" path="res://scenes/held_item.tscn" id="3_64oph"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iet7c"]
@@ -141,10 +141,26 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_p5vq5"]
+resource_name = "injured"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"injured"]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7fasp"]
 _data = {
 "falling": SubResource("Animation_8yxjy"),
 "idle": SubResource("Animation_e2yay"),
+"injured": SubResource("Animation_p5vq5"),
 "jumping": SubResource("Animation_ribtb"),
 "walking": SubResource("Animation_xfkf8")
 }
@@ -156,6 +172,7 @@ script = ExtResource("1_3lhdl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_d13h2")
 animation = &"float"
+frame_progress = 0.367197
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10, -70)
