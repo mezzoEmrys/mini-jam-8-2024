@@ -33,7 +33,7 @@ script = ExtResource("1_7lhln")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gde7r")
-frame_progress = 0.438446
+frame_progress = 0.602216
 flip_h = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
