@@ -1,18 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://1na86hoaag8n"]
+[gd_scene load_steps=9 format=3 uid="uid://1na86hoaag8n"]
 
 [ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/teacup.png" id="1_5lblh"]
 [ext_resource type="Script" path="res://scripts/electric.gd" id="1_7lhln"]
 [ext_resource type="Script" path="res://scripts/hazard.gd" id="1_cn5x8"]
+[ext_resource type="Texture2D" uid="uid://ckp6v3oj0utoj" path="res://sprites/hazards_animation/electricity/moving/1.png" id="2_y7qde"]
+[ext_resource type="Texture2D" uid="uid://dp13acsmvpqkp" path="res://sprites/hazards_animation/electricity/moving/2.png" id="3_lywvl"]
+[ext_resource type="Texture2D" uid="uid://dvus8qwf1o1ey" path="res://sprites/hazards_animation/electricity/moving/3.png" id="4_w7hc5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gde7r"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("2_y7qde")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_lywvl")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_w7hc5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymx56"]
-size = Vector2(41, 42)
+size = Vector2(326, 384)
 
 [node name="Electric" type="PathFollow2D"]
+scale = Vector2(0.165, 0.165)
 script = ExtResource("1_7lhln")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gde7r")
+frame_progress = 0.438446
+flip_h = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.301497, 0.279178)
 texture = ExtResource("1_5lblh")
 
@@ -20,6 +45,7 @@ texture = ExtResource("1_5lblh")
 script = ExtResource("1_cn5x8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
+position = Vector2(-162, 0)
 shape = SubResource("RectangleShape2D_ymx56")
 
 [connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]

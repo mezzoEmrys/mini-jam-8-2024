@@ -90,4 +90,3 @@ curve = SubResource("Curve2D_jgs5h")
 [node name="Electric" parent="Path2D" instance=ExtResource("11_eeoyx")]
 position = Vector2(292, -11)
 rotation = 1.57967
-rotates = false
