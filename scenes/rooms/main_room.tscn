@@ -1,0 +1,297 @@
+[gd_scene load_steps=55 format=3 uid="uid://dok7omvslwslh"]
+
+[ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
+[ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
+[ext_resource type="Texture2D" uid="uid://ce8vxmymrv247" path="res://sprites/rooms/Witch Room Cauldron.png" id="3_nlrpj"]
+[ext_resource type="Texture2D" uid="uid://buobpqwpvvcba" path="res://sprites/rooms/Witch Room Light.png" id="4_5jpvh"]
+[ext_resource type="Texture2D" uid="uid://cgdgvogxbj2n8" path="res://sprites/rooms/Witch Room Foreground.png" id="5_w5mfu"]
+[ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="6_e2cml"]
+[ext_resource type="Texture2D" uid="uid://cwlt34s28s5sd" path="res://sprites/witch_animation/idle/1.png" id="7_ocjqv"]
+[ext_resource type="Texture2D" uid="uid://bg5gwk185ych0" path="res://sprites/witch_animation/idle/2.png" id="8_bt6qv"]
+[ext_resource type="Texture2D" uid="uid://bov4uujg6h2yh" path="res://sprites/witch_animation/idle/3.png" id="9_6tgjt"]
+[ext_resource type="Texture2D" uid="uid://c0nhr1sosyf3t" path="res://sprites/witch_animation/idle/4.png" id="10_qd70h"]
+[ext_resource type="Texture2D" uid="uid://c4sl8cdfm85mq" path="res://sprites/witch_animation/idle/5.png" id="11_mk7fq"]
+[ext_resource type="Texture2D" uid="uid://dme04td6vp0p2" path="res://sprites/witch_animation/idle/6.png" id="12_x7qct"]
+[ext_resource type="Texture2D" uid="uid://cmqjxoh8gx6a5" path="res://sprites/witch_animation/idle/7.png" id="13_g8yej"]
+[ext_resource type="Texture2D" uid="uid://dbpr0snfq40o7" path="res://sprites/witch_animation/idle/8.png" id="14_vew0h"]
+[ext_resource type="Texture2D" uid="uid://bgqtavpudadx3" path="res://sprites/witch_animation/idle/9.png" id="15_awywd"]
+[ext_resource type="Texture2D" uid="uid://be1fiaj1mgail" path="res://sprites/witch_animation/idle/10.png" id="16_bikci"]
+[ext_resource type="Texture2D" uid="uid://cobfy1foc5t1y" path="res://sprites/witch_animation/idle/12.png" id="17_dt4mn"]
+[ext_resource type="Texture2D" uid="uid://dy6rou4nq57kn" path="res://sprites/witch_animation/idle/13.png" id="18_lgb74"]
+[ext_resource type="Texture2D" uid="uid://dkkygwm164rps" path="res://sprites/witch_animation/idle/14.png" id="19_0weio"]
+[ext_resource type="Texture2D" uid="uid://1f0h3dsgu2x3" path="res://sprites/witch_animation/idle/15.png" id="20_nxyow"]
+[ext_resource type="Texture2D" uid="uid://be060ego3ta4v" path="res://sprites/witch_animation/idle/16.png" id="21_uiroi"]
+[ext_resource type="Texture2D" uid="uid://clqlre5bw2g10" path="res://sprites/witch_animation/idle/17.png" id="22_iaeji"]
+[ext_resource type="Texture2D" uid="uid://d3snbkgh8ikiw" path="res://sprites/witch_animation/idle/18.png" id="23_5o5h6"]
+[ext_resource type="Texture2D" uid="uid://qvcox738jddg" path="res://sprites/witch_animation/idle/19.png" id="24_b8akg"]
+[ext_resource type="Texture2D" uid="uid://3y52r84iixap" path="res://sprites/witch_animation/idle/20.png" id="25_v7jff"]
+[ext_resource type="Texture2D" uid="uid://brtmm0ktcwdrk" path="res://sprites/witch_animation/idle/21.png" id="26_lvr3r"]
+[ext_resource type="Texture2D" uid="uid://cvxl6rwl7jm2g" path="res://sprites/witch_animation/idle/22.png" id="27_5unse"]
+[ext_resource type="Texture2D" uid="uid://ccg75nkegxee5" path="res://sprites/witch_animation/idle/23.png" id="28_8ykqo"]
+[ext_resource type="Texture2D" uid="uid://ckqjspp0mg2ea" path="res://sprites/witch_animation/idle/24.png" id="29_avkvt"]
+[ext_resource type="Texture2D" uid="uid://b40swikbb8drr" path="res://sprites/witch_animation/idle/25.png" id="30_qdjds"]
+[ext_resource type="Texture2D" uid="uid://c1kp5fxbif4ij" path="res://sprites/witch_animation/idle/26.png" id="31_acf4j"]
+[ext_resource type="Texture2D" uid="uid://cpht1453ir3jx" path="res://sprites/witch_animation/idle/27.png" id="32_p35bv"]
+[ext_resource type="Texture2D" uid="uid://c0o85aoc583dr" path="res://sprites/witch_animation/idle/28.png" id="33_yvlhb"]
+[ext_resource type="Texture2D" uid="uid://cl0wmjlo1a3em" path="res://sprites/witch_animation/idle/29.png" id="34_bgqeb"]
+[ext_resource type="Texture2D" uid="uid://bm0phmruc23yn" path="res://sprites/witch_animation/idle/30.png" id="35_64iy4"]
+[ext_resource type="Texture2D" uid="uid://od0b8q5bmbor" path="res://sprites/witch_animation/idle/31.png" id="36_bj1ia"]
+[ext_resource type="Texture2D" uid="uid://bos1cihbmqtpv" path="res://sprites/witch_animation/idle/32.png" id="37_yn6rv"]
+[ext_resource type="Texture2D" uid="uid://boj7fd4urunje" path="res://sprites/witch_animation/idle/33.png" id="38_8st8s"]
+[ext_resource type="Texture2D" uid="uid://dwaqrb7ukpiph" path="res://sprites/witch_animation/idle/34.png" id="39_m7088"]
+[ext_resource type="Texture2D" uid="uid://0lc4cywfy5ux" path="res://sprites/witch_animation/idle/35.png" id="40_nqqbs"]
+[ext_resource type="Texture2D" uid="uid://dlhlp6xdr5w2w" path="res://sprites/witch_animation/sneeze/1.png" id="41_1qggd"]
+[ext_resource type="Texture2D" uid="uid://dq7081jgnlayj" path="res://sprites/witch_animation/sneeze/2.png" id="42_rigok"]
+[ext_resource type="Texture2D" uid="uid://qcfs16coip2o" path="res://sprites/witch_animation/sneeze/3.png" id="43_ikyq6"]
+[ext_resource type="Texture2D" uid="uid://clxkn074ar6l" path="res://sprites/witch_animation/sneeze/4.png" id="44_qru8a"]
+[ext_resource type="Texture2D" uid="uid://bx0kl572p00xd" path="res://sprites/witch_animation/sneeze/5.png" id="45_bhrsq"]
+[ext_resource type="Texture2D" uid="uid://dev0uv5234huq" path="res://sprites/witch_animation/sneeze/6.png" id="46_odrkw"]
+[ext_resource type="Texture2D" uid="uid://dy20dpvy7ystt" path="res://sprites/witch_animation/sneeze/7.png" id="47_x385r"]
+[ext_resource type="Texture2D" uid="uid://dyerws5wrkqgf" path="res://sprites/witch_animation/sneeze/8.png" id="48_44tq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l55qc"]
+size = Vector2(767.5, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdt75"]
+size = Vector2(2565.5, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wygjk"]
+size = Vector2(2565.5, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dusno"]
+size = Vector2(49.0328, 115.488)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xd6r1"]
+size = Vector2(7.71023, 115.488)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4w0k6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ocjqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bt6qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6tgjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qd70h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mk7fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x7qct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_g8yej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vew0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_awywd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bikci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dt4mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lgb74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_0weio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nxyow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_uiroi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_iaeji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5o5h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_b8akg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_v7jff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_lvr3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5unse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8ykqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_avkvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qdjds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_acf4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_p35bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_yvlhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_bgqeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_64iy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_bj1ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_yn6rv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_8st8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_m7088")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_nqqbs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_1qggd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_rigok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ikyq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_qru8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_bhrsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_odrkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_x385r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_44tq4")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WitchRoomBackground" type="Sprite2D" parent="."]
+position = Vector2(1282, 723)
+texture = ExtResource("1_1boqs")
+
+[node name="WitchRoomChair" type="Sprite2D" parent="."]
+position = Vector2(1280, 724)
+texture = ExtResource("2_rdds6")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="WitchRoomChair"]
+position = Vector2(6, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WitchRoomChair/RigidBody2D"]
+position = Vector2(-307, 365)
+shape = SubResource("RectangleShape2D_l55qc")
+one_way_collision = true
+
+[node name="WitchRoomCauldron" type="Sprite2D" parent="."]
+visibility_layer = 2
+z_index = 2
+position = Vector2(1281, 720)
+texture = ExtResource("3_nlrpj")
+
+[node name="WitchRoomLight" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1292, 719)
+texture = ExtResource("4_5jpvh")
+
+[node name="WitchRoomForeground" type="Sprite2D" parent="."]
+visibility_layer = 2
+z_index = 5
+position = Vector2(1281, 723)
+texture = ExtResource("5_w5mfu")
+
+[node name="Ground" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1283.25, 1374.5)
+shape = SubResource("RectangleShape2D_sdt75")
+
+[node name="Ground2" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
+position = Vector2(1283.25, 1374.5)
+shape = SubResource("RectangleShape2D_wygjk")
+
+[node name="Wall" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(305.5, 711.325)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_dusno")
+
+[node name="Wall2" type="RigidBody2D" parent="."]
+position = Vector2(2206, -34)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(300, 736)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_xd6r1")
+
+[node name="Witch" type="Node2D" parent="."]
+position = Vector2(555, 682)
+scale = Vector2(0.29, 0.29)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Witch"]
+position = Vector2(1296.55, 396.552)
+sprite_frames = SubResource("SpriteFrames_4w0k6")
+animation = &"idle"
+frame_progress = 0.888799
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Witch"]
+
+[node name="Gorp" parent="." instance=ExtResource("6_e2cml")]
+position = Vector2(1132, 864)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="Gorp"]
+position = Vector2(-90, 90)
+scale = Vector2(5, 5)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 1400
+limit_smoothed = true
+position_smoothing_enabled = true
