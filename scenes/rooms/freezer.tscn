@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://de3hx2qn5h21q"]
+[gd_scene load_steps=14 format=3 uid="uid://cc6u5qs2ewanb"]
 
 [ext_resource type="Texture2D" uid="uid://c5h1s7u35futh" path="res://sprites/rooms/Freezer Background PNG.png" id="1_06jh8"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_bp5kl"]
@@ -114,13 +114,13 @@ rotation = -0.145763
 position = Vector2(190, 821)
 
 [node name="Icicle3" parent="." instance=ExtResource("8_s21a6")]
-position = Vector2(1256, 696)
+position = Vector2(1247, 711)
 scale = Vector2(0.355, 0.355)
 
 [node name="Icicle2" parent="." instance=ExtResource("9_oyycp")]
-position = Vector2(1052, 700)
+position = Vector2(1042, 714)
 scale = Vector2(0.495, 0.495)
 
 [node name="Icicle1" parent="." instance=ExtResource("8_xpikh")]
-position = Vector2(834, 705)
+position = Vector2(833, 711)
 scale = Vector2(0.495, 0.495)

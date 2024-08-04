@@ -10,5 +10,5 @@ icicle = ExtResource("2_2dtmd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 5
-position = Vector2(-2, 249)
+position = Vector2(-12, 225)
 texture = ExtResource("2_407mq")
