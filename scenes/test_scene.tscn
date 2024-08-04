@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="8_qbab3"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="9_36kx1"]
 [ext_resource type="PackedScene" uid="uid://d3f3wp7i4n8jt" path="res://scenes/hazards/fire_md.tscn" id="10_xhnn6"]
-[ext_resource type="PackedScene" uid="uid://dw877k3cwl7r7" path="res://scenes/hazards/ghost.tscn" id="11_djkul"]
+[ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="11_djkul"]
 [ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="11_eeoyx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
@@ -22,7 +22,7 @@ _data = {
 }
 point_count = 5
 
-[node name="TestScene" type="Node2D"]
+[node name="TestScene2" type="Node2D"]
 
 [node name="TestTutorialgarden1" type="Sprite2D" parent="."]
 position = Vector2(1280, 719)

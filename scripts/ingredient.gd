@@ -24,7 +24,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if(body.name == "Gorp"):
-		var held_item = get_node("/root/GameSource/Gorp/held_item")
+		var held_item = body.item_sprite
 		if not held_item.item_held:
 			held_item.set_item(id)
 			queue_free()

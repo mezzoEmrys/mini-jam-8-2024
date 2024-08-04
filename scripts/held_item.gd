@@ -34,8 +34,8 @@ func set_item(id):
 			animator.play("tea")
 		"ginger":
 			animator.play("ginger")
-		"cicle":
-			animator.play("cicle")
+		"ice":
+			animator.play("ice")
 		"teacup":
 			animator.play("teacup")
 
