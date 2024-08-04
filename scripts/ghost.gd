@@ -9,6 +9,12 @@ var is_flying : bool = false
 
 @onready var gorp = $"../Gorp"
 
+func activate():
+	$CollisionShape2D.disabled = false
+	
+func deactivate():
+	$CollisionShape2D.disabled = true
+
 func start_flying():
 	is_flying = true
 	

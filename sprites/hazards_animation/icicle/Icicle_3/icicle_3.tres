@@ -1,12 +1,21 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://5lposdictt8h"]
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://5lposdictt8h"]
 
 [ext_resource type="Texture2D" uid="uid://n7r1f63vvbm6" path="res://sprites/hazards_animation/icicle/Icicle_3/falling_icicle_C/icicle_falling_C_1.png" id="1_8qj82"]
+[ext_resource type="Texture2D" path="res://sprites/hazards_animation/icicle/Icicle_3/falling_icicle_C/falling_icicle_c_break.png" id="1_udoj8"]
 [ext_resource type="Texture2D" uid="uid://d272rkappf5dw" path="res://sprites/hazards_animation/icicle/Icicle_3/falling_icicle_C/icicle_falling_C_2.png" id="2_0flu7"]
 [ext_resource type="Texture2D" uid="uid://1diph4j6d2eu" path="res://sprites/hazards_animation/icicle/Icicle_3/falling_icicle_C/icicle_falling_C_3.png" id="3_qwv7r"]
 [ext_resource type="Texture2D" uid="uid://b3udd1ets31b" path="res://sprites/hazards_animation/icicle/Icicle_3/falling_icicle_C/icicle_falling_C_4.png" id="4_my6ga"]
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_udoj8")
+}],
+"loop": true,
+"name": &"break",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_8qj82")
