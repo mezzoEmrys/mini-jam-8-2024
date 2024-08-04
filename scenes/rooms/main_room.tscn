@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dok7omvslwslh"]
+[gd_scene load_steps=59 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
 [ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://buobpqwpvvcba" path="res://sprites/rooms/Witch Room Light.png" id="4_5jpvh"]
 [ext_resource type="Texture2D" uid="uid://cgdgvogxbj2n8" path="res://sprites/rooms/Witch Room Foreground.png" id="5_w5mfu"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="6_e2cml"]
+[ext_resource type="Script" path="res://scenes/rooms/Witch.gd" id="6_gho7b"]
 [ext_resource type="Texture2D" uid="uid://cwlt34s28s5sd" path="res://sprites/witch_animation/idle/1.png" id="7_ocjqv"]
 [ext_resource type="Texture2D" uid="uid://bg5gwk185ych0" path="res://sprites/witch_animation/idle/2.png" id="8_bt6qv"]
 [ext_resource type="Texture2D" uid="uid://bov4uujg6h2yh" path="res://sprites/witch_animation/idle/3.png" id="9_6tgjt"]
@@ -199,9 +200,47 @@ animations = [{
 "texture": ExtResource("48_44tq4")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"sneeze",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_tj3ja"]
+resource_name = "idle"
+loop_mode = 1
+step = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"idle", &"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_2t3b6"]
+resource_name = "sneeze"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"sneeze"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sod4p"]
+_data = {
+"idle": SubResource("Animation_tj3ja"),
+"sneeze": SubResource("Animation_2t3b6")
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -213,11 +252,12 @@ texture = ExtResource("1_1boqs")
 position = Vector2(1280, 724)
 texture = ExtResource("2_rdds6")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="WitchRoomChair"]
-position = Vector2(6, 5)
+[node name="Wall3" type="RigidBody2D" parent="WitchRoomChair"]
+position = Vector2(926, -758)
+freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WitchRoomChair/RigidBody2D"]
-position = Vector2(-307, 365)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WitchRoomChair/Wall3"]
+position = Vector2(-1227, 1128)
 shape = SubResource("RectangleShape2D_l55qc")
 one_way_collision = true
 
@@ -272,14 +312,18 @@ shape = SubResource("RectangleShape2D_xd6r1")
 [node name="Witch" type="Node2D" parent="."]
 position = Vector2(555, 682)
 scale = Vector2(0.29, 0.29)
+script = ExtResource("6_gho7b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Witch"]
 position = Vector2(1296.55, 396.552)
 sprite_frames = SubResource("SpriteFrames_4w0k6")
 animation = &"idle"
-frame_progress = 0.888799
+frame_progress = 0.489507
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Witch"]
+libraries = {
+"": SubResource("AnimationLibrary_sod4p")
+}
 
 [node name="Gorp" parent="." instance=ExtResource("6_e2cml")]
 position = Vector2(1132, 864)
