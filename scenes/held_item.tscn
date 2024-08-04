@@ -208,7 +208,7 @@ animations = [{
 [node name="held_item" type="Node2D"]
 show_behind_parent = true
 position = Vector2(-500, 0)
-scale = Vector2(2.665, 2.665)
+scale = Vector2(1.785, 1.785)
 script = ExtResource("1_v1t6r")
 
 [node name="catmint" type="Sprite2D" parent="."]
