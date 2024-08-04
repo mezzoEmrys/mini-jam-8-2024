@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://de3hx2qn5h21q"]
+[gd_scene load_steps=14 format=3 uid="uid://de3hx2qn5h21q"]
 
 [ext_resource type="Texture2D" uid="uid://c5h1s7u35futh" path="res://sprites/rooms/Freezer Background PNG.png" id="1_06jh8"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_bp5kl"]
@@ -14,6 +14,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
 size = Vector2(2565.5, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6480"]
+size = Vector2(7.71023, 115.488)
 
 [node name="TestScene" type="Node2D"]
 
@@ -42,6 +45,23 @@ freeze = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(1283.25, 1374.5)
 shape = SubResource("RectangleShape2D_sa37l")
+
+[node name="Wall" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(43.825, 711.325)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_w6480")
+
+[node name="Wall2" type="RigidBody2D" parent="."]
+position = Vector2(2206, -34)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(260, 728)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_w6480")
 
 [node name="Foreground" type="Sprite2D" parent="."]
 visibility_layer = 2
