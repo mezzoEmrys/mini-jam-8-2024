@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpcgyjvqksj3e"]
+
+[ext_resource type="SpriteFrames" uid="uid://kt22wwp0simj" path="res://sprites/hazards_animation/fire/fire_small/fire_small.tres" id="1_kqhgf"]
+[ext_resource type="Script" path="res://scripts/hazard.gd" id="2_udfdx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxb6w"]
+size = Vector2(1000, 264)
+
+[node name="FireSm" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -462)
+sprite_frames = ExtResource("1_kqhgf")
+
+[node name="Hazard" type="Area2D" parent="."]
+script = ExtResource("2_udfdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
+position = Vector2(-2, -132)
+shape = SubResource("RectangleShape2D_pxb6w")

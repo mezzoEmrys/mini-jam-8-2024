@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://bqmdtqo7irji8"]
+
+[ext_resource type="Texture2D" uid="uid://bvfaeskkasoiu" path="res://sprites/hazards_animation/fire/fire_medium/1.png" id="1_sqhcy"]
+[ext_resource type="Texture2D" uid="uid://bmdomabfsk1me" path="res://sprites/hazards_animation/fire/fire_medium/2.png" id="2_2hgpv"]
+[ext_resource type="Texture2D" uid="uid://8tj0jyx205d6" path="res://sprites/hazards_animation/fire/fire_medium/3.png" id="3_f3uct"]
+[ext_resource type="Texture2D" uid="uid://3jk7r10f0sy7" path="res://sprites/hazards_animation/fire/fire_medium/4.png" id="4_y2yoc"]
+[ext_resource type="Texture2D" uid="uid://cpnlt3141w2yx" path="res://sprites/hazards_animation/fire/fire_medium/5.png" id="5_ussbj"]
+[ext_resource type="Texture2D" uid="uid://sih5f858n0uv" path="res://sprites/hazards_animation/fire/fire_medium/6.png" id="6_1kqps"]
+[ext_resource type="Texture2D" uid="uid://dh8wribcblxe7" path="res://sprites/hazards_animation/fire/fire_medium/7.png" id="7_63jr1"]
+[ext_resource type="Texture2D" uid="uid://c20tqo15khwny" path="res://sprites/hazards_animation/fire/fire_medium/8.png" id="8_aqvl3"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sqhcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2hgpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f3uct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y2yoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ussbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1kqps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_63jr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_aqvl3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
