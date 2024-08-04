@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3t5006oe1dbi"]
+[gd_scene load_steps=10 format=3 uid="uid://cqa04felgq2om"]
 
 [ext_resource type="Texture2D" uid="uid://cqqwge0hc3jgb" path="res://sprites/test/test_tutorialgarden1.png" id="1_wwunv"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_r4l2d"]
