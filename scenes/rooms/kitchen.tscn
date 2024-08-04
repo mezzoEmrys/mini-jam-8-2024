@@ -1,17 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://vufkou7we5tj"]
+[gd_scene load_steps=15 format=3 uid="uid://vufkou7we5tj"]
 
 [ext_resource type="Texture2D" uid="uid://cohbe3kt6tyq" path="res://sprites/rooms/Fire Background.png" id="1_y83vv"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_wqr64"]
-[ext_resource type="Texture2D" uid="uid://ix7028bo65b6" path="res://sprites/platforms/cabinet_platform.png" id="3_gk83g"]
-[ext_resource type="Texture2D" uid="uid://cmxhcuhd4ltnh" path="res://sprites/platforms/spice_bottle_a_platform.png" id="4_yl68t"]
-[ext_resource type="Texture2D" uid="uid://brio2pt0r01j" path="res://sprites/platforms/heavy_kitchen_platform.png" id="5_hn6pk"]
-[ext_resource type="Texture2D" uid="uid://ba5bsuqqy10io" path="res://sprites/platforms/spice_bottle_b_platform.png" id="6_o6vji"]
+[ext_resource type="PackedScene" uid="uid://bhujfbn3o7now" path="res://scenes/platforms/cabinet.tscn" id="3_shv3m"]
+[ext_resource type="PackedScene" uid="uid://c17ypfkmkit6" path="res://scenes/item_scenes/pepper.tscn" id="4_58loy"]
+[ext_resource type="PackedScene" uid="uid://u204tjkvd16w" path="res://scenes/platforms/heavy_kitchen.tscn" id="5_pfx5c"]
+[ext_resource type="PackedScene" uid="uid://d3f3wp7i4n8jt" path="res://scenes/hazards/fire_md.tscn" id="6_wymfq"]
+[ext_resource type="PackedScene" uid="uid://djk4ueqrjq7ri" path="res://scenes/platforms/spice_bottle.tscn" id="7_t0sd3"]
+[ext_resource type="PackedScene" uid="uid://3yujkfggcolv" path="res://scenes/platforms/oven.tscn" id="8_d2wps"]
+[ext_resource type="PackedScene" uid="uid://7b5l4ch1g2hl" path="res://scenes/platforms/spice_bottle_empty.tscn" id="9_burff"]
+[ext_resource type="PackedScene" uid="uid://bpcgyjvqksj3e" path="res://scenes/hazards/fire_sm.tscn" id="10_lv62t"]
+[ext_resource type="PackedScene" uid="uid://cdcgjic7vrtej" path="res://scenes/platforms/thin_kitchen.tscn" id="11_jto38"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fa0eg"]
 size = Vector2(2565.5, 141)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m74vc"]
-size = Vector2(7.71023, 115.488)
+size = Vector2(12.3964, 115.488)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpo8e"]
 size = Vector2(7.71023, 115.488)
@@ -23,7 +28,7 @@ position = Vector2(1279, 720)
 texture = ExtResource("1_y83vv")
 
 [node name="Gorp" parent="." instance=ExtResource("2_wqr64")]
-position = Vector2(1883, 1236)
+position = Vector2(2281, 1244)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -48,7 +53,7 @@ shape = SubResource("RectangleShape2D_fa0eg")
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-position = Vector2(43.825, 711.325)
+position = Vector2(73.5, 711.325)
 scale = Vector2(12.665, 12.665)
 shape = SubResource("RectangleShape2D_m74vc")
 
@@ -61,24 +66,60 @@ position = Vector2(260, 728)
 scale = Vector2(12.665, 12.665)
 shape = SubResource("RectangleShape2D_kpo8e")
 
-[node name="CabinetPlatform" type="Sprite2D" parent="."]
-position = Vector2(313, 1097)
-texture = ExtResource("3_gk83g")
+[node name="Cabinet" parent="." instance=ExtResource("3_shv3m")]
+position = Vector2(294, 1159)
+scale = Vector2(0.719999, 0.719999)
 
-[node name="CabinetPlatform2" type="Sprite2D" parent="."]
-position = Vector2(309, 718)
-texture = ExtResource("3_gk83g")
+[node name="pepper" parent="." instance=ExtResource("4_58loy")]
+position = Vector2(309, 412)
+scale = Vector2(1.04243, 1.04243)
 
-[node name="SpiceBottleAPlatform" type="Sprite2D" parent="."]
-position = Vector2(679, 759)
-scale = Vector2(0.5515, 0.57534)
-texture = ExtResource("4_yl68t")
+[node name="Heavy" parent="." instance=ExtResource("5_pfx5c")]
+position = Vector2(930, 799)
+scale = Vector2(2, 2)
 
-[node name="HeavyKitchenPlatform" type="Sprite2D" parent="."]
-position = Vector2(1116, 943)
-texture = ExtResource("5_hn6pk")
+[node name="Cabinet2" parent="." instance=ExtResource("3_shv3m")]
+position = Vector2(294, 884)
+scale = Vector2(0.719999, 0.719999)
 
-[node name="SpiceBottleBPlatform" type="Sprite2D" parent="."]
-position = Vector2(1556, 774)
-scale = Vector2(0.384, 0.384)
-texture = ExtResource("6_o6vji")
+[node name="Cabinet3" parent="." instance=ExtResource("3_shv3m")]
+position = Vector2(294, 612)
+scale = Vector2(0.719999, 0.719999)
+
+[node name="FireMd" parent="." instance=ExtResource("6_wymfq")]
+position = Vector2(981, 1423)
+
+[node name="Spice Bottle" parent="." instance=ExtResource("7_t0sd3")]
+position = Vector2(565, 620)
+scale = Vector2(0.5, 0.5)
+
+[node name="Oven" parent="." instance=ExtResource("8_d2wps")]
+z_index = 1
+position = Vector2(1754, 1095)
+
+[node name="Spice Bottle Empty" parent="." instance=ExtResource("9_burff")]
+position = Vector2(1395, 747)
+rotation = -1.57551
+scale = Vector2(0.8, 0.8)
+
+[node name="FireSm" parent="." instance=ExtResource("10_lv62t")]
+z_index = 2
+position = Vector2(1742, 951)
+scale = Vector2(0.2, 0.2)
+
+[node name="Thin" parent="." instance=ExtResource("11_jto38")]
+position = Vector2(1986, 1216)
+rotation = 0.708427
+scale = Vector2(2, 2)
+
+[node name="Spice Bottle2" parent="." instance=ExtResource("7_t0sd3")]
+position = Vector2(1630, 857)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spice Bottle3" parent="." instance=ExtResource("7_t0sd3")]
+position = Vector2(1863, 888)
+scale = Vector2(0.4, 0.4)
+
+[node name="FireSm2" parent="." instance=ExtResource("10_lv62t")]
+position = Vector2(932, 680)
+scale = Vector2(0.2, 0.2)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://u204tjkvd16w"]
+
+[ext_resource type="Texture2D" uid="uid://brio2pt0r01j" path="res://sprites/platforms/heavy_kitchen_platform.png" id="1_fjo7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(453, 150)
+
+[node name="Heavy" type="RigidBody2D"]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -38)
+scale = Vector2(0.465, 0.465)
+shape = SubResource("RectangleShape2D_fpfvw")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-1.5, 38)
+texture = ExtResource("1_fjo7h")
