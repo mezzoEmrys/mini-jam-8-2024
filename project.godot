@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ConstantEscalation"
-run/main_scene="res://scenes/freezer.tscn"
+run/main_scene="res://scenes/rooms/electric.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
 

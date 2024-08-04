@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://cer7xu1jo4sry"]
+
+[ext_resource type="Texture2D" uid="uid://bqraa6qnndy7o" path="res://sprites/rooms/Electric Background.png" id="1_1ao5c"]
+[ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_7sxvg"]
+[ext_resource type="Texture2D" uid="uid://d1gctci571rqx" path="res://sprites/rooms/Freezer Foreground.png" id="3_lg4nx"]
+[ext_resource type="PackedScene" uid="uid://61jiqhynx030" path="res://scenes/item_scenes/lemon.tscn" id="4_nku2b"]
+[ext_resource type="PackedScene" uid="uid://du7fvvlu3aya1" path="res://scenes/platforms/batter.tscn" id="5_b1enw"]
+[ext_resource type="PackedScene" uid="uid://bhst8m6e8ae76" path="res://scenes/platforms/lemon.tscn" id="6_ld74e"]
+[ext_resource type="PackedScene" uid="uid://blps5y1jfdrnu" path="res://scenes/platforms/thin.tscn" id="7_pjmnt"]
+[ext_resource type="PackedScene" uid="uid://bicf2dlhiw2fk" path="res://scenes/platforms/electrical.tscn" id="8_rbakq"]
+[ext_resource type="PackedScene" uid="uid://6hvk07ybypyg" path="res://scenes/platforms/heavy_electrical.tscn" id="9_kk66w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
+size = Vector2(2565.5, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6480"]
+size = Vector2(7.71023, 115.488)
+
+[node name="Electric" type="Node2D"]
+
+[node name="Backgroud" type="Sprite2D" parent="."]
+position = Vector2(1280, 719)
+texture = ExtResource("1_1ao5c")
+
+[node name="Gorp" parent="." instance=ExtResource("2_7sxvg")]
+position = Vector2(1883, 1236)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="Gorp"]
+position = Vector2(-90, 90)
+scale = Vector2(5, 5)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 1400
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Ground" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1283.25, 1374.5)
+shape = SubResource("RectangleShape2D_sa37l")
+
+[node name="Wall" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(43.825, 711.325)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_w6480")
+
+[node name="Wall2" type="RigidBody2D" parent="."]
+position = Vector2(2206, -34)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(260, 728)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_w6480")
+
+[node name="Foreground" type="Sprite2D" parent="."]
+visibility_layer = 2
+z_index = 5
+position = Vector2(1280, 719)
+texture = ExtResource("3_lg4nx")
+
+[node name="lemon" parent="." instance=ExtResource("4_nku2b")]
+position = Vector2(580, 354)
+
+[node name="Batter" parent="." instance=ExtResource("5_b1enw")]
+position = Vector2(2053, 1209)
+
+[node name="Batter2" parent="." instance=ExtResource("5_b1enw")]
+position = Vector2(1581, 893)
+rotation = -1.5708
+
+[node name="Lemon2" parent="." instance=ExtResource("6_ld74e")]
+position = Vector2(1821, 1057)
+
+[node name="Lemon3" parent="." instance=ExtResource("6_ld74e")]
+position = Vector2(652, 795)
+
+[node name="Thin" parent="." instance=ExtResource("7_pjmnt")]
+position = Vector2(1213, 897)
+
+[node name="Thin2" parent="." instance=ExtResource("7_pjmnt")]
+position = Vector2(976, 705)
+
+[node name="Thin3" parent="." instance=ExtResource("7_pjmnt")]
+position = Vector2(1648, 631)
+
+[node name="Thin4" parent="." instance=ExtResource("7_pjmnt")]
+position = Vector2(1658, 483)
+
+[node name="Electrical" parent="." instance=ExtResource("8_rbakq")]
+position = Vector2(864, 919)
+
+[node name="Electrical2" parent="." instance=ExtResource("8_rbakq")]
+position = Vector2(1954, 515)
+
+[node name="Heavy" parent="." instance=ExtResource("9_kk66w")]
+position = Vector2(579, 464)

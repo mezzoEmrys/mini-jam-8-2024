@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c5h1s7u35futh" path="res://sprites/rooms/Freezer Background PNG.png" id="1_06jh8"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_bp5kl"]
 [ext_resource type="PackedScene" uid="uid://cvl1ieueno46m" path="res://scenes/platforms/freezer_shelf.tscn" id="5_cvm28"]
-[ext_resource type="PackedScene" uid="uid://cvu6veqjkbqrd" path="res://scenes/platforms/heavy.tscn" id="6_qpfdd"]
+[ext_resource type="PackedScene" uid="uid://cvu6veqjkbqrd" path="res://scenes/platforms/heavy_freezer.tscn" id="6_qpfdd"]
 [ext_resource type="PackedScene" uid="uid://bjhtj8d53aic8" path="res://scenes/platforms/freezer.tscn" id="7_6be0d"]
 [ext_resource type="PackedScene" uid="uid://br3106v103abs" path="res://scenes/platforms/fish.tscn" id="7_helx7"]
 [ext_resource type="PackedScene" uid="uid://de24nxecpqvo0" path="res://scenes/hazards/icicle_base_3.tscn" id="8_s21a6"]
@@ -18,7 +18,7 @@ size = Vector2(2565.5, 141)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w6480"]
 size = Vector2(7.71023, 115.488)
 
-[node name="TestScene" type="Node2D"]
+[node name="Freezer" type="Node2D"]
 
 [node name="Backgroud" type="Sprite2D" parent="."]
 position = Vector2(1280, 719)
