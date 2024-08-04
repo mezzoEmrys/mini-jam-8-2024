@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
-@export var speed : float = 300.0
+@export var speed : float = 10
+@export var slowdown : float = 20
+@export var maxvel : float = 400
 @export var jump_impulse : float = -400.0
 @export var jump_sustain : float = -0.5
 @export var jump_time : float = 0.2
-@export var coyote_time : float = 0.075
+@export var coyote_time : float = 0.12
 @export var gravity_multiplier : float = 3.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -50,6 +52,7 @@ func _physics_process(delta):
 			is_charging = true
 			is_jumping = true
 			coyote_timer = coyote_time
+			velocity.y += jump_impulse
 		if is_jumping and not is_charging :
 			velocity.y += jump_impulse
 	elif is_jumping:
@@ -66,9 +69,11 @@ func _physics_process(delta):
 	direction = Input.get_axis("move_left", "move_right")
 
 	if direction != 0 and not is_charging:
-		velocity.x = direction * speed
+		var newvel = velocity.x + direction * speed
+		if (abs(newvel) < abs(maxvel)):
+			velocity.x = newvel
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.x = move_toward(velocity.x, 0, slowdown)
 			
 
 	if direction != 0:

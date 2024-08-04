@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://3t5006oe1dbi"]
+[gd_scene load_steps=15 format=3 uid="uid://3t5006oe1dbi"]
 
 [ext_resource type="Texture2D" uid="uid://cqqwge0hc3jgb" path="res://sprites/test/test_tutorialgarden1.png" id="1_wwunv"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_r4l2d"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="8_qbab3"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="9_36kx1"]
 [ext_resource type="PackedScene" uid="uid://d3f3wp7i4n8jt" path="res://scenes/hazards/fire_md.tscn" id="10_xhnn6"]
+[ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="11_djkul"]
 [ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="11_eeoyx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
@@ -78,6 +79,9 @@ position = Vector2(1719, 963)
 
 [node name="FireMd" parent="." instance=ExtResource("10_xhnn6")]
 position = Vector2(716, 1309)
+
+[node name="Ghost" parent="." instance=ExtResource("11_djkul")]
+position = Vector2(2158, 673)
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(287, 663)
