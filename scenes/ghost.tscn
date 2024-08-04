@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dl7tuvnkcumem"]
+[gd_scene load_steps=8 format=3 uid="uid://dl7tuvnkcumem"]
 
 [ext_resource type="SpriteFrames" uid="uid://rsdnqv5kmped" path="res://sprites/ghost_animation/ghost.tres" id="1_7yvit"]
+[ext_resource type="Script" path="res://scripts/ghost.gd" id="1_mgjyd"]
 
 [sub_resource type="Animation" id="Animation_41c10"]
 resource_name = "hide"
@@ -89,6 +90,7 @@ _data = {
 radius = 181.011
 
 [node name="Ghost" type="Area2D"]
+script = ExtResource("1_mgjyd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(9, -83)
