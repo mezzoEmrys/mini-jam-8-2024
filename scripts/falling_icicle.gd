@@ -12,3 +12,13 @@ func _process(_delta):
 
 func _physics_process(delta):
 	position.y += (gravity * delta)
+
+func destroy_icicle():
+	queue_free()
+
+func _on_area_2d_body_entered(body):
+	if (body.name == "Gorp") or (body.name == "icicle_1")or (body.name == "icicle_2")or (body.name == "icicle_3"):
+		pass
+	else:
+		destroy_icicle()
+
