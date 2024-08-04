@@ -6,6 +6,7 @@
 size = Vector2(373, 126)
 
 [node name="Flower" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_pokb3")

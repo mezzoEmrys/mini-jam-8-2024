@@ -6,6 +6,7 @@
 size = Vector2(442, 346)
 
 [node name="Freezer" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_bshdq")

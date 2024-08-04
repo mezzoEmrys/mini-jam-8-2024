@@ -6,6 +6,7 @@
 size = Vector2(322.5, 237.5)
 
 [node name="Mushroom" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_dvydw")

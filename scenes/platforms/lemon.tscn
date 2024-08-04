@@ -6,6 +6,7 @@
 size = Vector2(339, 213)
 
 [node name="Lemon" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_lr6gw")

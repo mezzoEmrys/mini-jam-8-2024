@@ -6,6 +6,7 @@
 size = Vector2(448, 235)
 
 [node name="Fish" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_2vyh8")

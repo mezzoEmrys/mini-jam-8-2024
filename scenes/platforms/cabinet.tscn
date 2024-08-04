@@ -6,6 +6,7 @@
 size = Vector2(368, 377)
 
 [node name="Cabinet" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4f6au")

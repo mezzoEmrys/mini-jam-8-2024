@@ -11,4 +11,4 @@ func _process(delta):
 		queue_free()
 
 func _physics_process(delta):
-	transform.y += gravity
+	position.y += (gravity * delta)

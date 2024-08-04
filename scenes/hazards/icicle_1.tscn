@@ -8,6 +8,7 @@
 size = Vector2(54, 349)
 
 [node name="Icicle1" type="Node2D"]
+position = Vector2(-4, 111)
 script = ExtResource("1_t3k30")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

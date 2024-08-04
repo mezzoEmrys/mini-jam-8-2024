@@ -1,15 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcbvo0p7k7veh"]
+[gd_scene load_steps=3 format=3 uid="uid://bicf2dlhiw2fk"]
 
-[ext_resource type="Texture2D" uid="uid://b2ke0mss84s1x" path="res://sprites/platforms/evilbook_platform.png" id="1_roy46"]
+[ext_resource type="Texture2D" uid="uid://uphp3ivwxsbi" path="res://sprites/platforms/electrical_platform.png" id="1_jxtcu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
-size = Vector2(435, 43)
+size = Vector2(349, 345)
 
-[node name="Evil Book" type="RigidBody2D"]
+[node name="Electrical" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_roy46")
+texture = ExtResource("1_jxtcu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8.5, 21.5)
+position = Vector2(7.5, 1.5)
 shape = SubResource("RectangleShape2D_fpfvw")

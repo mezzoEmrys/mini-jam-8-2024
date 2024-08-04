@@ -9,6 +9,7 @@ size = Vector2(128, 53)
 size = Vector2(172, 213)
 
 [node name="Spice Bottle Empty" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_licwg")

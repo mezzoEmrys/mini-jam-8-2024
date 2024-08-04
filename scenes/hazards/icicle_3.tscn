@@ -8,6 +8,7 @@
 size = Vector2(54, 349)
 
 [node name="Icicle3" type="Node2D"]
+position = Vector2(2, 136)
 script = ExtResource("1_snayh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

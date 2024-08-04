@@ -6,6 +6,7 @@
 size = Vector2(358, 381)
 
 [node name="Oven" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_l8s6s")

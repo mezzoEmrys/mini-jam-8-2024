@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 @export var delay : float = 3
 var step_timer : float = 0
@@ -6,6 +6,8 @@ var step_timer : float = 0
 
 func drop_icicle():
 	var child = icicle.instantiate()
+	child.position = position
+	child.scale = scale
 	get_parent().add_child(child)
 
 func _process(delta):

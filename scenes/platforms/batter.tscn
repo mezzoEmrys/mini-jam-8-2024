@@ -6,6 +6,7 @@
 size = Vector2(282, 349)
 
 [node name="Batter" type="RigidBody2D"]
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_8i1kj")
