@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bqraa6qnndy7o" path="res://sprites/rooms/Electric Background.png" id="1_1ao5c"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_7sxvg"]
-[ext_resource type="Texture2D" uid="uid://d1gctci571rqx" path="res://sprites/rooms/Freezer Foreground.png" id="3_lg4nx"]
+[ext_resource type="Texture2D" uid="uid://bu8howskrtda0" path="res://sprites/rooms/Electric Foreground.png" id="3_8fgbh"]
 [ext_resource type="PackedScene" uid="uid://61jiqhynx030" path="res://scenes/item_scenes/lemon.tscn" id="4_nku2b"]
 [ext_resource type="PackedScene" uid="uid://du7fvvlu3aya1" path="res://scenes/platforms/batter.tscn" id="5_b1enw"]
 [ext_resource type="PackedScene" uid="uid://bhst8m6e8ae76" path="res://scenes/platforms/lemon.tscn" id="6_ld74e"]
@@ -86,7 +86,7 @@ shape = SubResource("RectangleShape2D_w6480")
 visibility_layer = 2
 z_index = 5
 position = Vector2(1280, 719)
-texture = ExtResource("3_lg4nx")
+texture = ExtResource("3_8fgbh")
 
 [node name="lemon" parent="." instance=ExtResource("4_nku2b")]
 position = Vector2(580, 229)
