@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cc6u5qs2ewanb"]
+[gd_scene load_steps=14 format=3 uid="uid://de3hx2qn5h21q"]
 
 [ext_resource type="Texture2D" uid="uid://c5h1s7u35futh" path="res://sprites/rooms/Freezer Background PNG.png" id="1_06jh8"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_bp5kl"]
