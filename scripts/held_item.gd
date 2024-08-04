@@ -7,6 +7,9 @@ var amplitude = 50
 var item_held = false
 var item_id = ""
 @onready var animator = $AnimationPlayer
+
+func _ready():
+	hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta * frequency
@@ -33,4 +36,6 @@ func set_item(id):
 			animator.play("ginger")
 		"cicle":
 			animator.play("cicle")
+		"teacup":
+			animator.play("teacup")
 
