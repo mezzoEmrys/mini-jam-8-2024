@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://djkvkcfryi1at"]
+
+[ext_resource type="Script" path="res://scripts/falling_icicle.gd" id="1_snayh"]
+[ext_resource type="SpriteFrames" uid="uid://5lposdictt8h" path="res://sprites/hazards_animation/icicle/Icicle_3/icicle_3.tres" id="2_g0d1t"]
+[ext_resource type="Script" path="res://scripts/hazard.gd" id="3_jel3h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopcd"]
+size = Vector2(54, 349)
+
+[node name="Icicle3" type="Node2D"]
+script = ExtResource("1_snayh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6, -67)
+sprite_frames = ExtResource("2_g0d1t")
+
+[node name="Hazard" type="Area2D" parent="."]
+script = ExtResource("3_jel3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
+position = Vector2(-11, -51)
+shape = SubResource("RectangleShape2D_iopcd")
