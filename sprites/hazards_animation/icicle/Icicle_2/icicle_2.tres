@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bcry6vi7jg3lq"]
 
-[ext_resource type="Texture2D" uid="uid://br6to785jc3xk" path="res://sprites/hazards_animation/icicle/Icicle_2/falling_icicle_B/falling_icicle_b_break.png" id="1_k14xg"]
+[ext_resource type="Texture2D" path="res://sprites/hazards_animation/icicle/Icicle_2/falling_icicle_B/falling_icicle_b_break.png" id="1_k14xg"]
 [ext_resource type="Texture2D" uid="uid://bl3gxjnglkv04" path="res://sprites/hazards_animation/icicle/Icicle_2/falling_icicle_B/falling_icicle_b_1.png" id="1_l7ef3"]
 [ext_resource type="Texture2D" uid="uid://c0x74kbw8r5pw" path="res://sprites/hazards_animation/icicle/Icicle_2/falling_icicle_B/falling_icicle_b_2.png" id="2_yauon"]
 [ext_resource type="Texture2D" uid="uid://bdu0hul3f0y08" path="res://sprites/hazards_animation/icicle/Icicle_2/falling_icicle_B/falling_icicle_b_3.png" id="3_1w1j3"]
