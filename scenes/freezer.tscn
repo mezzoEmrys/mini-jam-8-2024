@@ -110,7 +110,7 @@ rotation = 0.319513
 position = Vector2(857, 1136)
 rotation = -0.145763
 
-[node name="pepper" parent="." instance=ExtResource("8_ui0sh")]
+[node name="ice" parent="." instance=ExtResource("8_ui0sh")]
 position = Vector2(190, 821)
 
 [node name="Icicle3" parent="." instance=ExtResource("8_s21a6")]
