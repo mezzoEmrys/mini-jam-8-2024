@@ -12,6 +12,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_jumping : bool = false
 var jump_timer : float = 0
 var coyote_timer : float = 0
+var was_airborne : bool = false
+var hitstun : bool = false
 
 @onready var item_sprite = $held_item
 @onready var item_held = false
@@ -30,7 +32,9 @@ func finish_charge():
 	#connect("item_pickup", self, "")
 
 func _physics_process(delta):
+	if hitstun : return
 	# Add the gravity.
+	var is_airborne = false
 	if not is_jumping:
 		if not is_on_floor() :
 			velocity.y += gravity * delta
@@ -66,18 +70,33 @@ func _physics_process(delta):
 	if direction != 0:
 		sprite_2d.flip_h = direction < 0
 	move_and_slide()
+	
+	if is_on_floor() :
+		is_airborne = false
+	else :
+		is_airborne = true
 
 	if is_jumping :
 		anim_player.play("jumping")
 	elif is_on_floor() :
-		if velocity.x == 0 :
+		if was_airborne != is_airborne :
+			anim_player.play("landing")
+		elif velocity.x == 0 :
 			anim_player.play("idle")
 		else :
 			anim_player.play("walking")
 	elif not is_jumping : 
 		anim_player.play("falling")
+		
+	was_airborne = is_airborne
 
 func respawn():
-	position = checkpoint;
+	hitstun = true
+	anim_player.play("injured")
+
+func animate_return():
+	position = checkpoint
+	hitstun = false
+	
 func has_item():
 	return item_held

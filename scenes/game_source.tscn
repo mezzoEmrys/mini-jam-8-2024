@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://sih5f858n0uv" path="res://sprites/hazards_animation/fire/fire_medium/6.png" id="13_5cv0n"]
 [ext_resource type="Texture2D" uid="uid://dh8wribcblxe7" path="res://sprites/hazards_animation/fire/fire_medium/7.png" id="14_3yrhv"]
 [ext_resource type="Texture2D" uid="uid://c20tqo15khwny" path="res://sprites/hazards_animation/fire/fire_medium/8.png" id="15_0xpeo"]
-[ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="17_ecfij"]
+[ext_resource type="PackedScene" path="res://scenes/hazards/ghost.tscn" id="17_ecfij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
 size = Vector2(760.25, 87.5)
