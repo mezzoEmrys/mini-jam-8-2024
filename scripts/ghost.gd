@@ -1,14 +1,24 @@
 extends Area2D
 
 @onready var anim = $AnimationPlayer
+@onready var spr = $AnimatedSprite2D
 var is_chasing : bool = false
 var is_awake : bool = false
+var is_flying : bool = false
+@export var speed : float = 600
 
 @onready var gorp = $"../Gorp"
+
+func start_flying():
+	is_flying = true
+	
+func end_flying():
+	is_flying = false
 
 func do_hide():
 	anim.play("hide")
 	is_awake = false
+	end_flying()
 	
 func do_wake():
 	anim.play("wake")
@@ -20,6 +30,31 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if gorp.direction > (gorp.position.x - position.x):
-		print("facing ghost")
-	pass
+	var facing = 1
+	if (gorp.sprite_2d.flip_h):
+		facing = -1
+
+	if (gorp.position.x > position.x):
+		spr.flip_h = true
+	else:
+		spr.flip_h = false
+	
+	if (facing != ((gorp.position.x - position.x)/(abs(gorp.position.x - position.x)))):
+		if is_awake:
+			do_hide()
+	else:
+		if not is_awake:
+			do_wake()
+	if is_flying:
+		var gorp_pos = gorp.position
+		var target_pos = (gorp_pos - position).normalized()
+		#position += (position - gorp.position)
+		if position.distance_to(gorp_pos) > 1:
+			position += (position * target_pos).normalized()
+
+func _on_body_entered(body):
+	if(body.name == "Gorp"):
+		gorp.respawn()
+	
+
+

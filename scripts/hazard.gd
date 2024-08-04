@@ -7,7 +7,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
@@ -15,4 +15,3 @@ func _on_body_entered(body):
 	if(body.name == "Gorp"):
 		var gorp = get_node("/root/GameSource/Gorp/")
 		gorp.respawn()
-	pass # Replace with function body.
