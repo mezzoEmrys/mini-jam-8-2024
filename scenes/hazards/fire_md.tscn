@@ -11,6 +11,7 @@ size = Vector2(1000, 350)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -504)
 sprite_frames = ExtResource("1_yhhad")
+frame_progress = 0.714471
 
 [node name="Hazard" type="Area2D" parent="."]
 script = ExtResource("2_b6vd7")
@@ -18,3 +19,5 @@ script = ExtResource("2_b6vd7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
 position = Vector2(-2, -175)
 shape = SubResource("RectangleShape2D_pxb6w")
+
+[connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]

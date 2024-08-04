@@ -18,3 +18,5 @@ script = ExtResource("2_udfdx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
 position = Vector2(-2, -132)
 shape = SubResource("RectangleShape2D_pxb6w")
+
+[connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]

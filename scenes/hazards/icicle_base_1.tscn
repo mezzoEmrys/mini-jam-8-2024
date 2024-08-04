@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce3imkviboe7b"]
+[gd_scene load_steps=6 format=3 uid="uid://ce3imkviboe7b"]
 
 [ext_resource type="Script" path="res://scripts/icicle_base.gd" id="1_achkd"]
 [ext_resource type="PackedScene" uid="uid://evy24marsbh5" path="res://scenes/hazards/icicle_1.tscn" id="2_2dtmd"]
 [ext_resource type="Texture2D" uid="uid://btnbaeljiawpa" path="res://sprites/hazards_animation/icicle/Icicle_1/icicle_1_base.png" id="2_407mq"]
+[ext_resource type="Texture2D" uid="uid://bp4t6666mih5g" path="res://sprites/gorp sprite.png" id="4_2d44a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gdekq"]
 
 [node name="Icicle1" type="Node2D"]
 script = ExtResource("1_achkd")
@@ -12,3 +15,16 @@ icicle = ExtResource("2_2dtmd")
 z_index = 5
 position = Vector2(-2, 249)
 texture = ExtResource("2_407mq")
+<<<<<<< Updated upstream
+=======
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, 41.585)
+emitting = false
+amount = 15
+process_material = SubResource("ShaderMaterial_gdekq")
+texture = ExtResource("4_2d44a")
+lifetime = 1.5
+explosiveness = 0.29
+randomness = 0.56
+>>>>>>> Stashed changes

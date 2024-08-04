@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqa04felgq2om"]
+[gd_scene load_steps=12 format=3 uid="uid://3t5006oe1dbi"]
 
 [ext_resource type="Texture2D" uid="uid://cqqwge0hc3jgb" path="res://sprites/test/test_tutorialgarden1.png" id="1_wwunv"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_r4l2d"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://jneln3x2qhgk" path="res://scenes/platforms/box.tscn" id="6_hpahd"]
 [ext_resource type="PackedScene" uid="uid://bjhtj8d53aic8" path="res://scenes/platforms/freezer.tscn" id="7_kqqa4"]
 [ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="8_qbab3"]
+[ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="9_36kx1"]
+[ext_resource type="PackedScene" uid="uid://d3f3wp7i4n8jt" path="res://scenes/hazards/fire_md.tscn" id="10_xhnn6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
 size = Vector2(2565.5, 141)
@@ -31,6 +33,7 @@ limit_top = 0
 limit_right = 2560
 limit_bottom = 1400
 limit_smoothed = true
+position_smoothing_enabled = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 freeze = true
@@ -62,3 +65,12 @@ position = Vector2(951, 206)
 [node name="Icicle1" parent="." instance=ExtResource("8_qbab3")]
 position = Vector2(863, 378)
 scale = Vector2(0.370336, 0.333503)
+
+[node name="Checkpoint" parent="." instance=ExtResource("9_36kx1")]
+position = Vector2(478, 647)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("9_36kx1")]
+position = Vector2(1719, 963)
+
+[node name="FireMd" parent="." instance=ExtResource("10_xhnn6")]
+position = Vector2(716, 1309)

@@ -96,6 +96,7 @@ func respawn():
 
 func animate_return():
 	position = checkpoint
+	velocity = Vector2.ZERO
 	hitstun = false
 	
 func has_item():
