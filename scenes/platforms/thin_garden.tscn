@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cluo4af3nnnyx"]
+
+[ext_resource type="Texture2D" uid="uid://cpv2udr3nuvyi" path="res://sprites/platforms/thinplatform_platform.png" id="1_8rjtb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvw"]
+size = Vector2(445, 55)
+
+[node name="Thin" type="RigidBody2D"]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -49.5)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_fpfvw")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+modulate = Color(0.72549, 0.443137, 0.231373, 1)
+position = Vector2(-1.5, 49.5)
+texture = ExtResource("1_8rjtb")
