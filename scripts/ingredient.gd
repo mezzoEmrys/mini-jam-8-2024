@@ -23,7 +23,6 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	print(body.name)
 	if(body.name == "Gorp"):
 		var held_item = get_node("/root/GameSource/Gorp/held_item")
 		if not held_item.item_held:

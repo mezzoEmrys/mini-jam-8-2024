@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://xcwtrlt0bjol"]
+[gd_scene load_steps=24 format=3 uid="uid://xcwtrlt0bjol"]
 
 [ext_resource type="Texture2D" uid="uid://bp4t6666mih5g" path="res://sprites/gorp sprite.png" id="1_ab5ci"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_qaw0b"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cew3lwh3xlxk" path="res://scenes/cauldron.tscn" id="7_1j74d"]
 [ext_resource type="PackedScene" uid="uid://c17ypfkmkit6" path="res://scenes/item_scenes/pepper.tscn" id="7_yybtt"]
 [ext_resource type="Texture2D" uid="uid://bvfaeskkasoiu" path="res://sprites/hazards_animation/fire/fire_medium/1.png" id="8_khvsj"]
+[ext_resource type="Script" path="res://scenes/hazard.gd" id="8_ulvhn"]
 [ext_resource type="Texture2D" uid="uid://bmdomabfsk1me" path="res://sprites/hazards_animation/fire/fire_medium/2.png" id="9_n2yvs"]
 [ext_resource type="Texture2D" uid="uid://8tj0jyx205d6" path="res://sprites/hazards_animation/fire/fire_medium/3.png" id="10_7jxwd"]
 [ext_resource type="Texture2D" uid="uid://3jk7r10f0sy7" path="res://sprites/hazards_animation/fire/fire_medium/4.png" id="11_wo6rl"]
@@ -15,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://sih5f858n0uv" path="res://sprites/hazards_animation/fire/fire_medium/6.png" id="13_5cv0n"]
 [ext_resource type="Texture2D" uid="uid://dh8wribcblxe7" path="res://sprites/hazards_animation/fire/fire_medium/7.png" id="14_3yrhv"]
 [ext_resource type="Texture2D" uid="uid://c20tqo15khwny" path="res://sprites/hazards_animation/fire/fire_medium/8.png" id="15_0xpeo"]
+[ext_resource type="Script" path="res://scenes/ghost.gd" id="17_4p5l5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
 size = Vector2(760.25, 87.5)
@@ -56,6 +58,7 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_cflt0"]
 resource_name = "default"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -63,10 +66,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [&"default"]
+"values": []
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cd6if"]
@@ -130,6 +133,7 @@ position = Vector2(742, 471)
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(84, 546)
 scale = Vector2(0.285, 0.285)
+script = ExtResource("8_ulvhn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 position = Vector2(0, -505.7)
@@ -146,4 +150,8 @@ rotation = -3.14159
 scale = Vector2(12.631, 0.251)
 shape = SubResource("RectangleShape2D_63r76")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+script = ExtResource("17_4p5l5")
+
 [connection signal="body_entered" from="catmint" to="catmint" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

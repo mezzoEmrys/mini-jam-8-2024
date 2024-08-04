@@ -20,6 +20,7 @@ var coyote_timer : float = 0
 var is_charging : bool = false
 @onready var sprite_2d = $AnimatedSprite2D
 @onready var anim_player = $AnimationPlayer
+var checkpoint = Vector2(250, 250)
 
 func finish_charge():
 	is_charging = false
@@ -75,6 +76,7 @@ func _physics_process(delta):
 	elif not is_jumping : 
 		anim_player.play("falling")
 
-
+func respawn():
+	position = checkpoint;
 func has_item():
 	return item_held
