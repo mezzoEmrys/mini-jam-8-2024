@@ -21,6 +21,7 @@ var is_charging : bool = false
 @onready var sprite_2d = $AnimatedSprite2D
 @onready var anim_player = $AnimationPlayer
 var checkpoint = Vector2(250, 250)
+var direction = 1
 
 func finish_charge():
 	is_charging = false
@@ -54,7 +55,7 @@ func _physics_process(delta):
 			
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("move_left", "move_right")
+	direction = Input.get_axis("move_left", "move_right")
 
 	if direction != 0 and not is_charging:
 		velocity.x = direction * speed

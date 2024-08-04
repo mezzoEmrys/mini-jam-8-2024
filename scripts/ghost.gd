@@ -4,6 +4,8 @@ extends Area2D
 var is_chasing : bool = false
 var is_awake : bool = false
 
+@onready var gorp = $"../Gorp"
+
 func do_hide():
 	anim.play("hide")
 	is_awake = false
@@ -18,4 +20,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if gorp.direction > (gorp.position.x - position.x):
+		print("facing ghost")
 	pass

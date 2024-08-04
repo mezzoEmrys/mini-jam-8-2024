@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cew3lwh3xlxk" path="res://scenes/cauldron.tscn" id="7_1j74d"]
 [ext_resource type="PackedScene" uid="uid://c17ypfkmkit6" path="res://scenes/item_scenes/pepper.tscn" id="7_yybtt"]
 [ext_resource type="Texture2D" uid="uid://bvfaeskkasoiu" path="res://sprites/hazards_animation/fire/fire_medium/1.png" id="8_khvsj"]
-[ext_resource type="Script" path="res://scenes/hazard.gd" id="8_ulvhn"]
+[ext_resource type="Script" path="res://scripts/hazard.gd" id="8_ulvhn"]
 [ext_resource type="Texture2D" uid="uid://bmdomabfsk1me" path="res://sprites/hazards_animation/fire/fire_medium/2.png" id="9_n2yvs"]
 [ext_resource type="Texture2D" uid="uid://8tj0jyx205d6" path="res://sprites/hazards_animation/fire/fire_medium/3.png" id="10_7jxwd"]
 [ext_resource type="Texture2D" uid="uid://3jk7r10f0sy7" path="res://sprites/hazards_animation/fire/fire_medium/4.png" id="11_wo6rl"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://sih5f858n0uv" path="res://sprites/hazards_animation/fire/fire_medium/6.png" id="13_5cv0n"]
 [ext_resource type="Texture2D" uid="uid://dh8wribcblxe7" path="res://sprites/hazards_animation/fire/fire_medium/7.png" id="14_3yrhv"]
 [ext_resource type="Texture2D" uid="uid://c20tqo15khwny" path="res://sprites/hazards_animation/fire/fire_medium/8.png" id="15_0xpeo"]
-[ext_resource type="Script" path="res://scenes/ghost.gd" id="17_4p5l5"]
+[ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/ghost.tscn" id="17_ecfij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u18qv"]
 size = Vector2(760.25, 87.5)
@@ -150,8 +150,8 @@ rotation = -3.14159
 scale = Vector2(12.631, 0.251)
 shape = SubResource("RectangleShape2D_63r76")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-script = ExtResource("17_4p5l5")
+[node name="Ghost" parent="." instance=ExtResource("17_ecfij")]
+position = Vector2(925, 129)
 
 [connection signal="body_entered" from="catmint" to="catmint" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
