@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://vufkou7we5tj"]
+
+[ext_resource type="Texture2D" uid="uid://cohbe3kt6tyq" path="res://sprites/rooms/Fire Background.png" id="1_y83vv"]
+[ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_wqr64"]
+[ext_resource type="Texture2D" uid="uid://ix7028bo65b6" path="res://sprites/platforms/cabinet_platform.png" id="3_gk83g"]
+[ext_resource type="Texture2D" uid="uid://cmxhcuhd4ltnh" path="res://sprites/platforms/spice_bottle_a_platform.png" id="4_yl68t"]
+[ext_resource type="Texture2D" uid="uid://brio2pt0r01j" path="res://sprites/platforms/heavy_kitchen_platform.png" id="5_hn6pk"]
+[ext_resource type="Texture2D" uid="uid://ba5bsuqqy10io" path="res://sprites/platforms/spice_bottle_b_platform.png" id="6_o6vji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fa0eg"]
+size = Vector2(2565.5, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m74vc"]
+size = Vector2(7.71023, 115.488)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpo8e"]
+size = Vector2(7.71023, 115.488)
+
+[node name="fire" type="Node2D"]
+
+[node name="FireBackground" type="Sprite2D" parent="."]
+position = Vector2(1279, 720)
+texture = ExtResource("1_y83vv")
+
+[node name="Gorp" parent="." instance=ExtResource("2_wqr64")]
+position = Vector2(1883, 1236)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="Gorp"]
+position = Vector2(-90, 90)
+scale = Vector2(5, 5)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 1400
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Ground" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1283.25, 1374.5)
+shape = SubResource("RectangleShape2D_fa0eg")
+
+[node name="Wall" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(43.825, 711.325)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_m74vc")
+
+[node name="Wall2" type="RigidBody2D" parent="Wall"]
+position = Vector2(2206, -34)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Wall2"]
+position = Vector2(260, 728)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_kpo8e")
+
+[node name="CabinetPlatform" type="Sprite2D" parent="."]
+position = Vector2(313, 1097)
+texture = ExtResource("3_gk83g")
+
+[node name="CabinetPlatform2" type="Sprite2D" parent="."]
+position = Vector2(309, 718)
+texture = ExtResource("3_gk83g")
+
+[node name="SpiceBottleAPlatform" type="Sprite2D" parent="."]
+position = Vector2(679, 759)
+scale = Vector2(0.5515, 0.57534)
+texture = ExtResource("4_yl68t")
+
+[node name="HeavyKitchenPlatform" type="Sprite2D" parent="."]
+position = Vector2(1116, 943)
+texture = ExtResource("5_hn6pk")
+
+[node name="SpiceBottleBPlatform" type="Sprite2D" parent="."]
+position = Vector2(1556, 774)
+scale = Vector2(0.384, 0.384)
+texture = ExtResource("6_o6vji")
