@@ -35,6 +35,8 @@ func finish_charge():
 	#connect("item_pickup", self, "")
 
 func _physics_process(delta):
+	
+	
 	if hitstun : return
 	# Add the gravity.
 	var is_airborne = false
