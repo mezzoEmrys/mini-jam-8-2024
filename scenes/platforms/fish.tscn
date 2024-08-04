@@ -8,9 +8,11 @@ size = Vector2(448, 235)
 [node name="Fish" type="RigidBody2D"]
 freeze = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_2vyh8")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 52.5)
+scale = Vector2(0.47, 0.47)
 shape = SubResource("RectangleShape2D_fpfvw")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(6, -52.5)
+texture = ExtResource("1_2vyh8")

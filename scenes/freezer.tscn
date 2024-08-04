@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://de3hx2qn5h21q"]
+
+[ext_resource type="Texture2D" uid="uid://c5h1s7u35futh" path="res://sprites/rooms/Freezer Background PNG.png" id="1_06jh8"]
+[ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_bp5kl"]
+[ext_resource type="PackedScene" uid="uid://cvl1ieueno46m" path="res://scenes/platforms/freezer_shelf.tscn" id="5_cvm28"]
+[ext_resource type="PackedScene" uid="uid://cvu6veqjkbqrd" path="res://scenes/platforms/heavy.tscn" id="6_qpfdd"]
+[ext_resource type="PackedScene" uid="uid://bjhtj8d53aic8" path="res://scenes/platforms/freezer.tscn" id="7_6be0d"]
+[ext_resource type="PackedScene" uid="uid://br3106v103abs" path="res://scenes/platforms/fish.tscn" id="7_helx7"]
+[ext_resource type="Texture2D" uid="uid://d1gctci571rqx" path="res://sprites/rooms/Freezer Foreground.png" id="12_cacwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
+size = Vector2(2565.5, 141)
+
+[node name="TestScene" type="Node2D"]
+
+[node name="Backgroud" type="Sprite2D" parent="."]
+position = Vector2(1280, 719)
+texture = ExtResource("1_06jh8")
+
+[node name="Gorp" parent="." instance=ExtResource("2_bp5kl")]
+position = Vector2(1715, 930)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="Gorp"]
+position = Vector2(-90, 90)
+scale = Vector2(5, 5)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 1400
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Ground" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1283.25, 1374.5)
+shape = SubResource("RectangleShape2D_sa37l")
+
+[node name="Foreground" type="Sprite2D" parent="."]
+visibility_layer = 2
+z_index = 5
+position = Vector2(1280, 719)
+texture = ExtResource("12_cacwc")
+
+[node name="Freezer" parent="." instance=ExtResource("7_6be0d")]
+position = Vector2(1211, 1189)
+
+[node name="Freezer2" parent="." instance=ExtResource("7_6be0d")]
+position = Vector2(1394, 1014)
+
+[node name="Freezer3" parent="." instance=ExtResource("7_6be0d")]
+position = Vector2(1522, 846)
+
+[node name="Freezer Shelf" parent="." instance=ExtResource("5_cvm28")]
+position = Vector2(1891, 1188)
+
+[node name="Freezer Shelf2" parent="." instance=ExtResource("5_cvm28")]
+position = Vector2(1803, 947)
+
+[node name="Freezer Shelf3" parent="." instance=ExtResource("5_cvm28")]
+position = Vector2(1973, 720)
+
+[node name="Heavy" parent="." instance=ExtResource("6_qpfdd")]
+position = Vector2(1612, 670)
+
+[node name="Heavy2" parent="." instance=ExtResource("6_qpfdd")]
+position = Vector2(1240, 700)
+
+[node name="Heavy3" parent="." instance=ExtResource("6_qpfdd")]
+position = Vector2(1030, 700)
+
+[node name="Heavy4" parent="." instance=ExtResource("6_qpfdd")]
+position = Vector2(821, 700)
+
+[node name="Heavy5" parent="." instance=ExtResource("6_qpfdd")]
+position = Vector2(192, 934)
+
+[node name="Fish" parent="." instance=ExtResource("7_helx7")]
+position = Vector2(514, 960)
+rotation = 0.319513
+
+[node name="Fish2" parent="." instance=ExtResource("7_helx7")]
+position = Vector2(872, 1068)
+rotation = -0.145763

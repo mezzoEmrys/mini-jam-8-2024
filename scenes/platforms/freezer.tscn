@@ -8,9 +8,11 @@ size = Vector2(442, 346)
 [node name="Freezer" type="RigidBody2D"]
 freeze = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_bshdq")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, 29)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_fpfvw")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-7, -29)
+texture = ExtResource("1_bshdq")
