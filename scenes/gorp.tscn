@@ -140,9 +140,8 @@ tracks/2/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_xfkf8"]
-resource_name = "walking"
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_vxbri"]
+resource_name = "landing"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -153,7 +152,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"walk"]
+"values": [&"land"]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -170,8 +169,9 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_vxbri"]
-resource_name = "landing"
+[sub_resource type="Animation" id="Animation_xfkf8"]
+resource_name = "walking"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -182,7 +182,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"land"]
+"values": [&"walk"]
 }
 tracks/1/type = "method"
 tracks/1/imported = false

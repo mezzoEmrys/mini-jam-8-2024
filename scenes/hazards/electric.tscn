@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://1na86hoaag8n"]
+
+[ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/teacup.png" id="1_5lblh"]
+[ext_resource type="Script" path="res://scripts/electric.gd" id="1_7lhln"]
+[ext_resource type="Script" path="res://scripts/hazard.gd" id="1_cn5x8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymx56"]
+size = Vector2(41, 42)
+
+[node name="Electric" type="PathFollow2D"]
+script = ExtResource("1_7lhln")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.301497, 0.279178)
+texture = ExtResource("1_5lblh")
+
+[node name="Hazard" type="Area2D" parent="."]
+script = ExtResource("1_cn5x8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
+shape = SubResource("RectangleShape2D_ymx56")
+
+[connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]

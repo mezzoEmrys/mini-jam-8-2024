@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3t5006oe1dbi"]
+[gd_scene load_steps=14 format=3 uid="uid://3t5006oe1dbi"]
 
 [ext_resource type="Texture2D" uid="uid://cqqwge0hc3jgb" path="res://sprites/test/test_tutorialgarden1.png" id="1_wwunv"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_r4l2d"]
@@ -10,9 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="8_qbab3"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="9_36kx1"]
 [ext_resource type="PackedScene" uid="uid://d3f3wp7i4n8jt" path="res://scenes/hazards/fire_md.tscn" id="10_xhnn6"]
+[ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="11_eeoyx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
 size = Vector2(2565.5, 141)
+
+[sub_resource type="Curve2D" id="Curve2D_jgs5h"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 292, -11, 0, 0, 0, 0, 289, 327, 0, 0, 0, 0, -71, 325, 0, 0, 0, 0, -76, -10, 0, 0, 0, 0, 292, -11)
+}
+point_count = 5
 
 [node name="TestScene" type="Node2D"]
 
@@ -21,7 +28,7 @@ position = Vector2(1280, 719)
 texture = ExtResource("1_wwunv")
 
 [node name="Gorp" parent="." instance=ExtResource("2_r4l2d")]
-position = Vector2(1046, 731)
+position = Vector2(1717, 944)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -43,8 +50,8 @@ position = Vector2(1283.25, 1374.5)
 shape = SubResource("RectangleShape2D_sa37l")
 
 [node name="Mushroom" parent="." instance=ExtResource("3_0ca63")]
-position = Vector2(2003, 1203)
-scale = Vector2(0.486233, 0.512013)
+position = Vector2(2010, 1187)
+scale = Vector2(0.632959, 0.666518)
 
 [node name="Thin" parent="." instance=ExtResource("4_hmbgb")]
 position = Vector2(1532, 1071)
@@ -66,11 +73,17 @@ position = Vector2(951, 206)
 position = Vector2(863, 378)
 scale = Vector2(0.370336, 0.333503)
 
-[node name="Checkpoint" parent="." instance=ExtResource("9_36kx1")]
-position = Vector2(478, 647)
-
 [node name="Checkpoint2" parent="." instance=ExtResource("9_36kx1")]
 position = Vector2(1719, 963)
 
 [node name="FireMd" parent="." instance=ExtResource("10_xhnn6")]
 position = Vector2(716, 1309)
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(287, 663)
+curve = SubResource("Curve2D_jgs5h")
+
+[node name="Electric" parent="Path2D" instance=ExtResource("11_eeoyx")]
+position = Vector2(292, -11)
+rotation = 1.57967
+rotates = false

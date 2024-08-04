@@ -14,6 +14,7 @@ var jump_timer : float = 0
 var coyote_timer : float = 0
 var was_airborne : bool = false
 var hitstun : bool = false
+var airtime : float = 0
 
 @onready var item_sprite = $held_item
 @onready var item_held = false
@@ -37,7 +38,8 @@ func _physics_process(delta):
 	var is_airborne = false
 	if not is_jumping:
 		if not is_on_floor() :
-			velocity.y += gravity * delta
+			airtime += delta
+			velocity.y += gravity * delta * (1+airtime)
 			coyote_timer += delta
 		elif is_on_floor():
 			coyote_timer = 0
@@ -56,6 +58,8 @@ func _physics_process(delta):
 			jump_timer += delta
 		else :
 			is_jumping = false
+			airtime = 0
+			
 			
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
