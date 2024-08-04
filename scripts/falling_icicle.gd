@@ -36,5 +36,5 @@ func _on_area_2d_body_entered(body):
 	if (body.name == "Gorp") or (body.name == "icicle_1")or (body.name == "icicle_2")or (body.name == "icicle_3"):
 		pass
 	else:
-		destroy_icicle()
+		call_deferred("destroy_icicle")
 
