@@ -5,6 +5,8 @@ var current_windup = 0
 @export var cooldown_time : float = 10
 var current_cooldown = 0
 
+@onready var hitarea = $Area2D
+
 enum paw_state {COOLDOWN, WINDUP, ATTACK}
 var ps = paw_state.COOLDOWN
 

@@ -1,6 +1,98 @@
-[gd_scene load_steps=3 format=3 uid="uid://rrjw54hw3c3p"]
+[gd_scene load_steps=24 format=3 uid="uid://rrjw54hw3c3p"]
 
 [ext_resource type="Script" path="res://scripts/paw.gd" id="1_ubdja"]
+[ext_resource type="Texture2D" uid="uid://cpwd55bndk75w" path="res://sprites/hazards_animation/catvine/vine/1.png" id="2_4ig2p"]
+[ext_resource type="Texture2D" uid="uid://ex6mo21nv6n5" path="res://sprites/hazards_animation/catvine/vine/2.png" id="3_usswf"]
+[ext_resource type="Texture2D" uid="uid://dlrikf6fqvgbi" path="res://sprites/hazards_animation/catvine/vine/3.png" id="4_l6d5i"]
+[ext_resource type="Texture2D" uid="uid://bqchk0qfiiwxu" path="res://sprites/hazards_animation/catvine/vine/4.png" id="5_mloql"]
+[ext_resource type="Texture2D" uid="uid://i07p7cqdfnnp" path="res://sprites/hazards_animation/catvine/vine/5.png" id="6_h13fv"]
+[ext_resource type="Texture2D" uid="uid://xedpgrcx7h5v" path="res://sprites/hazards_animation/catvine/paw/1.png" id="7_8xm62"]
+[ext_resource type="Texture2D" uid="uid://cscm5vqeey3fs" path="res://sprites/hazards_animation/catvine/paw/2.png" id="8_opl75"]
+[ext_resource type="Texture2D" uid="uid://bg6d8i5f4101p" path="res://sprites/hazards_animation/catvine/paw/3.png" id="9_guj85"]
+[ext_resource type="Texture2D" uid="uid://c1ve8otvo64wl" path="res://sprites/hazards_animation/catvine/paw/4.png" id="10_4vjg6"]
+[ext_resource type="Texture2D" uid="uid://biyb0rqea4jp3" path="res://sprites/hazards_animation/catvine/paw/5.png" id="11_b3233"]
+[ext_resource type="Texture2D" uid="uid://bbpwu6tp5ejwi" path="res://sprites/hazards_animation/catvine/paw/6.png" id="12_08lov"]
+[ext_resource type="Texture2D" uid="uid://b3luare37mmdq" path="res://sprites/hazards_animation/catvine/paw/7.png" id="13_w1dap"]
+[ext_resource type="Texture2D" uid="uid://dlifo0bc217px" path="res://sprites/hazards_animation/catvine/paw/8.png" id="14_afh2o"]
+[ext_resource type="Texture2D" uid="uid://dwpepd55u3sme" path="res://sprites/hazards_animation/catvine/paw/9.png" id="15_erw7q"]
+[ext_resource type="Texture2D" uid="uid://ul5rh4qvsecb" path="res://sprites/hazards_animation/catvine/paw/10.png" id="16_mceqy"]
+[ext_resource type="Texture2D" uid="uid://dlq8g73fuack1" path="res://sprites/hazards_animation/catvine/paw/11.png" id="17_ltl7u"]
+[ext_resource type="Texture2D" uid="uid://lno72ksgx1xe" path="res://sprites/hazards_animation/catvine/paw/12.png" id="18_rd24k"]
+[ext_resource type="Texture2D" uid="uid://b6400l32xe8px" path="res://sprites/hazards_animation/catvine/paw/13.png" id="19_4gwb2"]
+[ext_resource type="Texture2D" uid="uid://dd00fvn2naeyd" path="res://sprites/hazards_animation/catvine/paw/14.png" id="20_ik4ro"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjnee"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4ig2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_usswf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l6d5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mloql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h13fv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_okalu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8xm62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_opl75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_guj85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4vjg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b3233")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_08lov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w1dap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_afh2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_erw7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mceqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ltl7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rd24k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4gwb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ik4ro")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mptj8"]
 size = Vector2(64, 20)
@@ -8,7 +100,11 @@ size = Vector2(64, 20)
 [node name="Paw" type="Node2D"]
 script = ExtResource("1_ubdja")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Leaves" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xjnee")
+
+[node name="Paw" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_okalu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
