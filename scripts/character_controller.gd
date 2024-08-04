@@ -100,3 +100,6 @@ func animate_return():
 	
 func has_item():
 	return item_held
+	
+func set_checkpoint(body):
+	checkpoint = body.position
