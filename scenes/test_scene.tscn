@@ -19,7 +19,7 @@ position = Vector2(1280, 719)
 texture = ExtResource("1_wwunv")
 
 [node name="Gorp" parent="." instance=ExtResource("2_r4l2d")]
-position = Vector2(2274, 1239)
+position = Vector2(1046, 731)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
