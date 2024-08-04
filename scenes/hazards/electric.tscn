@@ -45,7 +45,7 @@ texture = ExtResource("1_5lblh")
 script = ExtResource("1_cn5x8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
-position = Vector2(-162, 0)
+position = Vector2(163.636, 0)
 shape = SubResource("RectangleShape2D_ymx56")
 
 [connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]

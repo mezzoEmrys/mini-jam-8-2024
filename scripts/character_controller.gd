@@ -94,7 +94,7 @@ func _physics_process(delta):
 			anim_player.play("idle")
 		else :
 			anim_player.play("walking")
-	elif not is_jumping : 
+	elif velocity.y > 0 : 
 		anim_player.play("falling")
 		
 	was_airborne = is_airborne
