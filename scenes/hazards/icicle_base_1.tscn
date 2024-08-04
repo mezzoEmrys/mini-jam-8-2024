@@ -12,16 +12,3 @@ icicle = ExtResource("2_2dtmd")
 z_index = 5
 position = Vector2(-2, 249)
 texture = ExtResource("2_407mq")
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(0, 41.585)
-amount = 15
-lifetime = 1.5
-randomness = 0.56
-emission_shape = 2
-emission_sphere_radius = 16.06
-spread = 107.02
-gravity = Vector2(0, 400)
-scale_amount_min = 17.65
-scale_amount_max = 20.25
-color = Color(0.717647, 0.87451, 0.976471, 1)

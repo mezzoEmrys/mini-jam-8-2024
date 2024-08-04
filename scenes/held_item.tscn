@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bgywax4t1ifyd"]
+[gd_scene load_steps=19 format=3 uid="uid://bgywax4t1ifyd"]
 
 [ext_resource type="Script" path="res://scripts/held_item.gd" id="1_v1t6r"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_ns88y"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b4nan1vsp3rjm" path="res://sprites/items/Hot Pepper.png" id="6_6gaeg"]
 [ext_resource type="Texture2D" uid="uid://nxu3ldtbu3pa" path="res://sprites/items/Lemon Battery.png" id="6_vfbjl"]
 [ext_resource type="Texture2D" uid="uid://eeoqyg4grk5g" path="res://sprites/items/Tea Leaf.png" id="7_whqcx"]
+[ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/teacup.png" id="8_gfa0r"]
 
 [sub_resource type="Animation" id="Animation_x4vb0"]
 resource_name = "catmint"
@@ -113,6 +114,21 @@ tracks/0/keys = {
 "values": [&"tea"]
 }
 
+[sub_resource type="Animation" id="Animation_ae7qi"]
+resource_name = "teacup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teacup"]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bi7ji"]
 _data = {
 "catmint": SubResource("Animation_x4vb0"),
@@ -121,7 +137,8 @@ _data = {
 "ice": SubResource("Animation_bmbo1"),
 "lemon": SubResource("Animation_oh8m6"),
 "pepper": SubResource("Animation_22qej"),
-"tea": SubResource("Animation_xcyga")
+"tea": SubResource("Animation_xcyga"),
+"teacup": SubResource("Animation_ae7qi")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x2jrq"]
@@ -178,6 +195,14 @@ animations = [{
 "loop": true,
 "name": &"tea",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gfa0r")
+}],
+"loop": true,
+"name": &"teacup",
+"speed": 5.0
 }]
 
 [node name="held_item" type="Node2D"]
@@ -196,3 +221,4 @@ libraries = {
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x2jrq")
+animation = &"catmint"
