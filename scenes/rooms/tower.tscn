@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://t2uar4o5y4rx"]
+[gd_scene load_steps=34 format=3 uid="uid://t2uar4o5y4rx"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="Script" path="res://scenes/rooms/tower.gd" id="1_x47ue"]
@@ -12,11 +12,18 @@
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="5_us1kf"]
 [ext_resource type="PackedScene" uid="uid://jneln3x2qhgk" path="res://scenes/platforms/box.tscn" id="8_2grjq"]
 [ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="9_gjhmm"]
-[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/hazards/paw.tscn" id="10_frgne"]
+[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/item_scenes/paw.tscn" id="10_frgne"]
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="11_530j3"]
 [ext_resource type="PackedScene" uid="uid://ywvkrxabicia" path="res://scenes/platforms/flower.tscn" id="15_18aq2"]
 [ext_resource type="PackedScene" uid="uid://djk4ueqrjq7ri" path="res://scenes/platforms/spice_bottle.tscn" id="16_bp04t"]
-[ext_resource type="PackedScene" path="res://scenes/platforms/thin_kitchen.tscn" id="17_mau2u"]
+[ext_resource type="PackedScene" uid="uid://cdcgjic7vrtej" path="res://scenes/platforms/thin_kitchen.tscn" id="17_mau2u"]
+[ext_resource type="Texture2D" uid="uid://cw01w8h6o6m1o" path="res://sprites/items/door_icon_alts/Tea Leaf icon.png" id="18_xt5s7"]
+[ext_resource type="Texture2D" uid="uid://2o6mjrxhr1oe" path="res://sprites/items/door_icon_alts/Hot Pepper icon.png" id="19_7v35w"]
+[ext_resource type="Texture2D" uid="uid://c0m7f1f8jwo6r" path="res://sprites/items/door_icon_alts/Tail-cicle-icon.png" id="20_fmc2f"]
+[ext_resource type="Texture2D" uid="uid://b412x0sdabswm" path="res://sprites/items/door_icon_alts/Lemon Battery icon.png" id="21_r61i0"]
+[ext_resource type="Texture2D" uid="uid://bfkx10x1rkkea" path="res://sprites/items/door_icon_alts/Catmint Berry icon.png" id="22_gndeq"]
+[ext_resource type="Texture2D" uid="uid://cqi1ybu05sgsf" path="res://sprites/items/door_icon_alts/Haunted Ginger icon.png" id="23_s2wx4"]
+[ext_resource type="Texture2D" uid="uid://dgk6pjwefmm0n" path="res://sprites/items/door_icon_alts/teacup icon.png" id="24_egvkf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
@@ -317,3 +324,38 @@ position = Vector2(1774, -204)
 
 [node name="Roof" type="Node2D" parent="Entry"]
 position = Vector2(1752, -4667)
+
+[node name="tea-icon" type="Sprite2D" parent="."]
+position = Vector2(340.75, -527.625)
+scale = Vector2(0.427083, 0.799793)
+texture = ExtResource("18_xt5s7")
+
+[node name="pepper-icon" type="Sprite2D" parent="."]
+position = Vector2(1864, -546)
+scale = Vector2(0.427, 0.8)
+texture = ExtResource("19_7v35w")
+
+[node name="ice-icon" type="Sprite2D" parent="."]
+position = Vector2(1852, -2063)
+scale = Vector2(0.427, 0.8)
+texture = ExtResource("20_fmc2f")
+
+[node name="lemon-icon" type="Sprite2D" parent="."]
+position = Vector2(342, -3586)
+scale = Vector2(0.427, 0.8)
+texture = ExtResource("21_r61i0")
+
+[node name="catmint-icon" type="Sprite2D" parent="."]
+position = Vector2(341, -2038)
+scale = Vector2(0.427, 0.8)
+texture = ExtResource("22_gndeq")
+
+[node name="ginger-icon" type="Sprite2D" parent="."]
+position = Vector2(1855, -3555)
+scale = Vector2(0.427, 0.8)
+texture = ExtResource("23_s2wx4")
+
+[node name="mug-icon" type="Sprite2D" parent="."]
+position = Vector2(1864, -5020)
+scale = Vector2(0.427, 0.8)
+texture = ExtResource("24_egvkf")

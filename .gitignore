@@ -1,3 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
 *.tmp
+scenes/.DS_Store
+.DS_Store
