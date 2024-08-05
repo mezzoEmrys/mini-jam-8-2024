@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0vuo1jmifnny"]
+[gd_scene load_steps=22 format=3 uid="uid://b0vuo1jmifnny"]
 
 [ext_resource type="Texture2D" uid="uid://d0vo2uul7hxm7" path="res://sprites/rooms/Greenhouse.png" id="1_bwij5"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_a7tiy"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://butuf0kik7ldm" path="res://sprites/rooms/Greenhouse Midground.png" id="12_e8agp"]
 [ext_resource type="Texture2D" uid="uid://cx5bemicid5pv" path="res://sprites/rooms/Greenhouse Foreground.png" id="13_w264y"]
 [ext_resource type="Texture2D" uid="uid://2hdkxkuh36np" path="res://sprites/rooms/Greenhouse Back.png" id="14_ovx58"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="15_77nlt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_425k3"]
 size = Vector2(2565.5, 141)
@@ -74,7 +75,7 @@ scale = Vector2(12.665, 12.665)
 shape = SubResource("RectangleShape2D_cvpna")
 
 [node name="Gorp" parent="." instance=ExtResource("2_a7tiy")]
-position = Vector2(2335, 1268)
+position = Vector2(2249, 1252)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -196,7 +197,7 @@ speed = 1.0
 position = Vector2(0, 30)
 
 [node name="Checkpoint" parent="." instance=ExtResource("11_oex6e")]
-position = Vector2(2335, 1268)
+position = Vector2(2247, 1261)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("11_oex6e")]
 position = Vector2(816, 1204)
@@ -218,3 +219,7 @@ texture = ExtResource("14_ovx58")
 
 [node name="Toy2" parent="." instance=ExtResource("4_roxjx")]
 position = Vector2(1854, 412)
+
+[node name="SceneChanger" parent="." instance=ExtResource("15_77nlt")]
+position = Vector2(2343, 1254)
+target_scene = "res://scenes/rooms/tower.tscn"

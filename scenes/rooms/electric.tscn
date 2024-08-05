@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cer7xu1jo4sry"]
+[gd_scene load_steps=20 format=3 uid="uid://cer7xu1jo4sry"]
 
 [ext_resource type="Texture2D" uid="uid://bqraa6qnndy7o" path="res://sprites/rooms/Electric Background.png" id="1_1ao5c"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_7sxvg"]
@@ -7,12 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://bhst8m6e8ae76" path="res://scenes/platforms/lemon.tscn" id="6_ld74e"]
 [ext_resource type="PackedScene" uid="uid://blps5y1jfdrnu" path="res://scenes/platforms/thin.tscn" id="7_pjmnt"]
 [ext_resource type="PackedScene" uid="uid://bicf2dlhiw2fk" path="res://scenes/platforms/electrical.tscn" id="8_rbakq"]
-[ext_resource type="PackedScene" uid="uid://6hvk07ybypyg" path="res://scenes/platforms/heavy_electrical.tscn" id="9_kk66w"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/heavy_electrical.tscn" id="9_kk66w"]
 [ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="10_ym35r"]
 [ext_resource type="Script" path="res://scripts/PlatformMovement.gd" id="11_3klsi"]
 [ext_resource type="Texture2D" uid="uid://bu8howskrtda0" path="res://sprites/rooms/Electric Foreground.png" id="12_355ys"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="12_c7pea"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="13_0sf2x"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="14_bvvaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
 size = Vector2(2565.5, 141)
@@ -45,7 +46,7 @@ position = Vector2(1280, 719)
 texture = ExtResource("1_1ao5c")
 
 [node name="Gorp" parent="." instance=ExtResource("2_7sxvg")]
-position = Vector2(251, 1254)
+position = Vector2(283, 1255)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -87,14 +88,14 @@ shape = SubResource("RectangleShape2D_w6480")
 position = Vector2(1997, 236)
 
 [node name="Batter" parent="." instance=ExtResource("5_b1enw")]
-position = Vector2(365, 1207)
+position = Vector2(399, 1209)
 
 [node name="Batter2" parent="." instance=ExtResource("5_b1enw")]
 position = Vector2(836, 967)
 rotation = -1.5708
 
 [node name="Lemon2" parent="." instance=ExtResource("6_ld74e")]
-position = Vector2(598, 1082)
+position = Vector2(625, 1081)
 
 [node name="Lemon3" parent="." instance=ExtResource("6_ld74e")]
 position = Vector2(2035, 827)
@@ -163,7 +164,11 @@ position = Vector2(1280, 719)
 texture = ExtResource("12_355ys")
 
 [node name="Checkpoint" parent="." instance=ExtResource("13_0sf2x")]
-position = Vector2(268, 1247)
+position = Vector2(286, 1245)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("13_0sf2x")]
 position = Vector2(1947, 241)
+
+[node name="SceneChanger" parent="." instance=ExtResource("14_bvvaq")]
+position = Vector2(207, 1231)
+target_scene = "res://scenes/rooms/tower.tscn"

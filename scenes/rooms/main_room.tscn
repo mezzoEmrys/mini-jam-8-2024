@@ -1,6 +1,7 @@
 [gd_scene load_steps=75 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
+[ext_resource type="Script" path="res://scripts/rooms/main_room.gd" id="1_sbaoh"]
 [ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
 [ext_resource type="Texture2D" uid="uid://ce8vxmymrv247" path="res://sprites/rooms/Witch Room Cauldron.png" id="3_nlrpj"]
 [ext_resource type="Texture2D" uid="uid://buobpqwpvvcba" path="res://sprites/rooms/Witch Room Light.png" id="4_5jpvh"]
@@ -64,6 +65,8 @@
 [ext_resource type="Texture2D" uid="uid://nxu3ldtbu3pa" path="res://sprites/items/Lemon Battery.png" id="60_rpod4"]
 [ext_resource type="Texture2D" uid="uid://cy1sx6ny5j0xe" path="res://sprites/items/Tail-cicle.png" id="61_msa6e"]
 [ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/mug.png" id="62_f4taf"]
+[ext_resource type="SpriteFrames" uid="uid://duhapxtro4huy" path="res://sprites/smokes/poof.tres" id="55_p0w2v"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="56_hbg6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l55qc"]
 size = Vector2(767.5, 33)
@@ -287,7 +290,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji4ch"]
-size = Vector2(538, 378.25)
+size = Vector2(447, 378.25)
 
 [node name="Node2D" type="Node2D"]
 
@@ -374,7 +377,7 @@ position = Vector2(1281, 720)
 texture = ExtResource("3_nlrpj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(479, 936.875)
+position = Vector2(433.5, 936.875)
 shape = SubResource("RectangleShape2D_ji4ch")
 
 [node name="WitchRoomCauldronLadder" type="Sprite2D" parent="."]
@@ -390,11 +393,11 @@ rotation = -2.15723
 scale = Vector2(2.075, 1.225)
 
 [node name="catmint" parent="." instance=ExtResource("52_fb3xc")]
-position = Vector2(1969, 1241)
+position = Vector2(1141, 1558)
 scale = Vector2(2.02, 2.02)
 
 [node name="Gorp" parent="." instance=ExtResource("6_e2cml")]
-position = Vector2(1700, 1237)
+position = Vector2(772, 1021)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -410,6 +413,8 @@ position_smoothing_enabled = true
 
 [node name="lemon" parent="." instance=ExtResource("55_438ba")]
 position = Vector2(1496, 1125)
+[node name="Entry" type="Node2D" parent="."]
+position = Vector2(1582, 1251)
 
 [node name="tea" parent="." instance=ExtResource("55_w3uy7")]
 position = Vector2(1409, 1262)

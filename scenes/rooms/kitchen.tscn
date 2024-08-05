@@ -1,21 +1,22 @@
-[gd_scene load_steps=20 format=3 uid="uid://vufkou7we5tj"]
+[gd_scene load_steps=21 format=3 uid="uid://vufkou7we5tj"]
 
 [ext_resource type="Texture2D" uid="uid://cohbe3kt6tyq" path="res://sprites/rooms/Fire Background.png" id="1_y83vv"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_wqr64"]
 [ext_resource type="PackedScene" uid="uid://bhujfbn3o7now" path="res://scenes/platforms/cabinet.tscn" id="3_shv3m"]
 [ext_resource type="PackedScene" uid="uid://c17ypfkmkit6" path="res://scenes/item_scenes/pepper.tscn" id="4_58loy"]
-[ext_resource type="PackedScene" uid="uid://u204tjkvd16w" path="res://scenes/platforms/heavy_kitchen.tscn" id="5_pfx5c"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/heavy_kitchen.tscn" id="5_pfx5c"]
 [ext_resource type="PackedScene" uid="uid://d3f3wp7i4n8jt" path="res://scenes/hazards/fire_md.tscn" id="6_wymfq"]
 [ext_resource type="PackedScene" uid="uid://djk4ueqrjq7ri" path="res://scenes/platforms/spice_bottle.tscn" id="7_t0sd3"]
 [ext_resource type="PackedScene" uid="uid://3yujkfggcolv" path="res://scenes/platforms/oven.tscn" id="8_d2wps"]
 [ext_resource type="PackedScene" uid="uid://7b5l4ch1g2hl" path="res://scenes/platforms/spice_bottle_empty.tscn" id="9_burff"]
 [ext_resource type="PackedScene" uid="uid://bpcgyjvqksj3e" path="res://scenes/hazards/fire_sm.tscn" id="10_lv62t"]
-[ext_resource type="PackedScene" uid="uid://cdcgjic7vrtej" path="res://scenes/platforms/thin_kitchen.tscn" id="11_jto38"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/thin_kitchen.tscn" id="11_jto38"]
 [ext_resource type="Texture2D" uid="uid://doxa76p2hji2o" path="res://sprites/rooms/Fire Midground.png" id="12_ae4mg"]
-[ext_resource type="Texture2D" uid="uid://dn26uthaqkk3u" path="res://sprites/rooms/Foreground.png" id="13_irntm"]
-[ext_resource type="Texture2D" uid="uid://yp3fepi42mf6" path="res://sprites/rooms/Overlay.png" id="14_oemap"]
+[ext_resource type="Texture2D" uid="uid://ieq63ogb1ige" path="res://sprites/rooms/Foreground.png" id="13_irntm"]
+[ext_resource type="Texture2D" uid="uid://dx6uvtyyg37yw" path="res://sprites/rooms/Overlay.png" id="14_oemap"]
 [ext_resource type="Texture2D" uid="uid://cen4ux0fyaafh" path="res://sprites/rooms/1.png" id="15_s8hf3"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="16_p8fqs"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="17_k6wm2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fa0eg"]
 size = Vector2(2565.5, 141)
@@ -26,14 +27,14 @@ size = Vector2(12.3964, 115.488)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpo8e"]
 size = Vector2(7.71023, 115.488)
 
-[node name="fire" type="Node2D"]
+[node name="Kitchen" type="Node2D"]
 
 [node name="FireBackground" type="Sprite2D" parent="."]
 position = Vector2(1279, 720)
 texture = ExtResource("1_y83vv")
 
 [node name="Gorp" parent="." instance=ExtResource("2_wqr64")]
-position = Vector2(222, 1255)
+position = Vector2(283, 1224)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -164,4 +165,8 @@ texture = ExtResource("15_s8hf3")
 position = Vector2(2211, 454)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("16_p8fqs")]
-position = Vector2(278, 1251)
+position = Vector2(296, 1185)
+
+[node name="SceneChanger" parent="." instance=ExtResource("17_k6wm2")]
+position = Vector2(207, 1231)
+target_scene = "res://scenes/rooms/tower.tscn"

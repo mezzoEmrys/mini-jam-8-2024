@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://h7ob0x2as02"]
+[gd_scene load_steps=32 format=3 uid="uid://h7ob0x2as02"]
 
 [ext_resource type="Texture2D" uid="uid://yoytorv1y23k" path="res://sprites/rooms/Roof Background.png" id="1_oga0b"]
 [ext_resource type="Texture2D" uid="uid://bxorusp3x857e" path="res://sprites/rooms/Roof Forground.png" id="2_xn0yc"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="4_n101i"]
 [ext_resource type="PackedScene" uid="uid://blps5y1jfdrnu" path="res://scenes/platforms/thin.tscn" id="5_av46j"]
 [ext_resource type="PackedScene" uid="uid://ddxkiwbdjhd2d" path="res://scenes/platforms/skull.tscn" id="6_fg6y0"]
-[ext_resource type="PackedScene" uid="uid://u204tjkvd16w" path="res://scenes/platforms/heavy_kitchen.tscn" id="7_mcntv"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/heavy_kitchen.tscn" id="7_mcntv"]
 [ext_resource type="PackedScene" uid="uid://br3106v103abs" path="res://scenes/platforms/fish.tscn" id="8_yfnkq"]
 [ext_resource type="PackedScene" uid="uid://ywvkrxabicia" path="res://scenes/platforms/flower.tscn" id="9_hrtb2"]
 [ext_resource type="PackedScene" uid="uid://bhujfbn3o7now" path="res://scenes/platforms/cabinet.tscn" id="10_12w8u"]
@@ -20,13 +20,14 @@
 [ext_resource type="PackedScene" uid="uid://djk4ueqrjq7ri" path="res://scenes/platforms/spice_bottle.tscn" id="18_76v31"]
 [ext_resource type="PackedScene" uid="uid://7b5l4ch1g2hl" path="res://scenes/platforms/spice_bottle_empty.tscn" id="19_dcj1g"]
 [ext_resource type="PackedScene" uid="uid://bekdmvh1ag8qy" path="res://scenes/platforms/yarn.tscn" id="20_xdpqe"]
-[ext_resource type="PackedScene" path="res://scenes/hazards/paw.tscn" id="21_7yjnc"]
+[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/hazards/paw.tscn" id="21_7yjnc"]
 [ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="23_2l5by"]
 [ext_resource type="PackedScene" uid="uid://bpcgyjvqksj3e" path="res://scenes/hazards/fire_sm.tscn" id="24_5v8we"]
 [ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="25_i2e7o"]
 [ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="26_bbh2n"]
 [ext_resource type="Texture2D" uid="uid://dkvvwcnb7mkd7" path="res://sprites/rooms/Roof_Back.png" id="27_jptg0"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="27_ojaer"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="28_yuo80"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6psnn"]
 size = Vector2(3827.75, 225.5)
@@ -37,7 +38,7 @@ size = Vector2(10.6593, 177.26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fsfr"]
 size = Vector2(7.71023, 174.523)
 
-[node name="roof" type="Node2D"]
+[node name="Roof" type="Node2D"]
 
 [node name="RoofBackground" type="Sprite2D" parent="."]
 position = Vector2(1904.5, 1115.5)
@@ -51,7 +52,7 @@ texture = ExtResource("2_xn0yc")
 
 [node name="Gorp" parent="." instance=ExtResource("3_72isn")]
 z_index = 1
-position = Vector2(3249, 1962)
+position = Vector2(3078, 1948)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -188,7 +189,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(2000, 931)
 
 [node name="Checkpoint" parent="." instance=ExtResource("27_ojaer")]
-position = Vector2(3211, 1949)
+position = Vector2(3075, 1939)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("27_ojaer")]
 position = Vector2(1138, 378)
@@ -210,3 +211,7 @@ z_index = -1
 position = Vector2(1898.5, 1112.5)
 scale = Vector2(1.49414, 1.57431)
 texture = ExtResource("27_jptg0")
+
+[node name="SceneChanger" parent="." instance=ExtResource("28_yuo80")]
+position = Vector2(3259, 1943)
+target_scene = "res://scenes/rooms/tower.tscn"
