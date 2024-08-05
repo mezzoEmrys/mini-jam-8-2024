@@ -1,9 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://de3hx2qn5h21q"]
+[gd_scene load_steps=16 format=3 uid="uid://de3hx2qn5h21q"]
 
 [ext_resource type="Texture2D" uid="uid://c5h1s7u35futh" path="res://sprites/rooms/Freezer Background PNG.png" id="1_06jh8"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_bp5kl"]
 [ext_resource type="PackedScene" uid="uid://cvl1ieueno46m" path="res://scenes/platforms/freezer_shelf.tscn" id="5_cvm28"]
-[ext_resource type="PackedScene" uid="uid://cvu6veqjkbqrd" path="res://scenes/platforms/heavy_freezer.tscn" id="6_qpfdd"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/heavy_freezer.tscn" id="6_qpfdd"]
 [ext_resource type="PackedScene" uid="uid://bjhtj8d53aic8" path="res://scenes/platforms/freezer.tscn" id="7_6be0d"]
 [ext_resource type="PackedScene" uid="uid://br3106v103abs" path="res://scenes/platforms/fish.tscn" id="7_helx7"]
 [ext_resource type="PackedScene" uid="uid://de24nxecpqvo0" path="res://scenes/hazards/icicle_base_3.tscn" id="8_s21a6"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cajd0tbikj1e0" path="res://scenes/hazards/icicle_base_2.tscn" id="9_oyycp"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="12_7v2ks"]
 [ext_resource type="Texture2D" uid="uid://d1gctci571rqx" path="res://sprites/rooms/Freezer Foreground.png" id="12_cacwc"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="13_7binh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
 size = Vector2(2565.5, 141)
@@ -131,3 +132,7 @@ position = Vector2(334, 1237)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("12_7v2ks")]
 position = Vector2(2261, 820)
+
+[node name="SceneChanger" parent="." instance=ExtResource("13_7binh")]
+position = Vector2(207, 1231)
+target_scene = "res://scenes/rooms/tower.tscn"

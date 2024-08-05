@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://1kt8n61k3tjk"]
+[gd_scene load_steps=17 format=3 uid="uid://1kt8n61k3tjk"]
 
 [ext_resource type="Texture2D" uid="uid://dx1k0h6sky6kb" path="res://sprites/rooms/Haunted Room Background.png" id="1_00gic"]
 [ext_resource type="Texture2D" uid="uid://cf7sp3nfpp2xq" path="res://sprites/rooms/Haunted Room Foreground.png" id="2_kjve2"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c4ymqblc6s0mc" path="res://scenes/platforms/thin_haunted.tscn" id="10_x1yi7"]
 [ext_resource type="Texture2D" uid="uid://dkvvwcnb7mkd7" path="res://sprites/rooms/Roof_Back.png" id="11_ihgxj"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="12_jagbi"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="13_ng8ha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yapit"]
 size = Vector2(2565.5, 141)
@@ -22,7 +23,7 @@ size = Vector2(12.3964, 115.488)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v55nq"]
 size = Vector2(7.71023, 115.488)
 
-[node name="Haunted Room" type="Node2D"]
+[node name="HauntedRoom" type="Node2D"]
 
 [node name="HauntedRoomBackground" type="Sprite2D" parent="."]
 position = Vector2(1280, 720)
@@ -38,7 +39,7 @@ position = Vector2(1282, 720)
 texture = ExtResource("3_rp1t8")
 
 [node name="Gorp" parent="." instance=ExtResource("4_2d6mq")]
-position = Vector2(255, 1229)
+position = Vector2(303, 1229)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -138,3 +139,7 @@ position = Vector2(305, 1216)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("12_jagbi")]
 position = Vector2(2130, 293)
+
+[node name="SceneChanger" parent="." instance=ExtResource("13_ng8ha")]
+position = Vector2(207, 1231)
+target_scene = "res://scenes/rooms/tower.tscn"
