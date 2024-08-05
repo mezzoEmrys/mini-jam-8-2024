@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dok7omvslwslh"]
+[gd_scene load_steps=60 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
 [ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://dev0uv5234huq" path="res://sprites/witch_animation/sneeze/6.png" id="46_odrkw"]
 [ext_resource type="Texture2D" uid="uid://dy20dpvy7ystt" path="res://sprites/witch_animation/sneeze/7.png" id="47_x385r"]
 [ext_resource type="Texture2D" uid="uid://dyerws5wrkqgf" path="res://sprites/witch_animation/sneeze/8.png" id="48_44tq4"]
+[ext_resource type="Texture2D" uid="uid://t5mre12k0mhc" path="res://sprites/rooms/Witch Room Cauldron Ladder.png" id="50_cahhi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l55qc"]
 size = Vector2(767.5, 33)
@@ -367,3 +368,8 @@ limit_right = 2560
 limit_bottom = 1400
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="WitchRoomCauldronLadder" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1288, 723)
+texture = ExtResource("50_cahhi")
