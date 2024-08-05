@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dw877k3cwl7r7"]
+[gd_scene load_steps=10 format=3 uid="uid://djndm2ng7o3ap"]
 
 [ext_resource type="SpriteFrames" uid="uid://rsdnqv5kmped" path="res://sprites/ghost_animation/ghost.tres" id="1_7yvit"]
 [ext_resource type="Script" path="res://scripts/ghost.gd" id="1_mgjyd"]
+[ext_resource type="AudioStream" uid="uid://ld57r7froyr0" path="res://sounds/attackchirp.mp3" id="3_7mab8"]
+[ext_resource type="AudioStream" uid="uid://ql1utc36lulk" path="res://sounds/hidechirp.mp3" id="4_87ca5"]
 
 [sub_resource type="Animation" id="Animation_r4gm6"]
 length = 0.001
@@ -152,5 +154,12 @@ libraries = {
 position = Vector2(-51, 6)
 scale = Vector2(0.82, 0.82)
 shape = SubResource("CircleShape2D_uip84")
+
+[node name="attackchirp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7mab8")
+
+[node name="hidechirp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_87ca5")
+volume_db = 14.959
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
