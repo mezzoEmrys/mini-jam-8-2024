@@ -64,17 +64,13 @@ position = Vector2(1093, 1377)
 shape = SubResource("RectangleShape2D_vaovn")
 
 [node name="Gorp" parent="." instance=ExtResource("2_rb3fx")]
-position = Vector2(418, 1209)
+position = Vector2(427, 1266)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
-position = Vector2(-90, 90)
+position = Vector2(-140, -100)
 scale = Vector2(5, 5)
 zoom = Vector2(0.8, 0.8)
-limit_left = 0
-limit_top = 0
-limit_right = 2560
-limit_bottom = 1400
 limit_smoothed = true
 position_smoothing_enabled = true
 
