@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://t2uar4o5y4rx"]
+[gd_scene load_steps=24 format=3 uid="uid://t2uar4o5y4rx"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="Script" path="res://scenes/rooms/tower.gd" id="1_x47ue"]
@@ -11,10 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://de24nxecpqvo0" path="res://scenes/hazards/icicle_base_3.tscn" id="5_373q1"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="5_us1kf"]
 [ext_resource type="PackedScene" uid="uid://jneln3x2qhgk" path="res://scenes/platforms/box.tscn" id="8_2grjq"]
-[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="11_530j3"]
 [ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="9_gjhmm"]
-[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/hazards/paw.tscn" id="10_frgne"]
-
+[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/item_scenes/paw.tscn" id="10_frgne"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="11_530j3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
