@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://t2uar4o5y4rx"]
+[gd_scene load_steps=20 format=3 uid="uid://t2uar4o5y4rx"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_rb3fx"]
 [ext_resource type="PackedScene" uid="uid://d3f3wp7i4n8jt" path="res://scenes/hazards/fire_md.tscn" id="3_ah7qq"]
 [ext_resource type="PackedScene" uid="uid://blps5y1jfdrnu" path="res://scenes/platforms/thin.tscn" id="3_hor6h"]
+[ext_resource type="PackedScene" uid="uid://bpcgyjvqksj3e" path="res://scenes/hazards/fire_sm.tscn" id="4_0kfbc"]
+[ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="4_a0rwi"]
 [ext_resource type="Script" path="res://scripts/PlatformMovement.gd" id="4_tjdkl"]
+[ext_resource type="PackedScene" uid="uid://de24nxecpqvo0" path="res://scenes/hazards/icicle_base_3.tscn" id="5_373q1"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="5_us1kf"]
 [ext_resource type="PackedScene" uid="uid://jneln3x2qhgk" path="res://scenes/platforms/box.tscn" id="8_2grjq"]
 
@@ -16,6 +19,18 @@ size = Vector2(10.5665, 586.445)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vaovn"]
 size = Vector2(2183, 117.5)
+
+[sub_resource type="Curve2D" id="Curve2D_er8e4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3729.07, 200, 0, 0, 0, 0, 3729.07, 2000, 0, 0, 0, 0, 3729.07, 200)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_3deic"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3729.07, 200, 0, 0, 0, 0, 3729, 2000, 0, 0, 0, 0, 3729.07, 200)
+}
+point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_u62on"]
 _data = {
@@ -72,7 +87,7 @@ position = Vector2(1093, 1377)
 shape = SubResource("RectangleShape2D_vaovn")
 
 [node name="Gorp" parent="." instance=ExtResource("2_rb3fx")]
-position = Vector2(440, -233)
+position = Vector2(385, 1270)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -93,15 +108,43 @@ position = Vector2(1602, -134)
 scale = Vector2(0.08, 0.23)
 
 [node name="FireMd3" parent="pepper" instance=ExtResource("3_ah7qq")]
-position = Vector2(1385, -592)
+position = Vector2(1385, -623)
 rotation = -3.14159
 scale = Vector2(0.055, 0.705)
 
+[node name="FireSm" parent="pepper" instance=ExtResource("4_0kfbc")]
+position = Vector2(1466, 533)
+scale = Vector2(0.145, 0.355)
+
 [node name="lemon" type="Node" parent="."]
+
+[node name="Path2D" type="Path2D" parent="lemon"]
+position = Vector2(72, -477)
+scale = Vector2(0.169531, 0.170778)
+curve = SubResource("Curve2D_er8e4")
+
+[node name="Electric" parent="lemon/Path2D" instance=ExtResource("4_a0rwi")]
+position = Vector2(3729.07, 200)
+rotation = 1.5708
+scale = Vector2(1, 1)
+
+[node name="Path2D3" type="Path2D" parent="lemon"]
+position = Vector2(356, 556)
+scale = Vector2(0.169531, 0.170778)
+curve = SubResource("Curve2D_3deic")
+
+[node name="Electric" parent="lemon/Path2D3" instance=ExtResource("4_a0rwi")]
+position = Vector2(3729.07, 200)
+rotation = 1.57084
+scale = Vector2(1, 1)
 
 [node name="ginger" type="Node" parent="."]
 
 [node name="ice" type="Node" parent="."]
+
+[node name="Icicle3" parent="ice" instance=ExtResource("5_373q1")]
+position = Vector2(1272, 154)
+scale = Vector2(0.41, 0.41)
 
 [node name="catmint" type="Node" parent="."]
 
@@ -180,7 +223,16 @@ position = Vector2(1413, -40)
 scale = Vector2(1.5, 1)
 
 [node name="Thin8" parent="." instance=ExtResource("3_hor6h")]
-position = Vector2(1274, -470)
+position = Vector2(1271, -501)
 
 [node name="Thin7" parent="." instance=ExtResource("3_hor6h")]
-position = Vector2(1498, -470)
+position = Vector2(1497, -501)
+
+[node name="Thin9" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(1510, 554)
+
+[node name="Thin10" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(1499, -873)
+
+[node name="Thin11" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(1275, -873)
