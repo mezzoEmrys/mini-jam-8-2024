@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://t2uar4o5y4rx"]
+[gd_scene load_steps=27 format=3 uid="uid://t2uar4o5y4rx"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="Script" path="res://scenes/rooms/tower.gd" id="1_x47ue"]
@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="9_gjhmm"]
 [ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/hazards/paw.tscn" id="10_frgne"]
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="11_530j3"]
+[ext_resource type="PackedScene" uid="uid://ywvkrxabicia" path="res://scenes/platforms/flower.tscn" id="15_18aq2"]
+[ext_resource type="PackedScene" uid="uid://djk4ueqrjq7ri" path="res://scenes/platforms/spice_bottle.tscn" id="16_bp04t"]
+[ext_resource type="PackedScene" uid="uid://cdcgjic7vrtej" path="res://scenes/platforms/thin_kitchen.tscn" id="17_mau2u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
@@ -92,7 +95,7 @@ position = Vector2(1093, 1377)
 shape = SubResource("RectangleShape2D_vaovn")
 
 [node name="Gorp" parent="." instance=ExtResource("2_rb3fx")]
-position = Vector2(385, 1270)
+position = Vector2(359, 1240)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -113,7 +116,7 @@ position = Vector2(1602, -134)
 scale = Vector2(0.08, 0.23)
 
 [node name="FireMd3" parent="pepper" instance=ExtResource("3_ah7qq")]
-position = Vector2(1385, -623)
+position = Vector2(1351, -620)
 rotation = -3.14159
 scale = Vector2(0.055, 0.705)
 
@@ -236,7 +239,7 @@ position = Vector2(1498, -470)
 [node name="Ghost" parent="." instance=ExtResource("9_gjhmm")]
 
 [node name="Paw" parent="." instance=ExtResource("10_frgne")]
-position = Vector2(1497, -501)
+position = Vector2(1509, -512)
 
 [node name="Thin9" parent="." instance=ExtResource("3_hor6h")]
 position = Vector2(1510, 554)
@@ -248,7 +251,7 @@ position = Vector2(1499, -873)
 position = Vector2(1275, -873)
 
 [node name="SceneChanger" parent="." instance=ExtResource("11_530j3")]
-position = Vector2(336, -200)
+position = Vector2(339, -201)
 target_scene = "res://scenes/rooms/garden.tscn"
 
 [node name="SceneChanger2" parent="." instance=ExtResource("11_530j3")]
@@ -274,3 +277,16 @@ target_scene = "res://scenes/rooms/haunted_room.tscn"
 [node name="SceneChanger7" parent="." instance=ExtResource("11_530j3")]
 position = Vector2(1854.53, -4681.12)
 target_scene = "res://scenes/rooms/roof.tscn"
+
+[node name="Flower" parent="." instance=ExtResource("15_18aq2")]
+position = Vector2(704, -149)
+scale = Vector2(0.3, 0.3)
+
+[node name="Spice Bottle" parent="." instance=ExtResource("16_bp04t")]
+position = Vector2(591, -282)
+rotation = -2.20225
+scale = Vector2(0.3, 0.3)
+
+[node name="Thin12" parent="." instance=ExtResource("17_mau2u")]
+position = Vector2(936, -414)
+rotation = -0.434601
