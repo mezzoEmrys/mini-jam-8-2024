@@ -6,6 +6,9 @@ var ice_active : bool = false
 var lemon_active: bool = false
 var pepper_active: bool = false
 
+var tea_active: bool = false
+var mug_active: bool = false
+
 var next_scene : PackedScene
 var level_container : Node2D
 var transition : AnimationPlayer
@@ -30,4 +33,21 @@ func load_scene(scene: PackedScene):
 	load_containers()
 	transition.play("dissolve")
 	next_scene = scene
+	
+func activate_hazards(item):
+	match item:
+		"catmint":
+			catmint_active = true
+		"lemon":
+			lemon_active = true
+		"ginger":
+			ginger_active = true
+		"pepper":
+			pepper_active = true
+		"ice":
+			ice_active = true
+		"tea":
+			tea_active = true
+		"mug":
+			mug_active = true
 

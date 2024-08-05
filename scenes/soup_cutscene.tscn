@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://eudxnvxuooe4"]
+[gd_scene load_steps=50 format=3 uid="uid://eudxnvxuooe4"]
 
 [ext_resource type="Script" path="res://scripts/soup_cutscene.gd" id="1_ig1ea"]
 [ext_resource type="Texture2D" uid="uid://cyfcnpmag3oeo" path="res://sprites/animatics/cauldron animatic 1.png" id="2_7bqhp"]
@@ -21,14 +21,22 @@
 [ext_resource type="Texture2D" uid="uid://c8yd4ocvkuqj5" path="res://sprites/smokes/ghost_smoke/Timeline 1_0005.png" id="19_7bunt"]
 [ext_resource type="Texture2D" uid="uid://bchf23ubqlpsx" path="res://sprites/smokes/ghost_smoke/Timeline 1_0006.png" id="20_gy20r"]
 [ext_resource type="Texture2D" uid="uid://cxs42f2moraa0" path="res://sprites/smokes/ghost_smoke/Timeline 1_0007.png" id="21_on1l0"]
-[ext_resource type="Texture2D" uid="uid://vjmjrl1a2jol" path="res://sprites/smokes/lemon_smoke/Timeline 1_0000.png" id="22_ua4ry"]
-[ext_resource type="Texture2D" uid="uid://cpixvnvmr0aha" path="res://sprites/smokes/lemon_smoke/Timeline 1_0001.png" id="23_y5t42"]
-[ext_resource type="Texture2D" uid="uid://xhxpl38mwb1u" path="res://sprites/smokes/lemon_smoke/Timeline 1_0002.png" id="24_a0vo0"]
-[ext_resource type="Texture2D" uid="uid://r7qknsqi7jiu" path="res://sprites/smokes/lemon_smoke/Timeline 1_0003.png" id="25_6op6g"]
+[ext_resource type="Texture2D" uid="uid://bfivgt8pdfv5w" path="res://sprites/smokes/ice_smoke/Timeline 1_0000.png" id="22_nj3x4"]
+[ext_resource type="Texture2D" uid="uid://bq4j432g0660q" path="res://sprites/smokes/lemon_smoke/Timeline 1_0000.png" id="22_ua4ry"]
+[ext_resource type="Texture2D" uid="uid://dmea027x80wk5" path="res://sprites/smokes/ice_smoke/Timeline 1_0001.png" id="23_ckpgg"]
+[ext_resource type="Texture2D" uid="uid://dfs3jicts3nv0" path="res://sprites/smokes/lemon_smoke/Timeline 1_0001.png" id="23_y5t42"]
+[ext_resource type="Texture2D" uid="uid://11r58t4nmrdr" path="res://sprites/smokes/lemon_smoke/Timeline 1_0002.png" id="24_a0vo0"]
+[ext_resource type="Texture2D" uid="uid://b518cqsh3ed7f" path="res://sprites/smokes/ice_smoke/Timeline 1_0002.png" id="24_ox3f4"]
+[ext_resource type="Texture2D" uid="uid://3t71id8qvktx" path="res://sprites/smokes/lemon_smoke/Timeline 1_0003.png" id="25_6op6g"]
+[ext_resource type="Texture2D" uid="uid://8hc7thvcpi4m" path="res://sprites/smokes/ice_smoke/Timeline 1_0003.png" id="25_h23v8"]
 [ext_resource type="Texture2D" uid="uid://b5fegkpqkqy3u" path="res://sprites/smokes/lemon_smoke/Timeline 1_0004.png" id="26_813sh"]
+[ext_resource type="Texture2D" uid="uid://bxhrptnrgc16t" path="res://sprites/smokes/ice_smoke/Timeline 1_0004.png" id="26_xqqhj"]
+[ext_resource type="Texture2D" uid="uid://cmrtq0tm8hpvj" path="res://sprites/smokes/ice_smoke/Timeline 1_0005.png" id="27_h5n3w"]
 [ext_resource type="Texture2D" uid="uid://brawacse5u3di" path="res://sprites/smokes/lemon_smoke/Timeline 1_0005.png" id="27_y3x0l"]
 [ext_resource type="Texture2D" uid="uid://j8gjdjp2pme7" path="res://sprites/smokes/lemon_smoke/Timeline 1_0006.png" id="28_gcvw7"]
+[ext_resource type="Texture2D" uid="uid://cjhsfy755hsnj" path="res://sprites/smokes/ice_smoke/Timeline 1_0006.png" id="28_ikpmw"]
 [ext_resource type="Texture2D" uid="uid://bhkqrcanetaj8" path="res://sprites/smokes/lemon_smoke/Timeline 1_0007.png" id="29_bg85l"]
+[ext_resource type="Texture2D" uid="uid://nlxi8vc1ys5r" path="res://sprites/smokes/ice_smoke/Timeline 1_0007.png" id="29_mvrq1"]
 [ext_resource type="Texture2D" uid="uid://d0b803qsihete" path="res://sprites/smokes/pepper_smoke/Timeline 1_0000.png" id="30_chyv7"]
 [ext_resource type="Texture2D" uid="uid://cgf1qpwof6xnh" path="res://sprites/smokes/pepper_smoke/Timeline 1_0001.png" id="31_8p0e2"]
 [ext_resource type="Texture2D" uid="uid://byn2termyox6o" path="res://sprites/smokes/pepper_smoke/Timeline 1_0002.png" id="32_uhjif"]
@@ -183,6 +191,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("22_nj3x4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ckpgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ox3f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_h23v8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xqqhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_h5n3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ikpmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_mvrq1")
+}],
+"loop": true,
+"name": &"ice",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("22_ua4ry")
 }, {
 "duration": 1.0,
@@ -206,11 +243,6 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("29_bg85l")
 }],
-"loop": true,
-"name": &"ice",
-"speed": 5.0
-}, {
-"frames": [],
 "loop": true,
 "name": &"lemon",
 "speed": 5.0
@@ -245,7 +277,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Control" type="Control"]
+[node name="soup_cutscene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -265,4 +297,6 @@ scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_4rewb")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(547, 352)
 sprite_frames = SubResource("SpriteFrames_6elpj")
+animation = &"lemon"
