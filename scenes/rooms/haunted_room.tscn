@@ -1,0 +1,117 @@
+[gd_scene load_steps=14 format=3 uid="uid://1kt8n61k3tjk"]
+
+[ext_resource type="Texture2D" uid="uid://dx1k0h6sky6kb" path="res://sprites/rooms/Haunted Room Background.png" id="1_00gic"]
+[ext_resource type="Texture2D" uid="uid://cf7sp3nfpp2xq" path="res://sprites/rooms/Haunted Room Foreground.png" id="2_kjve2"]
+[ext_resource type="Texture2D" uid="uid://bvuu04bkhf8qc" path="res://sprites/rooms/Haunted Room Midground.png" id="3_rp1t8"]
+[ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="4_2d6mq"]
+[ext_resource type="PackedScene" uid="uid://dw877k3cwl7r7" path="res://scenes/hazards/ghost.tscn" id="5_irtxl"]
+[ext_resource type="PackedScene" uid="uid://c771exwyn8uuo" path="res://scenes/item_scenes/ginger.tscn" id="6_5mo4l"]
+[ext_resource type="PackedScene" uid="uid://bcbvo0p7k7veh" path="res://scenes/platforms/evil_book.tscn" id="7_r3pyp"]
+[ext_resource type="PackedScene" uid="uid://ddxkiwbdjhd2d" path="res://scenes/platforms/skull.tscn" id="8_ywf1y"]
+[ext_resource type="PackedScene" uid="uid://0j8enel2adj2" path="res://scenes/platforms/bones.tscn" id="9_08uyf"]
+[ext_resource type="PackedScene" uid="uid://c4ymqblc6s0mc" path="res://scenes/platforms/thin_haunted.tscn" id="10_x1yi7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yapit"]
+size = Vector2(2565.5, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sxkh"]
+size = Vector2(12.3964, 115.488)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v55nq"]
+size = Vector2(7.71023, 115.488)
+
+[node name="Haunted Room" type="Node2D"]
+
+[node name="HauntedRoomBackground" type="Sprite2D" parent="."]
+position = Vector2(1280, 720)
+texture = ExtResource("1_00gic")
+
+[node name="HauntedRoomForeground" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1279, 719)
+texture = ExtResource("2_kjve2")
+
+[node name="HauntedRoomMidground" type="Sprite2D" parent="."]
+position = Vector2(1282, 720)
+texture = ExtResource("3_rp1t8")
+
+[node name="Gorp" parent="." instance=ExtResource("4_2d6mq")]
+position = Vector2(255, 1229)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="Gorp"]
+position = Vector2(-90, 90)
+scale = Vector2(5, 5)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 1400
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Ground" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1283.25, 1374.5)
+shape = SubResource("RectangleShape2D_yapit")
+
+[node name="Wall" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(73.5, 711.325)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_1sxkh")
+
+[node name="Wall2" type="RigidBody2D" parent="Wall"]
+position = Vector2(2206, -34)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Wall2"]
+position = Vector2(314, 740)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_v55nq")
+
+[node name="Ghost" parent="." instance=ExtResource("5_irtxl")]
+position = Vector2(2212, 1156)
+
+[node name="ginger" parent="." instance=ExtResource("6_5mo4l")]
+position = Vector2(2075, 245)
+
+[node name="Evil Book" parent="." instance=ExtResource("7_r3pyp")]
+position = Vector2(2065, 345)
+
+[node name="Skull" parent="." instance=ExtResource("8_ywf1y")]
+position = Vector2(678, 1055)
+rotation = -3.38635
+scale = Vector2(0.5, 0.5)
+
+[node name="Skull2" parent="." instance=ExtResource("8_ywf1y")]
+position = Vector2(1358, 1116)
+
+[node name="Skull3" parent="." instance=ExtResource("8_ywf1y")]
+position = Vector2(1662, 684)
+
+[node name="Bones" parent="." instance=ExtResource("9_08uyf")]
+position = Vector2(1605, 1192)
+
+[node name="Bones2" parent="." instance=ExtResource("9_08uyf")]
+position = Vector2(1755, 1090)
+
+[node name="Thin" parent="." instance=ExtResource("10_x1yi7")]
+position = Vector2(1175, 761)
+
+[node name="Thin2" parent="." instance=ExtResource("10_x1yi7")]
+position = Vector2(1375, 464)
+
+[node name="Thin3" parent="." instance=ExtResource("10_x1yi7")]
+position = Vector2(1346, 494)
+
+[node name="Thin4" parent="." instance=ExtResource("10_x1yi7")]
+position = Vector2(1456, 288)
+
+[node name="Thin5" parent="." instance=ExtResource("10_x1yi7")]
+position = Vector2(458, 1224)
+rotation = -0.682088
