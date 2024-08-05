@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://vufkou7we5tj"]
+[gd_scene load_steps=19 format=3 uid="uid://vufkou7we5tj"]
 
 [ext_resource type="Texture2D" uid="uid://cohbe3kt6tyq" path="res://sprites/rooms/Fire Background.png" id="1_y83vv"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_wqr64"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://doxa76p2hji2o" path="res://sprites/rooms/Fire Midground.png" id="12_ae4mg"]
 [ext_resource type="Texture2D" uid="uid://dn26uthaqkk3u" path="res://sprites/rooms/Foreground.png" id="13_irntm"]
 [ext_resource type="Texture2D" uid="uid://yp3fepi42mf6" path="res://sprites/rooms/Overlay.png" id="14_oemap"]
+[ext_resource type="Texture2D" uid="uid://cen4ux0fyaafh" path="res://sprites/rooms/1.png" id="15_s8hf3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fa0eg"]
 size = Vector2(2565.5, 141)
@@ -152,3 +153,8 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(1204, 840)
 rotation = 3.14159
 scale = Vector2(0.19, 0.19)
+
+[node name="1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1246, 716)
+texture = ExtResource("15_s8hf3")
