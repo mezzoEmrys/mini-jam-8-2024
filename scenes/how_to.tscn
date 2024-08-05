@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://yhypx5ixkcoo"]
+
+[ext_resource type="Script" path="res://scripts/ui_only.gd" id="1_jgrir"]
+[ext_resource type="Texture2D" uid="uid://ckqrjka6viwpf" path="res://sprites/menus/instructions/instructions_bg.png" id="2_bi7xj"]
+[ext_resource type="Texture2D" uid="uid://b5qa0dj75ohuo" path="res://sprites/menus/instructions/button_instructions.png" id="3_eultj"]
+
+[node name="HowTo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jgrir")
+
+[node name="InstructionsBg" type="Sprite2D" parent="."]
+position = Vector2(575.5, 325.5)
+scale = Vector2(0.448828, 0.452083)
+texture = ExtResource("2_bi7xj")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 445.0
+offset_right = 1501.0
+offset_bottom = 792.0
+scale = Vector2(0.41688, 0.462334)
+icon = ExtResource("3_eultj")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

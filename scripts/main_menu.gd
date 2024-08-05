@@ -1,6 +1,8 @@
 extends Control
 
 var main_room = preload("res://scenes/rooms/main_room.tscn")
+var instructions = preload("res://scenes/how_to.tscn")
+var credits = preload("res://scenes/credits.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +18,7 @@ func _on_button_start_pressed():
 	Get.SceneManager.load_scene(main_room)
 
 func _on_button_instructions_pressed():
-	Get.SceneManager.load_scene(main_room)
+	Get.SceneManager.load_scene(instructions)
 
 func _on_button_credits_pressed():
-	Get.SceneManager.load_scene(main_room)
+	Get.SceneManager.load_scene(credits)
