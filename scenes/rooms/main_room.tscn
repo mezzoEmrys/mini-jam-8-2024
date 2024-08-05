@@ -318,7 +318,7 @@ script = ExtResource("6_gho7b")
 position = Vector2(1296.55, 396.552)
 sprite_frames = SubResource("SpriteFrames_4w0k6")
 animation = &"idle"
-frame_progress = 0.489507
+frame_progress = 0.860704
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Witch"]
 libraries = {

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvkqbwaa5ros2"]
+[gd_scene load_steps=13 format=3 uid="uid://dvkqbwaa5ros2"]
 
 [ext_resource type="Script" path="res://scripts/character_controller.gd" id="1_3lhdl"]
 [ext_resource type="SpriteFrames" uid="uid://3ld6ewvvily8" path="res://sprites/gorp_animation/gorp.tres" id="2_d13h2"]
 [ext_resource type="PackedScene" uid="uid://bgywax4t1ifyd" path="res://scenes/held_item.tscn" id="3_64oph"]
+[ext_resource type="AudioStream" uid="uid://blys66spqvdex" path="res://sounds/boing (2).wav" id="4_2vigy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iet7c"]
 radius = 150.0
@@ -234,6 +235,10 @@ collision_layer = 2
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(10, -70)
 shape = SubResource("CapsuleShape2D_iet7c")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_2vigy")
+pitch_scale = 2.31
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

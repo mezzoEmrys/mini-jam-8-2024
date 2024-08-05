@@ -55,6 +55,7 @@ func _physics_process(delta):
 			is_jumping = true
 			coyote_timer = coyote_time
 			velocity.y += jump_impulse
+			$AudioStreamPlayer2D.play()
 		if is_jumping and not is_charging :
 			velocity.y += jump_impulse
 	elif is_jumping:
