@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://eudxnvxuooe4"]
+
+[ext_resource type="Script" path="res://soup_cutscene.gd" id="1_m5clw"]
+[ext_resource type="Texture2D" uid="uid://cyfcnpmag3oeo" path="res://sprites/animatics/cauldron animatic 1.png" id="1_vwch3"]
+[ext_resource type="Texture2D" uid="uid://d4a2nyls2tggk" path="res://sprites/animatics/cauldron animatic 2.png" id="2_sa516"]
+[ext_resource type="Texture2D" uid="uid://djv5y58idcbgm" path="res://sprites/animatics/cauldron animatic 3.png" id="3_63fx7"]
+[ext_resource type="Texture2D" uid="uid://ujqr5qhs7ifl" path="res://sprites/animatics/cauldron animatic 4.png" id="4_ci0a1"]
+
+[sub_resource type="Animation" id="Animation_shsfp"]
+resource_name = "soup_cutscene"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j386h"]
+_data = {
+"soup_cutscene": SubResource("Animation_shsfp")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rewb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vwch3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sa516")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_63fx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ci0a1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m5clw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j386h")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(571.5, 325)
+scale = Vector2(0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_4rewb")

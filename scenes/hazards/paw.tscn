@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://rrjw54hw3c3p"]
+[gd_scene load_steps=29 format=3 uid="uid://rrjw54hw3c3p"]
 
 [ext_resource type="Script" path="res://scripts/paw.gd" id="1_ubdja"]
 [ext_resource type="Texture2D" uid="uid://cpwd55bndk75w" path="res://sprites/hazards_animation/catvine/vine/1.png" id="2_4ig2p"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b6400l32xe8px" path="res://sprites/hazards_animation/catvine/paw/13.png" id="19_4gwb2"]
 [ext_resource type="Texture2D" uid="uid://dd00fvn2naeyd" path="res://sprites/hazards_animation/catvine/paw/14.png" id="20_ik4ro"]
 [ext_resource type="Script" path="res://scripts/hazard.gd" id="21_6mmh8"]
+[ext_resource type="AudioStream" uid="uid://dfxx62wfeiwmd" path="res://sounds/catmeow.wav" id="22_jxa06"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xjnee"]
 animations = [{
@@ -274,9 +275,12 @@ tracks/5/path = NodePath(".")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(3.2),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.6, 3.2),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [],
+"method": &"meow"
+}, {
 "args": [],
 "method": &"swipe_finished"
 }]
@@ -345,5 +349,9 @@ script = ExtResource("21_6mmh8")
 position = Vector2(-10.5952, 11.0955)
 shape = SubResource("RectangleShape2D_mptj8")
 disabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_jxa06")
+pitch_scale = 1.18
 
 [connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]

@@ -6,6 +6,7 @@ var is_swiping : bool = false
 @onready var anim = $AnimationPlayer
 @onready var gorp = get_tree().current_scene.get_node("Gorp")
 @onready var hazard = $Hazard
+@onready var sound = $AudioStreamPlayer2D
 
 func swipe_finished():
 	is_swiping = false
@@ -24,3 +25,5 @@ func _process(delta):
 func _physics_process(_delta):
 	if not is_swiping:
 		position = gorp.position
+func meow():
+	sound.play()
