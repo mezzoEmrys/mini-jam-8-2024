@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://1kt8n61k3tjk"]
+[gd_scene load_steps=15 format=3 uid="uid://1kt8n61k3tjk"]
 
 [ext_resource type="Texture2D" uid="uid://dx1k0h6sky6kb" path="res://sprites/rooms/Haunted Room Background.png" id="1_00gic"]
 [ext_resource type="Texture2D" uid="uid://cf7sp3nfpp2xq" path="res://sprites/rooms/Haunted Room Foreground.png" id="2_kjve2"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ddxkiwbdjhd2d" path="res://scenes/platforms/skull.tscn" id="8_ywf1y"]
 [ext_resource type="PackedScene" uid="uid://0j8enel2adj2" path="res://scenes/platforms/bones.tscn" id="9_08uyf"]
 [ext_resource type="PackedScene" uid="uid://c4ymqblc6s0mc" path="res://scenes/platforms/thin_haunted.tscn" id="10_x1yi7"]
+[ext_resource type="Texture2D" uid="uid://dkvvwcnb7mkd7" path="res://sprites/rooms/Roof_Back.png" id="11_ihgxj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yapit"]
 size = Vector2(2565.5, 141)
@@ -125,3 +126,8 @@ rotation = -0.682088
 [node name="Bones3" parent="." instance=ExtResource("9_08uyf")]
 position = Vector2(903, 1228)
 rotation = -0.457224
+
+[node name="RoofBack" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1284, 719)
+texture = ExtResource("11_ihgxj")

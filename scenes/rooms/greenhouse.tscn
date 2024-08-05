@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b0vuo1jmifnny"]
+[gd_scene load_steps=21 format=3 uid="uid://b0vuo1jmifnny"]
 
 [ext_resource type="Texture2D" uid="uid://d0vo2uul7hxm7" path="res://sprites/rooms/Greenhouse.png" id="1_bwij5"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_a7tiy"]
@@ -11,6 +11,9 @@
 [ext_resource type="Script" path="res://scripts/PlatformMovement.gd" id="9_e12cn"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="9_fisvx"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="11_oex6e"]
+[ext_resource type="Texture2D" uid="uid://butuf0kik7ldm" path="res://sprites/rooms/Greenhouse Midground.png" id="12_e8agp"]
+[ext_resource type="Texture2D" uid="uid://cx5bemicid5pv" path="res://sprites/rooms/Greenhouse Foreground.png" id="13_w264y"]
+[ext_resource type="Texture2D" uid="uid://2hdkxkuh36np" path="res://sprites/rooms/Greenhouse Back.png" id="14_ovx58"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_425k3"]
 size = Vector2(2565.5, 141)
@@ -114,9 +117,6 @@ position = Vector2(1786, 900)
 [node name="Yarn3" parent="." instance=ExtResource("5_d7d2s")]
 position = Vector2(1786, 626)
 
-[node name="Yarn3" parent="Yarn3" instance=ExtResource("5_d7d2s")]
-position = Vector2(0, -274)
-
 [node name="Path2D2" type="Path2D" parent="."]
 position = Vector2(1247, 595)
 curve = SubResource("Curve2D_rxcf8")
@@ -128,6 +128,19 @@ script = ExtResource("9_e12cn")
 speed = 1.0
 
 [node name="CharacterBody2D" parent="Path2D2/PlatformMovement" instance=ExtResource("9_fisvx")]
+position = Vector2(0, 30)
+
+[node name="Path2D4" type="Path2D" parent="."]
+position = Vector2(450, 595)
+curve = SubResource("Curve2D_rxcf8")
+
+[node name="PlatformMovement" type="PathFollow2D" parent="Path2D4"]
+position = Vector2(821, 384)
+rotates = false
+script = ExtResource("9_e12cn")
+speed = 1.0
+
+[node name="CharacterBody2D" parent="Path2D4/PlatformMovement" instance=ExtResource("9_fisvx")]
 position = Vector2(0, 30)
 
 [node name="Path2D3" type="Path2D" parent="."]
@@ -156,8 +169,52 @@ speed = 1.0
 [node name="CharacterBody2D" parent="Path2D3/Path2D2/PlatformMovement" instance=ExtResource("9_fisvx")]
 position = Vector2(0, 30)
 
+[node name="Path2D5" type="Path2D" parent="."]
+position = Vector2(600, 0)
+curve = SubResource("Curve2D_gidsi")
+
+[node name="PlatformMovement" type="PathFollow2D" parent="Path2D5"]
+position = Vector2(830, 978)
+rotates = false
+script = ExtResource("9_e12cn")
+speed = 1.0
+
+[node name="CharacterBody2D" parent="Path2D5/PlatformMovement" instance=ExtResource("9_fisvx")]
+position = Vector2(0, 30)
+
+[node name="Path2D2" type="Path2D" parent="Path2D5"]
+position = Vector2(0, -80)
+curve = SubResource("Curve2D_m3rms")
+
+[node name="PlatformMovement" type="PathFollow2D" parent="Path2D5/Path2D2"]
+position = Vector2(830, 383)
+rotates = false
+script = ExtResource("9_e12cn")
+speed = 1.0
+
+[node name="CharacterBody2D" parent="Path2D5/Path2D2/PlatformMovement" instance=ExtResource("9_fisvx")]
+position = Vector2(0, 30)
+
 [node name="Checkpoint" parent="." instance=ExtResource("11_oex6e")]
 position = Vector2(2335, 1268)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("11_oex6e")]
 position = Vector2(816, 1204)
+
+[node name="GreenhouseMidground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1287, 712)
+texture = ExtResource("12_e8agp")
+
+[node name="GreenhouseForeground" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1296, 721)
+texture = ExtResource("13_w264y")
+
+[node name="GreenhouseBack" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(1311, 727)
+texture = ExtResource("14_ovx58")
+
+[node name="Toy2" parent="." instance=ExtResource("4_roxjx")]
+position = Vector2(1854, 412)

@@ -10,7 +10,6 @@ var tea_active: bool = false
 var mug_active: bool = false
 
 var from : String
-var next_scene : PackedScene
 var level_container : Node2D
 var transition : AnimationPlayer
 
@@ -30,20 +29,26 @@ func load_containers():
 	transition = get_tree().current_scene.get_node("canvas").get_node("transition_player")
 
 func stage_hidden():
+	var next = Get.get_next_scene()
+	var scene = next.instantiate()
 	load_containers()
 	for child in level_container.get_children():
 		level_container.remove_child(child)
 		child.queue_free()
-	var scene = next_scene.instantiate()
 	level_container.add_child(scene)
 	Get.refresh_Gorp()
 	transition.play_backwards('dissolve')
 
+func load_scene_named(scene: String):
+	print(scene)
+	var out = load(scene)
+	load_scene(out)
+
 func load_scene(scene: PackedScene):
 	from = get_tree().current_scene.get_node("LevelScene").get_child(0).name
 	load_containers()
+	Get.set_next_scene(scene)
 	transition.play("dissolve")
-	next_scene = scene
 	
 func activate_hazards(item):
 	stop_music()
