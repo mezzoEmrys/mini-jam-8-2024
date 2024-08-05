@@ -1,7 +1,6 @@
-[gd_scene load_steps=75 format=3 uid="uid://dok7omvslwslh"]
+[gd_scene load_steps=76 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
-[ext_resource type="Script" path="res://scripts/rooms/main_room.gd" id="1_sbaoh"]
 [ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
 [ext_resource type="Texture2D" uid="uid://ce8vxmymrv247" path="res://sprites/rooms/Witch Room Cauldron.png" id="3_nlrpj"]
 [ext_resource type="Texture2D" uid="uid://buobpqwpvvcba" path="res://sprites/rooms/Witch Room Light.png" id="4_5jpvh"]
@@ -55,7 +54,7 @@
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="50_xyctv"]
 [ext_resource type="PackedScene" uid="uid://bo8hgahl1785t" path="res://scenes/item_scenes/catmint.tscn" id="52_fb3xc"]
 [ext_resource type="PackedScene" uid="uid://61jiqhynx030" path="res://scenes/item_scenes/lemon.tscn" id="55_438ba"]
-[ext_resource type="Texture2D" uid="uid://krrry3mlvo7" path="res://sprites/witch_animation/thoughtbubble/3.png" id="55_rxy7u"]
+[ext_resource type="Texture2D" uid="uid://ckb82v68a6mjx" path="res://sprites/witch_animation/thoughtbubble/3.png" id="55_rxy7u"]
 [ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="55_w3uy7"]
 [ext_resource type="Texture2D" uid="uid://eeoqyg4grk5g" path="res://sprites/items/Tea Leaf.png" id="56_pd2ra"]
 [ext_resource type="Script" path="res://scenes/rooms/TeaThought.gd" id="56_s8ev3"]
@@ -65,8 +64,7 @@
 [ext_resource type="Texture2D" uid="uid://nxu3ldtbu3pa" path="res://sprites/items/Lemon Battery.png" id="60_rpod4"]
 [ext_resource type="Texture2D" uid="uid://cy1sx6ny5j0xe" path="res://sprites/items/Tail-cicle.png" id="61_msa6e"]
 [ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/mug.png" id="62_f4taf"]
-[ext_resource type="SpriteFrames" uid="uid://duhapxtro4huy" path="res://sprites/smokes/poof.tres" id="55_p0w2v"]
-[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="56_hbg6t"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="65_3av0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l55qc"]
 size = Vector2(767.5, 33)
@@ -412,12 +410,13 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="lemon" parent="." instance=ExtResource("55_438ba")]
-position = Vector2(1496, 1125)
+position = Vector2(1432, 1567)
+
 [node name="Entry" type="Node2D" parent="."]
 position = Vector2(1582, 1251)
 
 [node name="tea" parent="." instance=ExtResource("55_w3uy7")]
-position = Vector2(1409, 1262)
+position = Vector2(1313, 1562)
 
 [node name="TeaThought" type="Sprite2D" parent="."]
 position = Vector2(1303, 722)
@@ -459,5 +458,9 @@ texture = ExtResource("61_msa6e")
 position = Vector2(21.48, -34.905)
 scale = Vector2(2.685, 2.685)
 texture = ExtResource("62_f4taf")
+
+[node name="SceneChanger" parent="." instance=ExtResource("65_3av0d")]
+position = Vector2(1722, 1252)
+target_scene = "res://scenes/rooms/tower.tscn"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
