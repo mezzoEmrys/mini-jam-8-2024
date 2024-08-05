@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://krrry3mlvo7"
-path="res://.godot/imported/3.png-58bfae4630ecf650cc5112538f3e5b79.ctex"
+uid="uid://ujqr5qhs7ifl"
+path="res://.godot/imported/cauldron animatic 4.png-e9ff4dad863c9db02878bcc1ec341f72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/witch_animation/thoughtbubble/3.png"
-dest_files=["res://.godot/imported/3.png-58bfae4630ecf650cc5112538f3e5b79.ctex"]
+source_file="res://sprites/animatics/cauldron animatic 4.png"
+dest_files=["res://.godot/imported/cauldron animatic 4.png-e9ff4dad863c9db02878bcc1ec341f72.ctex"]
 
 [params]
 

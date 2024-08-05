@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://krrry3mlvo7"
-path="res://.godot/imported/3.png-58bfae4630ecf650cc5112538f3e5b79.ctex"
+uid="uid://bahb46rlq0dj5"
+path="res://.godot/imported/end animatic 1.png-39709ff5a6f8ebef68c63902d96d2d46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/witch_animation/thoughtbubble/3.png"
-dest_files=["res://.godot/imported/3.png-58bfae4630ecf650cc5112538f3e5b79.ctex"]
+source_file="res://sprites/animatics/end animatic 1.png"
+dest_files=["res://.godot/imported/end animatic 1.png-39709ff5a6f8ebef68c63902d96d2d46.ctex"]
 
 [params]
 

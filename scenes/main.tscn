@@ -1,10 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc8tfn4e1spe6"]
+[gd_scene load_steps=6 format=3 uid="uid://bc8tfn4e1spe6"]
 
 [ext_resource type="Script" path="res://scripts/SceneManager.gd" id="1_em2sy"]
+[ext_resource type="PackedScene" uid="uid://tsb0ovultpxn" path="res://scenes/main_menu.tscn" id="1_ga074"]
+
+[sub_resource type="Animation" id="Animation_y7d15"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("canvas/dissolve_rect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_aoesg"]
+resource_name = "dissolve"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("canvas/dissolve_rect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SceneManager")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stage_hidden"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q8g76"]
+_data = {
+"RESET": SubResource("Animation_y7d15"),
+"dissolve": SubResource("Animation_aoesg")
+}
 
 [node name="Root" type="Node2D"]
 
 [node name="LevelScene" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Control" parent="LevelScene" instance=ExtResource("1_ga074")]
 
 [node name="SceneManager" type="Node" parent="."]
 script = ExtResource("1_em2sy")
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="dissolve_rect" type="ColorRect" parent="canvas"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1156.0
+offset_bottom = 653.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="transition_player" type="AnimationPlayer" parent="canvas"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_q8g76")
+}

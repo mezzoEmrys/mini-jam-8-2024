@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cw8ghinwy4dnb"]
+[gd_scene load_steps=7 format=3 uid="uid://tsb0ovultpxn"]
 
-[ext_resource type="Texture2D" uid="uid://1n0s11gl36m8" path="res://sprites/menus/startscreen/button_credits.png" id="1_5e2ue"]
-[ext_resource type="Texture2D" uid="uid://c3u1d0s6m0m0y" path="res://sprites/menus/startscreen/button_instructions.png" id="2_dtfb5"]
-[ext_resource type="Texture2D" uid="uid://dgf5y4cx4kchi" path="res://sprites/menus/startscreen/button_start.png" id="3_tyiex"]
-[ext_resource type="Texture2D" uid="uid://bay4g1iuewrcc" path="res://sprites/menus/startscreen/teatime trouble bg.png" id="4_n21rj"]
-[ext_resource type="Texture2D" uid="uid://bt30c3noaq8cn" path="res://sprites/menus/startscreen/teatime trouble.png" id="5_1jopn"]
+[ext_resource type="Texture2D" uid="uid://c1w77hgj46a7t" path="res://sprites/menus/startscreen/button_credits.png" id="1_5e2ue"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_qf54t"]
+[ext_resource type="Texture2D" uid="uid://cccy7xerlr7p5" path="res://sprites/menus/startscreen/button_instructions.png" id="2_dtfb5"]
+[ext_resource type="Texture2D" uid="uid://bocmkw4a10y24" path="res://sprites/menus/startscreen/button_start.png" id="3_tyiex"]
+[ext_resource type="Texture2D" uid="uid://cm6kabay1ytjh" path="res://sprites/menus/startscreen/teatime trouble bg.png" id="4_n21rj"]
+[ext_resource type="Texture2D" uid="uid://bfo6mqkc5wd4n" path="res://sprites/menus/startscreen/teatime trouble.png" id="5_1jopn"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qf54t")
 
 [node name="TeatimeTroubleBg" type="Sprite2D" parent="."]
 position = Vector2(578.5, 323.5)
@@ -24,17 +26,36 @@ position = Vector2(882, 322)
 scale = Vector2(0.475, 0.475)
 texture = ExtResource("5_1jopn")
 
-[node name="ButtonCredits" type="Sprite2D" parent="."]
-position = Vector2(187, 557)
+[node name="ButtonCredits" type="Button" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 488.0
+offset_right = 632.0
+offset_bottom = 793.0
 scale = Vector2(0.475, 0.475)
-texture = ExtResource("1_5e2ue")
+icon = ExtResource("1_5e2ue")
+flat = true
 
-[node name="ButtonInstructions" type="Sprite2D" parent="."]
-position = Vector2(431, 494)
+[node name="ButtonInstructions" type="Button" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 406.0
+offset_right = 904.0
+offset_bottom = 711.0
 scale = Vector2(0.475, 0.475)
-texture = ExtResource("2_dtfb5")
+icon = ExtResource("2_dtfb5")
+flat = true
 
-[node name="ButtonStart" type="Sprite2D" parent="."]
-position = Vector2(184, 434)
-scale = Vector2(0.475, 0.475)
-texture = ExtResource("3_tyiex")
+[node name="ButtonStart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 342.0
+offset_right = 613.0
+offset_bottom = 647.0
+scale = Vector2(0.517308, 0.517308)
+icon = ExtResource("3_tyiex")
+flat = true
+
+[connection signal="pressed" from="ButtonCredits" to="." method="_on_button_credits_pressed"]
+[connection signal="pressed" from="ButtonInstructions" to="." method="_on_button_instructions_pressed"]
+[connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]

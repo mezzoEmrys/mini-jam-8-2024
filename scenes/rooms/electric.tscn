@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cer7xu1jo4sry"]
+[gd_scene load_steps=19 format=3 uid="uid://cer7xu1jo4sry"]
 
 [ext_resource type="Texture2D" uid="uid://bqraa6qnndy7o" path="res://sprites/rooms/Electric Background.png" id="1_1ao5c"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_7sxvg"]
@@ -161,9 +161,8 @@ script = ExtResource("11_3klsi")
 [node name="CharacterBody2D" parent="Path2D2/PlatformMovement" instance=ExtResource("12_c7pea")]
 position = Vector2(0, 30)
 
-[node name="Foreground" type="Sprite2D" parent="."]
+[node name="Foreground2" type="Sprite2D" parent="."]
 visibility_layer = 2
 z_index = 5
 position = Vector2(1280, 719)
-scale = Vector2(1, 1)
 texture = ExtResource("12_355ys")

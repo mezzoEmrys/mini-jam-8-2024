@@ -7,6 +7,7 @@ var amplitude = 50
 var item_held = false
 var item_id = ""
 @onready var animator = $AnimationPlayer
+@onready var sound = $AudioStreamPlayer2D
 
 func _ready():
 	hide()
@@ -23,6 +24,7 @@ func set_item(id):
 	print("setting item to " + id)
 	item_held = true
 	item_id = id
+	sound.play()
 	match id:
 		"catmint":
 			animator.play("catmint")
