@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5dfgir7y202w"]
+
+[ext_resource type="Script" path="res://scripts/ui_only.gd" id="1_2lj4d"]
+[ext_resource type="Texture2D" uid="uid://cb4qp1gyaonfc" path="res://sprites/menus/credits/credits_bg.png" id="2_fywif"]
+[ext_resource type="Texture2D" uid="uid://b5qa0dj75ohuo" path="res://sprites/menus/instructions/button_instructions.png" id="3_rrdsp"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2lj4d")
+
+[node name="CreditsBg" type="Sprite2D" parent="."]
+position = Vector2(576.444, 325)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_fywif")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 206.0
+offset_right = 1454.0
+offset_bottom = 553.0
+scale = Vector2(0.435357, 0.435357)
+icon = ExtResource("3_rrdsp")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
