@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dok7omvslwslh"]
+[gd_scene load_steps=64 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
 [ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
@@ -49,6 +49,10 @@
 [ext_resource type="Texture2D" uid="uid://dev0uv5234huq" path="res://sprites/witch_animation/sneeze/6.png" id="46_odrkw"]
 [ext_resource type="Texture2D" uid="uid://dy20dpvy7ystt" path="res://sprites/witch_animation/sneeze/7.png" id="47_x385r"]
 [ext_resource type="Texture2D" uid="uid://dyerws5wrkqgf" path="res://sprites/witch_animation/sneeze/8.png" id="48_44tq4"]
+[ext_resource type="Texture2D" uid="uid://t5mre12k0mhc" path="res://sprites/rooms/Witch Room Cauldron Ladder.png" id="49_170iq"]
+[ext_resource type="PackedScene" uid="uid://c4ymqblc6s0mc" path="res://scenes/platforms/thin_haunted.tscn" id="50_83mad"]
+[ext_resource type="Script" path="res://scripts/cauldron.gd" id="50_xyctv"]
+[ext_resource type="PackedScene" uid="uid://bo8hgahl1785t" path="res://scenes/item_scenes/catmint.tscn" id="52_fb3xc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l55qc"]
 size = Vector2(767.5, 33)
@@ -271,6 +275,9 @@ _data = {
 "sneeze": SubResource("Animation_2t3b6")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ji4ch"]
+size = Vector2(538, 378.25)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="WitchRoomBackground" type="Sprite2D" parent="."]
@@ -289,12 +296,6 @@ freeze = true
 position = Vector2(-1227, 1128)
 shape = SubResource("RectangleShape2D_l55qc")
 one_way_collision = true
-
-[node name="WitchRoomCauldron" type="Sprite2D" parent="."]
-visibility_layer = 2
-z_index = 2
-position = Vector2(1281, 720)
-texture = ExtResource("3_nlrpj")
 
 [node name="WitchRoomLight" type="Sprite2D" parent="."]
 z_index = 1
@@ -353,8 +354,37 @@ libraries = {
 "": SubResource("AnimationLibrary_sod4p")
 }
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("50_xyctv")
+
+[node name="WitchRoomCauldron" type="Sprite2D" parent="Area2D"]
+visibility_layer = 2
+position = Vector2(1281, 720)
+scale = Vector2(1, 1)
+texture = ExtResource("3_nlrpj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(479, 936.875)
+shape = SubResource("RectangleShape2D_ji4ch")
+
+[node name="WitchRoomCauldronLadder" type="Sprite2D" parent="."]
+position = Vector2(1381.05, 381.032)
+rotation = -0.307178
+scale = Vector2(1.33257, 1.33257)
+texture = ExtResource("49_170iq")
+
+[node name="Thin5" parent="WitchRoomCauldronLadder" instance=ExtResource("50_83mad")]
+visible = false
+position = Vector2(-545.554, 446.507)
+rotation = -2.15723
+scale = Vector2(2.075, 1.225)
+
+[node name="catmint" parent="." instance=ExtResource("52_fb3xc")]
+position = Vector2(1969, 1241)
+scale = Vector2(2.02, 2.02)
+
 [node name="Gorp" parent="." instance=ExtResource("6_e2cml")]
-position = Vector2(1132, 864)
+position = Vector2(1700, 1237)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -367,3 +397,5 @@ limit_right = 2560
 limit_bottom = 1400
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
