@@ -6,6 +6,8 @@ var is_chasing : bool = false
 var is_awake : bool = false
 var is_flying : bool = false
 @export var speed : float = 600
+@onready var attackchirp = $attackchirp
+@onready var hidechirp = $hidechirp
 
 @onready var gorp = $"../Gorp"
 
@@ -22,11 +24,13 @@ func end_flying():
 	is_flying = false
 
 func do_hide():
+	hidechirp.play()
 	anim.play("hide")
 	is_awake = false
 	end_flying()
 	
 func do_wake():
+	attackchirp.play()
 	anim.play("wake")
 	is_awake = true
 
