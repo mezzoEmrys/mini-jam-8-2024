@@ -121,3 +121,7 @@ rotation = 1.5708
 [node name="Thin5" parent="." instance=ExtResource("10_x1yi7")]
 position = Vector2(520, 1128)
 rotation = -0.682088
+
+[node name="Bones3" parent="." instance=ExtResource("9_08uyf")]
+position = Vector2(903, 1228)
+rotation = -0.457224
