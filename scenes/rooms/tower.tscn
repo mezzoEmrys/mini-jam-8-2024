@@ -1,5 +1,5 @@
-
 [gd_scene load_steps=20 format=3 uid="uid://t2uar4o5y4rx"]
+
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="Script" path="res://scenes/rooms/tower.gd" id="1_x47ue"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_rb3fx"]
