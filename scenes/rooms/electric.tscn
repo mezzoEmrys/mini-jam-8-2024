@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cer7xu1jo4sry"]
+[gd_scene load_steps=18 format=3 uid="uid://cer7xu1jo4sry"]
 
 [ext_resource type="Texture2D" uid="uid://bqraa6qnndy7o" path="res://sprites/rooms/Electric Background.png" id="1_1ao5c"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_7sxvg"]
-[ext_resource type="Texture2D" uid="uid://d1gctci571rqx" path="res://sprites/rooms/Freezer Foreground.png" id="3_lg4nx"]
 [ext_resource type="PackedScene" uid="uid://61jiqhynx030" path="res://scenes/item_scenes/lemon.tscn" id="4_nku2b"]
 [ext_resource type="PackedScene" uid="uid://du7fvvlu3aya1" path="res://scenes/platforms/batter.tscn" id="5_b1enw"]
 [ext_resource type="PackedScene" uid="uid://bhst8m6e8ae76" path="res://scenes/platforms/lemon.tscn" id="6_ld74e"]
@@ -34,9 +33,9 @@ point_count = 6
 
 [sub_resource type="Curve2D" id="Curve2D_w0x15"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 3729.07, 727.733, 0, 0, 0, 0, 3729.07, 1624.7, 0, 0, 0, 0, 2585.38, 1624.7, 0, 0, 0, 0, 2561.14, 727.733, 0, 0, 0, 0, 3729.07, 727.733)
+"points": PackedVector2Array(0, 0, 0, 0, 3729.07, 727.733, 0, 0, 0, 0, 3729.07, 1624.7, 0, 0, 0, 0, 3127.41, 1607.13, 0, 0, 0, 0, 2585.38, 1624.7, 0, 0, 0, 0, 2561.14, 727.733, 0, 0, 0, 0, 3164.68, 687.809, 0, 0, 0, 0, 3729.07, 727.733)
 }
-point_count = 5
+point_count = 7
 
 [node name="Electric" type="Node2D"]
 
@@ -45,7 +44,7 @@ position = Vector2(1280, 719)
 texture = ExtResource("1_1ao5c")
 
 [node name="Gorp" parent="." instance=ExtResource("2_7sxvg")]
-position = Vector2(637, 578)
+position = Vector2(251, 1254)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -83,39 +82,33 @@ position = Vector2(260, 728)
 scale = Vector2(12.665, 12.665)
 shape = SubResource("RectangleShape2D_w6480")
 
-[node name="Foreground" type="Sprite2D" parent="."]
-visibility_layer = 2
-z_index = 5
-position = Vector2(1280, 719)
-texture = ExtResource("3_lg4nx")
-
 [node name="lemon" parent="." instance=ExtResource("4_nku2b")]
-position = Vector2(580, 229)
+position = Vector2(1997, 236)
 
 [node name="Batter" parent="." instance=ExtResource("5_b1enw")]
-position = Vector2(2053, 1209)
+position = Vector2(365, 1207)
 
 [node name="Batter2" parent="." instance=ExtResource("5_b1enw")]
-position = Vector2(1581, 893)
+position = Vector2(836, 967)
 rotation = -1.5708
 
 [node name="Lemon2" parent="." instance=ExtResource("6_ld74e")]
-position = Vector2(1821, 1057)
+position = Vector2(598, 1082)
 
 [node name="Lemon3" parent="." instance=ExtResource("6_ld74e")]
-position = Vector2(652, 795)
+position = Vector2(2035, 827)
 
 [node name="Thin" parent="." instance=ExtResource("7_pjmnt")]
-position = Vector2(1213, 897)
+position = Vector2(1322, 919)
 
 [node name="Electrical" parent="." instance=ExtResource("8_rbakq")]
-position = Vector2(864, 919)
+position = Vector2(1688, 972)
 
 [node name="Electrical2" parent="." instance=ExtResource("8_rbakq")]
-position = Vector2(1956, 561)
+position = Vector2(598, 543)
 
 [node name="Heavy" parent="." instance=ExtResource("9_kk66w")]
-position = Vector2(577, 355)
+position = Vector2(1991, 357)
 
 [node name="Path2D3" type="Path2D" parent="."]
 position = Vector2(-5, -295)
@@ -141,8 +134,8 @@ scale = Vector2(1, 1)
 position = Vector2(0.00585938, 30.9999)
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2(1065.41, 696.924)
-scale = Vector2(0.165, 0.165)
+position = Vector2(310.808, 765.538)
+scale = Vector2(0.169531, 0.170778)
 curve = SubResource("Curve2D_w0x15")
 
 [node name="Electric" parent="Path2D" instance=ExtResource("10_ym35r")]
@@ -151,6 +144,7 @@ rotation = 1.5708
 scale = Vector2(1, 1)
 
 [node name="Path2D2" type="Path2D" parent="."]
+position = Vector2(0, -10)
 curve = SubResource("Curve2D_i7ss3")
 
 [node name="PlatformMovement" type="PathFollow2D" parent="Path2D2"]
