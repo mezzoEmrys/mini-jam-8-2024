@@ -23,6 +23,7 @@ func stage_hidden():
 		level_container.remove_child(child)
 		child.queue_free()
 	level_container.add_child(next_scene.instantiate())
+	Get.refresh_Gorp()
 	transition.play_backwards('dissolve')
 
 func load_scene(scene: PackedScene):
