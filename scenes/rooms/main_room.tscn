@@ -1,7 +1,6 @@
 [gd_scene load_steps=74 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
-[ext_resource type="Script" path="res://scripts/rooms/main_room.gd" id="1_sbaoh"]
 [ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
 [ext_resource type="Texture2D" uid="uid://ce8vxmymrv247" path="res://sprites/rooms/Witch Room Cauldron.png" id="3_nlrpj"]
 [ext_resource type="Texture2D" uid="uid://buobpqwpvvcba" path="res://sprites/rooms/Witch Room Light.png" id="4_5jpvh"]
@@ -54,6 +53,8 @@
 [ext_resource type="PackedScene" uid="uid://c4ymqblc6s0mc" path="res://scenes/platforms/thin_haunted.tscn" id="50_83mad"]
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="50_xyctv"]
 [ext_resource type="PackedScene" uid="uid://bo8hgahl1785t" path="res://scenes/item_scenes/catmint.tscn" id="52_fb3xc"]
+[ext_resource type="PackedScene" uid="uid://y6ywikf81qod" path="res://scenes/item_scenes/mug.tscn" id="54_fcdca"]
+[ext_resource type="PackedScene" uid="uid://61jiqhynx030" path="res://scenes/item_scenes/lemon.tscn" id="55_438ba"]
 [ext_resource type="SpriteFrames" uid="uid://duhapxtro4huy" path="res://sprites/smokes/poof.tres" id="55_p0w2v"]
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="56_hbg6t"]
 
@@ -279,7 +280,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji4ch"]
-size = Vector2(447, 378.25)
+size = Vector2(538, 378.25)
 
 [sub_resource type="Animation" id="Animation_22dm1"]
 resource_name = "RESET"
@@ -667,7 +668,7 @@ position = Vector2(1281, 720)
 texture = ExtResource("3_nlrpj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(433.5, 936.875)
+position = Vector2(479, 936.875)
 shape = SubResource("RectangleShape2D_ji4ch")
 
 [node name="WitchRoomCauldronLadder" type="Sprite2D" parent="."]
@@ -683,11 +684,11 @@ rotation = -2.15723
 scale = Vector2(2.075, 1.225)
 
 [node name="catmint" parent="." instance=ExtResource("52_fb3xc")]
-position = Vector2(1141, 1558)
+position = Vector2(1969, 1241)
 scale = Vector2(2.02, 2.02)
 
 [node name="Gorp" parent="." instance=ExtResource("6_e2cml")]
-position = Vector2(772, 1021)
+position = Vector2(1700, 1237)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -701,8 +702,8 @@ limit_bottom = 1400
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Entry" type="Node2D" parent="."]
-position = Vector2(1582, 1251)
+[node name="mug" parent="." instance=ExtResource("54_fcdca")]
+position = Vector2(2169, 1057)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

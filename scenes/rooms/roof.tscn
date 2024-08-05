@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://yoytorv1y23k" path="res://sprites/rooms/Roof Background.png" id="1_oga0b"]
 [ext_resource type="Texture2D" uid="uid://bxorusp3x857e" path="res://sprites/rooms/Roof Forground.png" id="2_xn0yc"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="3_72isn"]
-[ext_resource type="PackedScene" uid="uid://y6ywikf81qod" path="res://scenes/item_scenes/teacup.tscn" id="4_n101i"]
+[ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="4_n101i"]
 [ext_resource type="PackedScene" uid="uid://blps5y1jfdrnu" path="res://scenes/platforms/thin.tscn" id="5_av46j"]
 [ext_resource type="PackedScene" uid="uid://ddxkiwbdjhd2d" path="res://scenes/platforms/skull.tscn" id="6_fg6y0"]
 [ext_resource type="PackedScene" uid="uid://u204tjkvd16w" path="res://scenes/platforms/heavy_kitchen.tscn" id="7_mcntv"]
