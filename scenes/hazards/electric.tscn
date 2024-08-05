@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://1na86hoaag8n"]
 
-[ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/teacup.png" id="1_5lblh"]
+[ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/mug.png" id="1_5lblh"]
 [ext_resource type="Script" path="res://scripts/electric.gd" id="1_7lhln"]
 [ext_resource type="Script" path="res://scripts/hazard.gd" id="1_cn5x8"]
 [ext_resource type="Texture2D" uid="uid://ckp6v3oj0utoj" path="res://sprites/hazards_animation/electricity/moving/1.png" id="2_y7qde"]

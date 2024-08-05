@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://eji7xiu0vath"
+path="res://.godot/imported/Kobold Game Ice.ogg-b203955ea63c6608d578484a78d80b33.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/Kobold Game Ice.ogg"
+dest_files=["res://.godot/imported/Kobold Game Ice.ogg-b203955ea63c6608d578484a78d80b33.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

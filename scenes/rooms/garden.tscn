@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://26hqvx6glvhs"]
+[gd_scene load_steps=14 format=3 uid="uid://26hqvx6glvhs"]
 
 [ext_resource type="Texture2D" uid="uid://2sp2x54fmwnv" path="res://sprites/rooms/Garden Background.png" id="1_vg1tu"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_4vhfj"]
@@ -7,8 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c7doh3v3nbfkn" path="res://scenes/platforms/trunk.tscn" id="5_cropg"]
 [ext_resource type="PackedScene" uid="uid://ywvkrxabicia" path="res://scenes/platforms/flower.tscn" id="6_nuyk2"]
 [ext_resource type="PackedScene" uid="uid://b4nl4h12qdjj5" path="res://scenes/platforms/mushroom.tscn" id="7_465tp"]
-[ext_resource type="PackedScene" path="res://scenes/platforms/heavy_garden.tscn" id="8_6wbkg"]
-[ext_resource type="PackedScene" path="res://scenes/platforms/thin_garden.tscn" id="9_wouye"]
+[ext_resource type="PackedScene" uid="uid://byb8hgge48jmu" path="res://scenes/platforms/heavy_garden.tscn" id="8_6wbkg"]
+[ext_resource type="PackedScene" uid="uid://cluo4af3nnnyx" path="res://scenes/platforms/thin_garden.tscn" id="9_wouye"]
+[ext_resource type="Texture2D" uid="uid://cen4ux0fyaafh" path="res://sprites/rooms/1.png" id="10_878sy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohb2w"]
 size = Vector2(2565.5, 141)
@@ -105,3 +106,8 @@ position = Vector2(552, 609)
 
 [node name="Thin" parent="." instance=ExtResource("9_wouye")]
 position = Vector2(551, 779)
+
+[node name="1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1288, 726)
+texture = ExtResource("10_878sy")

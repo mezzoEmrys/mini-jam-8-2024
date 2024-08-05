@@ -1,7 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc8tfn4e1spe6"]
+[gd_scene load_steps=12 format=3 uid="uid://bc8tfn4e1spe6"]
 
 [ext_resource type="Script" path="res://scripts/SceneManager.gd" id="1_em2sy"]
 [ext_resource type="PackedScene" uid="uid://cw8ghinwy4dnb" path="res://scenes/main_menu.tscn" id="1_ga074"]
+[ext_resource type="AudioStream" uid="uid://b3rd0qrygv0d6" path="res://sounds/Kobold Game Base Track.ogg" id="3_kpj3w"]
+[ext_resource type="AudioStream" uid="uid://0nkmjstvc8rl" path="res://sounds/Kobold Game Fire.ogg" id="4_stl70"]
+[ext_resource type="AudioStream" uid="uid://c76roay72h75a" path="res://sounds/Kobold Game Electricity.ogg" id="5_setno"]
+[ext_resource type="AudioStream" uid="uid://v6538tlllthc" path="res://sounds/Kobold Game Ghost.ogg" id="6_vfeel"]
+[ext_resource type="AudioStream" uid="uid://eji7xiu0vath" path="res://sounds/Kobold Game Ice.ogg" id="7_2scll"]
+[ext_resource type="AudioStream" uid="uid://bdpsvxv43n7j7" path="res://sounds/Kobold Game Jungle.ogg" id="8_ykt13"]
 
 [sub_resource type="Animation" id="Animation_y7d15"]
 resource_name = "RESET"
@@ -79,3 +85,23 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_q8g76")
 }
+
+[node name="Music" type="Node" parent="."]
+
+[node name="base" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("3_kpj3w")
+
+[node name="fire" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("4_stl70")
+
+[node name="electricity" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("5_setno")
+
+[node name="jungle" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("8_ykt13")
+
+[node name="ghost" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("6_vfeel")
+
+[node name="ice" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("7_2scll")

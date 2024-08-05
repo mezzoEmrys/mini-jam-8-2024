@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c76roay72h75a"
+path="res://.godot/imported/Kobold Game Electricity.ogg-615776914354e73892565ec79d156f88.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/Kobold Game Electricity.ogg"
+dest_files=["res://.godot/imported/Kobold Game Electricity.ogg-615776914354e73892565ec79d156f88.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
