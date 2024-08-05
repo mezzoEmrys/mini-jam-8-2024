@@ -1,12 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://t2uar4o5y4rx"]
+[gd_scene load_steps=18 format=3 uid="uid://dbvw6fdsw7iow"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
+[ext_resource type="Script" path="res://scenes/rooms/tower.gd" id="1_x47ue"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_rb3fx"]
 [ext_resource type="PackedScene" uid="uid://d3f3wp7i4n8jt" path="res://scenes/hazards/fire_md.tscn" id="3_ah7qq"]
 [ext_resource type="PackedScene" uid="uid://blps5y1jfdrnu" path="res://scenes/platforms/thin.tscn" id="3_hor6h"]
 [ext_resource type="Script" path="res://scripts/PlatformMovement.gd" id="4_tjdkl"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="5_us1kf"]
 [ext_resource type="PackedScene" uid="uid://jneln3x2qhgk" path="res://scenes/platforms/box.tscn" id="8_2grjq"]
+[ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="9_gjhmm"]
+[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/hazards/paw.tscn" id="10_frgne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
@@ -42,6 +45,7 @@ _data = {
 point_count = 3
 
 [node name="tower" type="Node2D"]
+script = ExtResource("1_x47ue")
 
 [node name="Tower" type="Sprite2D" parent="."]
 position = Vector2(1098, -2278)
@@ -184,3 +188,7 @@ position = Vector2(1274, -470)
 
 [node name="Thin7" parent="." instance=ExtResource("3_hor6h")]
 position = Vector2(1498, -470)
+
+[node name="Ghost" parent="." instance=ExtResource("9_gjhmm")]
+
+[node name="Paw" parent="." instance=ExtResource("10_frgne")]
