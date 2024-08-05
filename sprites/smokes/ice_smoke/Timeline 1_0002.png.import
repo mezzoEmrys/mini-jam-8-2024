@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://11r58t4nmrdr"
-path="res://.godot/imported/Timeline 1_0002.png-721caeec96547d6f6ab205874935662f.ctex"
+uid="uid://b518cqsh3ed7f"
+path="res://.godot/imported/Timeline 1_0002.png-6292b977e9b8553f7d70a2a4b99889be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/smokes/lemon_smoke/Timeline 1_0002.png"
-dest_files=["res://.godot/imported/Timeline 1_0002.png-721caeec96547d6f6ab205874935662f.ctex"]
+source_file="res://sprites/smokes/ice_smoke/Timeline 1_0002.png"
+dest_files=["res://.godot/imported/Timeline 1_0002.png-6292b977e9b8553f7d70a2a4b99889be.ctex"]
 
 [params]
 

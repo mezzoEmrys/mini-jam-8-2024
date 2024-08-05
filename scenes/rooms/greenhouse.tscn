@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cvb5q5aey4loq"]
+[gd_scene load_steps=18 format=3 uid="uid://b0vuo1jmifnny"]
 
 [ext_resource type="Texture2D" uid="uid://d0vo2uul7hxm7" path="res://sprites/rooms/Greenhouse.png" id="1_bwij5"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_a7tiy"]

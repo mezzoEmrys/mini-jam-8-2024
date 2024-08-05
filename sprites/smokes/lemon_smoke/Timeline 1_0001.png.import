@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfs3jicts3nv0"
-path="res://.godot/imported/Timeline 1_0001.png-699fe906e5bdd3a000b834eb9480223b.ctex"
+path="res://.godot/imported/Timeline 1_0001.png-2bc8e9ce2f35793797bd7a24e4d48ef2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/smokes/ice_smoke/Timeline 1_0001.png"
-dest_files=["res://.godot/imported/Timeline 1_0001.png-699fe906e5bdd3a000b834eb9480223b.ctex"]
+source_file="res://sprites/smokes/lemon_smoke/Timeline 1_0001.png"
+dest_files=["res://.godot/imported/Timeline 1_0001.png-2bc8e9ce2f35793797bd7a24e4d48ef2.ctex"]
 
 [params]
 
