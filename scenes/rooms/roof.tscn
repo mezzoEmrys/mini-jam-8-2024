@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://h7ob0x2as02"]
+[gd_scene load_steps=30 format=3 uid="uid://h7ob0x2as02"]
 
 [ext_resource type="Texture2D" uid="uid://yoytorv1y23k" path="res://sprites/rooms/Roof Background.png" id="1_oga0b"]
 [ext_resource type="Texture2D" uid="uid://bxorusp3x857e" path="res://sprites/rooms/Roof Forground.png" id="2_xn0yc"]
@@ -21,9 +21,14 @@
 [ext_resource type="PackedScene" uid="uid://7b5l4ch1g2hl" path="res://scenes/platforms/spice_bottle_empty.tscn" id="19_dcj1g"]
 [ext_resource type="PackedScene" uid="uid://bekdmvh1ag8qy" path="res://scenes/platforms/yarn.tscn" id="20_xdpqe"]
 [ext_resource type="PackedScene" path="res://scenes/hazards/paw.tscn" id="21_7yjnc"]
+[ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="23_2l5by"]
+[ext_resource type="PackedScene" uid="uid://bpcgyjvqksj3e" path="res://scenes/hazards/fire_sm.tscn" id="24_5v8we"]
+[ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="25_i2e7o"]
+[ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="26_bbh2n"]
+[ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="27_ojaer"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6psnn"]
-size = Vector2(3827.75, 141)
+size = Vector2(3827.75, 225.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fv0ld"]
 size = Vector2(10.6593, 177.26)
@@ -44,6 +49,7 @@ scale = Vector2(1.48477, 1.54514)
 texture = ExtResource("2_xn0yc")
 
 [node name="Gorp" parent="." instance=ExtResource("3_72isn")]
+z_index = 1
 position = Vector2(3249, 1962)
 scale = Vector2(0.2, 0.2)
 
@@ -59,63 +65,67 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="teacup" parent="." instance=ExtResource("4_n101i")]
-position = Vector2(551, 316)
+position = Vector2(1087, 365)
 
 [node name="Thin" parent="." instance=ExtResource("5_av46j")]
-position = Vector2(583, 410)
+position = Vector2(1115, 474)
 
 [node name="Skull" parent="." instance=ExtResource("6_fg6y0")]
-position = Vector2(2776, 963)
+position = Vector2(2707, 897)
 
 [node name="Heavy" parent="." instance=ExtResource("7_mcntv")]
-position = Vector2(1244, 522)
+position = Vector2(1433, 473)
 
 [node name="Fish" parent="." instance=ExtResource("8_yfnkq")]
 position = Vector2(2153, 1662)
 
 [node name="Flower" parent="." instance=ExtResource("9_hrtb2")]
-position = Vector2(1303, 1078)
+position = Vector2(1316, 1024)
 
 [node name="Cabinet" parent="." instance=ExtResource("10_12w8u")]
-position = Vector2(2567, 1826)
+position = Vector2(2547, 1848)
+scale = Vector2(0.9, 0.9)
 
 [node name="Batter" parent="." instance=ExtResource("11_5qcui")]
-position = Vector2(434, 1546)
+position = Vector2(507, 1368)
+rotation = -1.17385
 
 [node name="Bones" parent="." instance=ExtResource("12_bm4jb")]
-position = Vector2(1759, 514)
+position = Vector2(2001, 454)
 
 [node name="Catfood" parent="." instance=ExtResource("13_yyx07")]
-position = Vector2(2119, 951)
+position = Vector2(2244, 922)
 
 [node name="Freezer" parent="." instance=ExtResource("14_cq8fe")]
-position = Vector2(1112, 1539)
+position = Vector2(774, 1188)
+scale = Vector2(0.5, 0.5)
 
 [node name="Freezer Shelf" parent="." instance=ExtResource("15_kfdte")]
-position = Vector2(744, 1736)
+position = Vector2(820, 1770)
 
 [node name="Freezer Shelf2" parent="." instance=ExtResource("15_kfdte")]
-position = Vector2(747, 1511)
+position = Vector2(821, 1533)
 
 [node name="Lemon" parent="." instance=ExtResource("16_y2k27")]
-position = Vector2(2876, 1901)
+position = Vector2(2791, 1955)
+rotation = 0.284962
 
 [node name="Mushroom" parent="." instance=ExtResource("17_v5wf4")]
-position = Vector2(1188, 1908)
+position = Vector2(1205, 1873)
 
 [node name="Spice Bottle" parent="." instance=ExtResource("18_76v31")]
-position = Vector2(1520, 1556)
+position = Vector2(1531, 1619)
 rotation = -1.56054
 
 [node name="Spice Bottle Empty" parent="." instance=ExtResource("19_dcj1g")]
-position = Vector2(1759, 1108)
+position = Vector2(1786, 1046)
 rotation = 1.5708
 
 [node name="Thin2" parent="." instance=ExtResource("5_av46j")]
 position = Vector2(1848, 1723)
 
 [node name="Yarn" parent="." instance=ExtResource("20_xdpqe")]
-position = Vector2(2502, 451)
+position = Vector2(2603, 454)
 
 [node name="Paw" parent="." instance=ExtResource("21_7yjnc")]
 position = Vector2(1838, 1957)
@@ -124,7 +134,7 @@ position = Vector2(1838, 1957)
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(1884.13, 2178)
+position = Vector2(1884.13, 2135.75)
 shape = SubResource("RectangleShape2D_6psnn")
 
 [node name="Wall" type="RigidBody2D" parent="."]
@@ -143,3 +153,53 @@ freeze = true
 position = Vector2(1554, 1139.84)
 scale = Vector2(12.665, 12.665)
 shape = SubResource("RectangleShape2D_7fsfr")
+
+[node name="Freezer2" parent="." instance=ExtResource("14_cq8fe")]
+position = Vector2(940, 1077)
+scale = Vector2(0.5, 0.5)
+
+[node name="Freezer Shelf3" parent="." instance=ExtResource("15_kfdte")]
+position = Vector2(3089, 755)
+
+[node name="Freezer Shelf4" parent="." instance=ExtResource("15_kfdte")]
+position = Vector2(3089, 523)
+
+[node name="Ghost" parent="." instance=ExtResource("23_2l5by")]
+position = Vector2(243, 589)
+
+[node name="FireSm2" parent="." instance=ExtResource("24_5v8we")]
+position = Vector2(1789, 1082)
+rotation = 3.14027
+scale = Vector2(0.3, 0.3)
+
+[node name="FireSm3" parent="." instance=ExtResource("24_5v8we")]
+position = Vector2(1880, 2178)
+
+[node name="Icicle1" parent="." instance=ExtResource("25_i2e7o")]
+position = Vector2(1361, 1138)
+scale = Vector2(0.5, 0.5)
+
+[node name="Icicle2" parent="." instance=ExtResource("25_i2e7o")]
+position = Vector2(1121, 454)
+scale = Vector2(0.5, 0.5)
+
+[node name="Electric" parent="." instance=ExtResource("26_bbh2n")]
+position = Vector2(2000, 931)
+
+[node name="Checkpoint" parent="." instance=ExtResource("27_ojaer")]
+position = Vector2(3211, 1949)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("27_ojaer")]
+position = Vector2(1138, 378)
+
+[node name="Freezer Shelf5" parent="." instance=ExtResource("15_kfdte")]
+position = Vector2(826, 1972)
+
+[node name="Electric2" parent="." instance=ExtResource("26_bbh2n")]
+position = Vector2(1668, 461)
+
+[node name="Electric3" parent="." instance=ExtResource("26_bbh2n")]
+position = Vector2(2272, 413)
+
+[node name="Electric4" parent="." instance=ExtResource("26_bbh2n")]
+position = Vector2(840, 402)
