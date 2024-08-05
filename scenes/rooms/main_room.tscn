@@ -290,7 +290,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji4ch"]
 size = Vector2(447, 378.25)
 
-[node name="Node2D" type="Node2D"]
+[node name="MainRoom" type="Node2D"]
 
 [node name="WitchRoomBackground" type="Sprite2D" parent="."]
 position = Vector2(1282, 723)
