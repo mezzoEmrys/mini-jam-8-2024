@@ -15,6 +15,10 @@ run/main_scene="res://scenes/rooms/greenhouse.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
 
+[autoload]
+
+Get="*res://scripts/get.gd"
+
 [input]
 
 jump={
