@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://t2uar4o5y4rx"]
+[gd_scene load_steps=21 format=3 uid="uid://t2uar4o5y4rx"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_rb3fx"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://de24nxecpqvo0" path="res://scenes/hazards/icicle_base_3.tscn" id="5_373q1"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="5_us1kf"]
 [ext_resource type="PackedScene" uid="uid://jneln3x2qhgk" path="res://scenes/platforms/box.tscn" id="8_2grjq"]
+[ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="11_530j3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
@@ -236,3 +237,31 @@ position = Vector2(1499, -873)
 
 [node name="Thin11" parent="." instance=ExtResource("3_hor6h")]
 position = Vector2(1275, -873)
+
+[node name="SceneChanger" parent="." instance=ExtResource("11_530j3")]
+position = Vector2(336, -200)
+target_scene = "res://scenes/rooms/garden.tscn"
+
+[node name="SceneChanger2" parent="." instance=ExtResource("11_530j3")]
+position = Vector2(1863, -208)
+target_scene = "res://scenes/rooms/kitchen.tscn"
+
+[node name="SceneChanger3" parent="." instance=ExtResource("11_530j3")]
+position = Vector2(342.029, -1712.37)
+target_scene = "res://scenes/rooms/greenhouse.tscn"
+
+[node name="SceneChanger4" parent="." instance=ExtResource("11_530j3")]
+position = Vector2(1854.53, -1712.37)
+target_scene = "res://scenes/rooms/electric.tscn"
+
+[node name="SceneChanger5" parent="." instance=ExtResource("11_530j3")]
+position = Vector2(328.279, -3194.87)
+target_scene = "res://scenes/rooms/freezer.tscn"
+
+[node name="SceneChanger6" parent="." instance=ExtResource("11_530j3")]
+position = Vector2(1843.28, -3223.62)
+target_scene = "res://scenes/rooms/haunted_room.tscn"
+
+[node name="SceneChanger7" parent="." instance=ExtResource("11_530j3")]
+position = Vector2(1854.53, -4681.12)
+target_scene = "res://scenes/rooms/roof.tscn"
