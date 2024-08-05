@@ -1,6 +1,7 @@
-[gd_scene load_steps=76 format=3 uid="uid://dok7omvslwslh"]
+[gd_scene load_steps=77 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
+[ext_resource type="Script" path="res://scripts/rooms/main_room.gd" id="1_gduad"]
 [ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
 [ext_resource type="Texture2D" uid="uid://ce8vxmymrv247" path="res://sprites/rooms/Witch Room Cauldron.png" id="3_nlrpj"]
 [ext_resource type="Texture2D" uid="uid://buobpqwpvvcba" path="res://sprites/rooms/Witch Room Light.png" id="4_5jpvh"]
@@ -291,6 +292,7 @@ _data = {
 size = Vector2(447, 378.25)
 
 [node name="MainRoom" type="Node2D"]
+script = ExtResource("1_gduad")
 
 [node name="WitchRoomBackground" type="Sprite2D" parent="."]
 position = Vector2(1282, 723)
