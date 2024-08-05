@@ -9,10 +9,10 @@ var is_swiping : bool = false
 
 func swipe_finished():
 	is_swiping = false
+	timer = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	hazard.hide()
 	anim.play("RESET")
 
 func _process(delta):
@@ -20,10 +20,7 @@ func _process(delta):
 	if timer >= swipe_delay:
 		is_swiping = true
 		anim.play("swiping")
-	pass
 	
 func _physics_process(_delta):
 	if not is_swiping:
 		position = gorp.position
-		pass
-	pass
