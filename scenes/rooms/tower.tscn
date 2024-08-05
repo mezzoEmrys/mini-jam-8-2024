@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://byjek575aj8bv"]
+[gd_scene load_steps=13 format=3 uid="uid://byjek575aj8bv"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_rb3fx"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://scripts/PlatformMovement.gd" id="4_tjdkl"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="5_us1kf"]
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="6_uy101"]
-[ext_resource type="PackedScene" uid="uid://dok7omvslwslh" path="res://scenes/rooms/main_room.tscn" id="7_k5ptf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
@@ -145,4 +144,4 @@ position = Vector2(0, 30)
 
 [node name="SceneChanger" parent="." instance=ExtResource("6_uy101")]
 position = Vector2(342, 1269)
-target_scene = ExtResource("7_k5ptf")
+target_scene = "res://scenes/rooms/main_room.tscn"

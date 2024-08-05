@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var target_scene : PackedScene
+@export_file("*.tscn") var target_scene: String
 
 func _on_area_2d_body_entered(body):
-	Get.SceneManager.load_scene(target_scene)
+	Get.SceneManager.load_scene_named(target_scene)
