@@ -1,0 +1,107 @@
+[gd_scene load_steps=13 format=3 uid="uid://dtm0dydtxa1x6"]
+
+[ext_resource type="Texture2D" uid="uid://2sp2x54fmwnv" path="res://sprites/rooms/Garden Background.png" id="1_vg1tu"]
+[ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_4vhfj"]
+[ext_resource type="Texture2D" uid="uid://domxahnd57lee" path="res://sprites/rooms/Garden Foreground.png" id="3_etly7"]
+[ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="4_24a3c"]
+[ext_resource type="PackedScene" uid="uid://c7doh3v3nbfkn" path="res://scenes/platforms/trunk.tscn" id="5_cropg"]
+[ext_resource type="PackedScene" uid="uid://ywvkrxabicia" path="res://scenes/platforms/flower.tscn" id="6_nuyk2"]
+[ext_resource type="PackedScene" uid="uid://b4nl4h12qdjj5" path="res://scenes/platforms/mushroom.tscn" id="7_465tp"]
+[ext_resource type="PackedScene" uid="uid://byb8hgge48jmu" path="res://scenes/platforms/heavy_garden.tscn" id="8_6wbkg"]
+[ext_resource type="PackedScene" uid="uid://cluo4af3nnnyx" path="res://scenes/platforms/thin_garden.tscn" id="9_wouye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohb2w"]
+size = Vector2(2565.5, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81rd7"]
+size = Vector2(12.3964, 115.488)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76og1"]
+size = Vector2(7.71023, 115.488)
+
+[node name="Garden" type="Node2D"]
+
+[node name="GardenBackground" type="Sprite2D" parent="."]
+position = Vector2(1280, 720)
+texture = ExtResource("1_vg1tu")
+
+[node name="Gorp" parent="." instance=ExtResource("2_4vhfj")]
+z_index = 1
+position = Vector2(2281, 1244)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="Gorp"]
+position = Vector2(-90, 90)
+scale = Vector2(5, 5)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 1400
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Ground" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1283.25, 1374.5)
+shape = SubResource("RectangleShape2D_ohb2w")
+
+[node name="Wall" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(73.5, 711.325)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_81rd7")
+
+[node name="Wall2" type="RigidBody2D" parent="Wall"]
+position = Vector2(2206, -34)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Wall2"]
+position = Vector2(305, 730)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_76og1")
+
+[node name="GardenForeground" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1279, 720)
+texture = ExtResource("3_etly7")
+
+[node name="tea" parent="." instance=ExtResource("4_24a3c")]
+z_index = 1
+position = Vector2(263, 287)
+
+[node name="Trunk" parent="." instance=ExtResource("5_cropg")]
+position = Vector2(1679, 1192)
+
+[node name="Flower" parent="." instance=ExtResource("6_nuyk2")]
+position = Vector2(266, 323)
+scale = Vector2(0.5, 0.5)
+
+[node name="Mushroom" parent="." instance=ExtResource("7_465tp")]
+position = Vector2(1935, 1202)
+scale = Vector2(0.5, 0.5)
+
+[node name="Heavy" parent="." instance=ExtResource("8_6wbkg")]
+position = Vector2(1287, 1046)
+scale = Vector2(1.4, 1.4)
+
+[node name="Mushroom2" parent="." instance=ExtResource("7_465tp")]
+position = Vector2(1512, 1256)
+scale = Vector2(0.25, 0.25)
+
+[node name="Trunk2" parent="." instance=ExtResource("5_cropg")]
+position = Vector2(877, 929)
+rotation = 1.88173
+
+[node name="Thin3" parent="." instance=ExtResource("9_wouye")]
+position = Vector2(548, 450)
+
+[node name="Thin2" parent="." instance=ExtResource("9_wouye")]
+position = Vector2(552, 609)
+
+[node name="Thin" parent="." instance=ExtResource("9_wouye")]
+position = Vector2(551, 779)
