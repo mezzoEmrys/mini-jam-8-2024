@@ -10,21 +10,29 @@ var item_id = ""
 @onready var sound = $AudioStreamPlayer2D
 
 func _ready():
-	hide()
+	if Get.item_id != null :
+		set_item(Get.item_id, false)
+	else :
+		hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta * frequency
 	set_position(default_pos + Vector2(0, sin(time) * amplitude))
+
 func give_item():
 	item_held = false
+	Get.item_id = null
 	hide()
 	return item_id
-func set_item(id):
+	
+func set_item(id, playsound):
 	show()
 	print("setting item to " + id)
 	item_held = true
 	item_id = id
-	sound.play()
+	Get.item_id = id
+	if playsound:
+		sound.play()
 	match id:
 		"catmint":
 			animator.play("catmint")

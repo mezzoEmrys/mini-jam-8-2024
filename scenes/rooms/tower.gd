@@ -3,6 +3,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Get.SceneManager.from != "MainRoom":
+		$Gorp.position = get_node("Entry").get_node(Get.SceneManager.from).position
+	
 	if not Get.SceneManager.catmint_active:
 		remove_child($Paw)
 	if not Get.SceneManager.ginger_active:

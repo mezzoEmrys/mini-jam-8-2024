@@ -4,6 +4,7 @@ var SceneManager
 var Gorp
 var cauldron_item
 var next_scene : String
+var item_id
 
 func set_next_scene(scene):
 	next_scene = scene

@@ -26,5 +26,5 @@ func _on_body_entered(body):
 	if(body.name == "Gorp"):
 		var held_item = body.item_sprite
 		if not held_item.item_held:
-			held_item.set_item(id)
+			held_item.set_item(id, true)
 			queue_free()

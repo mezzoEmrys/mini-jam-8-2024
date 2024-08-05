@@ -12,4 +12,4 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if(body.name == "Gorp"):
-		gorp.set_checkpoint(self)
+		body.set_checkpoint(self)

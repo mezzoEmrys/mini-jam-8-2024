@@ -292,6 +292,7 @@ _data = {
 size = Vector2(447, 378.25)
 
 [node name="MainRoom" type="Node2D"]
+position = Vector2(11, 8)
 script = ExtResource("1_gduad")
 
 [node name="WitchRoomBackground" type="Sprite2D" parent="."]
@@ -415,7 +416,7 @@ position_smoothing_enabled = true
 position = Vector2(1432, 1567)
 
 [node name="Entry" type="Node2D" parent="."]
-position = Vector2(1582, 1251)
+position = Vector2(1547, 1253)
 
 [node name="tea" parent="." instance=ExtResource("55_w3uy7")]
 position = Vector2(1313, 1562)
