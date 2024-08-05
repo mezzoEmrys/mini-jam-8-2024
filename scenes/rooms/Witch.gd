@@ -8,7 +8,8 @@ extends Node2D
 var sneeze_timer = 20.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	anim.play("idle")
+	animspr.play()
+	anim.play("RESET")
 	pass # Replace with function body.
 
 
@@ -17,4 +18,5 @@ func _process(_delta):
 	sneeze_timer -= _delta * randf_range(1.0, 3.0)
 	if (sneeze_timer < 0):
 		anim.play("sneeze")
+		sneeze_timer = sneeze_timer_max
 	pass
