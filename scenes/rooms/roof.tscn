@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://h7ob0x2as02"]
+[gd_scene load_steps=31 format=3 uid="uid://h7ob0x2as02"]
 
 [ext_resource type="Texture2D" uid="uid://yoytorv1y23k" path="res://sprites/rooms/Roof Background.png" id="1_oga0b"]
 [ext_resource type="Texture2D" uid="uid://bxorusp3x857e" path="res://sprites/rooms/Roof Forground.png" id="2_xn0yc"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bpcgyjvqksj3e" path="res://scenes/hazards/fire_sm.tscn" id="24_5v8we"]
 [ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="25_i2e7o"]
 [ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="26_bbh2n"]
+[ext_resource type="Texture2D" uid="uid://dkvvwcnb7mkd7" path="res://sprites/rooms/Roof_Back.png" id="27_jptg0"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="27_ojaer"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6psnn"]
@@ -203,3 +204,9 @@ position = Vector2(2272, 413)
 
 [node name="Electric4" parent="." instance=ExtResource("26_bbh2n")]
 position = Vector2(840, 402)
+
+[node name="RoofBack" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1898.5, 1112.5)
+scale = Vector2(1.49414, 1.57431)
+texture = ExtResource("27_jptg0")
