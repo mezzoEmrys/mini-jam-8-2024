@@ -8,8 +8,12 @@ func _ready():
 
 func _on_body_entered(body):
 	if(body.name == "Gorp"):
-		var item = get_node("/root/GameSource/Gorp/held_item")
+		var item = body.get_node("held_item")
 		if item.item_held:
-			print("Cauldroning " + item.give_item())
+			var item_name = item.give_item()
+			print("Cauldroning " + item_name)
+			Get.cauldron_item = item_name
+			print(Get.cauldron_item)
+			Get.SceneManager.load_scene(load("res://scenes/soup_cutscene.tscn"))
 			
 			
