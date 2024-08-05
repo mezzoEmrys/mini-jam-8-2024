@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://t2uar4o5y4rx"]
+
+[ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
+[ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_rb3fx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
+size = Vector2(14.7513, 583.84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1p1jw"]
+size = Vector2(10.5665, 586.445)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vaovn"]
+size = Vector2(2183, 117.5)
+
+[node name="tower" type="Node2D"]
+
+[node name="Tower" type="Sprite2D" parent="."]
+position = Vector2(1098, -2278)
+texture = ExtResource("1_rpc7b")
+
+[node name="Wall" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(95, -2305)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_8pl8t")
+
+[node name="Wall2" type="RigidBody2D" parent="."]
+position = Vector2(2206, -34)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(-90, -2364)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_1p1jw")
+
+[node name="Ground" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1093, 1377)
+shape = SubResource("RectangleShape2D_vaovn")
+
+[node name="Gorp" parent="." instance=ExtResource("2_rb3fx")]
+position = Vector2(418, 1209)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="Gorp"]
+position = Vector2(-90, 90)
+scale = Vector2(5, 5)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 1400
+limit_smoothed = true
+position_smoothing_enabled = true
