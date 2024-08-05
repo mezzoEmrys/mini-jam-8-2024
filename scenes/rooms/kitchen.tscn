@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://vufkou7we5tj"]
+[gd_scene load_steps=18 format=3 uid="uid://vufkou7we5tj"]
 
 [ext_resource type="Texture2D" uid="uid://cohbe3kt6tyq" path="res://sprites/rooms/Fire Background.png" id="1_y83vv"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_wqr64"]
@@ -11,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://7b5l4ch1g2hl" path="res://scenes/platforms/spice_bottle_empty.tscn" id="9_burff"]
 [ext_resource type="PackedScene" uid="uid://bpcgyjvqksj3e" path="res://scenes/hazards/fire_sm.tscn" id="10_lv62t"]
 [ext_resource type="PackedScene" uid="uid://cdcgjic7vrtej" path="res://scenes/platforms/thin_kitchen.tscn" id="11_jto38"]
+[ext_resource type="Texture2D" uid="uid://doxa76p2hji2o" path="res://sprites/rooms/Fire Midground.png" id="12_ae4mg"]
+[ext_resource type="Texture2D" uid="uid://dn26uthaqkk3u" path="res://sprites/rooms/Foreground.png" id="13_irntm"]
+[ext_resource type="Texture2D" uid="uid://yp3fepi42mf6" path="res://sprites/rooms/Overlay.png" id="14_oemap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fa0eg"]
 size = Vector2(2565.5, 141)
@@ -28,7 +31,7 @@ position = Vector2(1279, 720)
 texture = ExtResource("1_y83vv")
 
 [node name="Gorp" parent="." instance=ExtResource("2_wqr64")]
-position = Vector2(2281, 1244)
+position = Vector2(222, 1255)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -67,59 +70,85 @@ scale = Vector2(12.665, 12.665)
 shape = SubResource("RectangleShape2D_kpo8e")
 
 [node name="Cabinet" parent="." instance=ExtResource("3_shv3m")]
-position = Vector2(294, 1159)
+position = Vector2(2288, 1167)
 scale = Vector2(0.719999, 0.719999)
 
 [node name="pepper" parent="." instance=ExtResource("4_58loy")]
-position = Vector2(309, 412)
+position = Vector2(2272, 429)
 scale = Vector2(1.04243, 1.04243)
 
 [node name="Heavy" parent="." instance=ExtResource("5_pfx5c")]
-position = Vector2(930, 799)
+z_index = 1
+position = Vector2(1563, 836)
 scale = Vector2(2, 2)
 
 [node name="Cabinet2" parent="." instance=ExtResource("3_shv3m")]
-position = Vector2(294, 884)
+position = Vector2(2288, 895)
 scale = Vector2(0.719999, 0.719999)
 
 [node name="Cabinet3" parent="." instance=ExtResource("3_shv3m")]
-position = Vector2(294, 612)
+position = Vector2(2291, 623)
 scale = Vector2(0.719999, 0.719999)
 
 [node name="FireMd" parent="." instance=ExtResource("6_wymfq")]
-position = Vector2(981, 1423)
+position = Vector2(1582, 1466)
 
 [node name="Spice Bottle" parent="." instance=ExtResource("7_t0sd3")]
-position = Vector2(565, 620)
+position = Vector2(2031, 665)
 scale = Vector2(0.5, 0.5)
 
 [node name="Oven" parent="." instance=ExtResource("8_d2wps")]
 z_index = 1
-position = Vector2(1754, 1095)
+position = Vector2(846, 1132)
 
 [node name="Spice Bottle Empty" parent="." instance=ExtResource("9_burff")]
-position = Vector2(1395, 747)
+z_index = 1
+position = Vector2(1188, 784)
 rotation = -1.57551
 scale = Vector2(0.8, 0.8)
 
 [node name="FireSm" parent="." instance=ExtResource("10_lv62t")]
 z_index = 2
-position = Vector2(1742, 951)
+position = Vector2(828, 985)
 scale = Vector2(0.2, 0.2)
 
 [node name="Thin" parent="." instance=ExtResource("11_jto38")]
-position = Vector2(1986, 1216)
-rotation = 0.708427
+position = Vector2(549, 1236)
+rotation = -0.689097
 scale = Vector2(2, 2)
 
 [node name="Spice Bottle2" parent="." instance=ExtResource("7_t0sd3")]
-position = Vector2(1630, 857)
+position = Vector2(960, 902)
 scale = Vector2(0.5, 0.5)
 
 [node name="Spice Bottle3" parent="." instance=ExtResource("7_t0sd3")]
-position = Vector2(1863, 888)
+position = Vector2(715, 939)
 scale = Vector2(0.4, 0.4)
 
 [node name="FireSm2" parent="." instance=ExtResource("10_lv62t")]
-position = Vector2(932, 680)
+position = Vector2(1574, 716)
 scale = Vector2(0.2, 0.2)
+
+[node name="FireMidground" type="Sprite2D" parent="."]
+position = Vector2(1271, 711)
+texture = ExtResource("12_ae4mg")
+
+[node name="Foreground" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1279, 719)
+texture = ExtResource("13_irntm")
+
+[node name="Overlay" type="Sprite2D" parent="."]
+z_index = 7
+position = Vector2(1278, 719)
+texture = ExtResource("14_oemap")
+
+[node name="FireSm3" parent="." instance=ExtResource("10_lv62t")]
+position = Vector2(1564, 781)
+rotation = 3.14159
+scale = Vector2(0.4, 0.4)
+
+[node name="FireSm4" parent="." instance=ExtResource("10_lv62t")]
+position = Vector2(1204, 840)
+rotation = 3.14159
+scale = Vector2(0.19, 0.19)
