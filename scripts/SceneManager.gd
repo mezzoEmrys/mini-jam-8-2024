@@ -9,6 +9,7 @@ var pepper_active: bool = false
 var tea_active: bool = false
 var mug_active: bool = false
 
+var from : String
 var next_scene : PackedScene
 var level_container : Node2D
 var transition : AnimationPlayer
@@ -25,11 +26,13 @@ func stage_hidden():
 	for child in level_container.get_children():
 		level_container.remove_child(child)
 		child.queue_free()
-	level_container.add_child(next_scene.instantiate())
+	var scene = next_scene.instantiate()
+	level_container.add_child(scene)
 	Get.refresh_Gorp()
 	transition.play_backwards('dissolve')
 
 func load_scene(scene: PackedScene):
+	from = get_tree().current_scene.get_node("LevelScene").get_child(0).name
 	load_containers()
 	transition.play("dissolve")
 	next_scene = scene
