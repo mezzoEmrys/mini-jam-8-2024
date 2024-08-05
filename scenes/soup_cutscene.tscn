@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://eudxnvxuooe4"]
 
-[ext_resource type="Script" path="res://soup_cutscene.gd" id="1_m5clw"]
-[ext_resource type="Texture2D" uid="uid://cyfcnpmag3oeo" path="res://sprites/animatics/cauldron animatic 1.png" id="1_vwch3"]
-[ext_resource type="Texture2D" uid="uid://d4a2nyls2tggk" path="res://sprites/animatics/cauldron animatic 2.png" id="2_sa516"]
-[ext_resource type="Texture2D" uid="uid://djv5y58idcbgm" path="res://sprites/animatics/cauldron animatic 3.png" id="3_63fx7"]
-[ext_resource type="Texture2D" uid="uid://ujqr5qhs7ifl" path="res://sprites/animatics/cauldron animatic 4.png" id="4_ci0a1"]
+[ext_resource type="Script" path="res://scripts/soup_cutscene.gd" id="1_ig1ea"]
+[ext_resource type="Texture2D" uid="uid://cyfcnpmag3oeo" path="res://sprites/animatics/cauldron animatic 1.png" id="2_7bqhp"]
+[ext_resource type="Texture2D" uid="uid://d4a2nyls2tggk" path="res://sprites/animatics/cauldron animatic 2.png" id="3_nrvh4"]
+[ext_resource type="Texture2D" uid="uid://djv5y58idcbgm" path="res://sprites/animatics/cauldron animatic 3.png" id="4_txs7j"]
+[ext_resource type="Texture2D" uid="uid://ujqr5qhs7ifl" path="res://sprites/animatics/cauldron animatic 4.png" id="5_8v75e"]
 
 [sub_resource type="Animation" id="Animation_shsfp"]
 resource_name = "soup_cutscene"
@@ -31,16 +31,16 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_vwch3")
+"texture": ExtResource("2_7bqhp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_sa516")
+"texture": ExtResource("3_nrvh4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_63fx7")
+"texture": ExtResource("4_txs7j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ci0a1")
+"texture": ExtResource("5_8v75e")
 }],
 "loop": true,
 "name": &"default",
@@ -54,7 +54,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_m5clw")
+script = ExtResource("1_ig1ea")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

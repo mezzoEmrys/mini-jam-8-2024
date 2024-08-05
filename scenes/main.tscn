@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bc8tfn4e1spe6"]
 
 [ext_resource type="Script" path="res://scripts/SceneManager.gd" id="1_em2sy"]
-[ext_resource type="PackedScene" uid="uid://tsb0ovultpxn" path="res://scenes/main_menu.tscn" id="1_ga074"]
+[ext_resource type="PackedScene" uid="uid://cw8ghinwy4dnb" path="res://scenes/main_menu.tscn" id="1_ga074"]
 
 [sub_resource type="Animation" id="Animation_y7d15"]
 resource_name = "RESET"
