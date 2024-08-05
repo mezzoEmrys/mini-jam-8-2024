@@ -460,7 +460,7 @@ scale = Vector2(2.685, 2.685)
 texture = ExtResource("62_f4taf")
 
 [node name="SceneChanger" parent="." instance=ExtResource("65_3av0d")]
-position = Vector2(1722, 1252)
+position = Vector2(1673, 1252)
 target_scene = "res://scenes/rooms/tower.tscn"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

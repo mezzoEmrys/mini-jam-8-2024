@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="11_530j3"]
 [ext_resource type="PackedScene" uid="uid://ywvkrxabicia" path="res://scenes/platforms/flower.tscn" id="15_18aq2"]
 [ext_resource type="PackedScene" uid="uid://djk4ueqrjq7ri" path="res://scenes/platforms/spice_bottle.tscn" id="16_bp04t"]
-[ext_resource type="PackedScene" uid="uid://cdcgjic7vrtej" path="res://scenes/platforms/thin_kitchen.tscn" id="17_mau2u"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/thin_kitchen.tscn" id="17_mau2u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
@@ -63,7 +63,7 @@ _data = {
 }
 point_count = 3
 
-[node name="tower" type="Node2D"]
+[node name="Tower" type="Node2D"]
 script = ExtResource("1_x47ue")
 
 [node name="Tower" type="Sprite2D" parent="."]
@@ -95,7 +95,7 @@ position = Vector2(1093, 1377)
 shape = SubResource("RectangleShape2D_vaovn")
 
 [node name="Gorp" parent="." instance=ExtResource("2_rb3fx")]
-position = Vector2(359, 1240)
+position = Vector2(426, 1256)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -290,3 +290,30 @@ scale = Vector2(0.3, 0.3)
 [node name="Thin12" parent="." instance=ExtResource("17_mau2u")]
 position = Vector2(936, -414)
 rotation = -0.434601
+
+[node name="SceneChanger8" parent="." instance=ExtResource("11_530j3")]
+position = Vector2(337, 1277)
+target_scene = "res://scenes/rooms/main_room.tscn"
+
+[node name="Entry" type="Node2D" parent="."]
+
+[node name="Electric" type="Node2D" parent="Entry"]
+position = Vector2(1774, -1722)
+
+[node name="Freezer" type="Node2D" parent="Entry"]
+position = Vector2(408, -3187)
+
+[node name="Garden" type="Node2D" parent="Entry"]
+position = Vector2(400, -196)
+
+[node name="Greenhouse" type="Node2D" parent="Entry"]
+position = Vector2(430, -1699)
+
+[node name="HauntedRoom" type="Node2D" parent="Entry"]
+position = Vector2(1752, -3217)
+
+[node name="Kitchen" type="Node2D" parent="Entry"]
+position = Vector2(1774, -204)
+
+[node name="Roof" type="Node2D" parent="Entry"]
+position = Vector2(1752, -4667)
