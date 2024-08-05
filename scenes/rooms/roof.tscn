@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://yoytorv1y23k" path="res://sprites/rooms/Roof Background.png" id="1_oga0b"]
 [ext_resource type="Texture2D" uid="uid://bxorusp3x857e" path="res://sprites/rooms/Roof Forground.png" id="2_xn0yc"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="3_72isn"]
-[ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="4_n101i"]
 [ext_resource type="PackedScene" uid="uid://blps5y1jfdrnu" path="res://scenes/platforms/thin.tscn" id="5_av46j"]
 [ext_resource type="PackedScene" uid="uid://ddxkiwbdjhd2d" path="res://scenes/platforms/skull.tscn" id="6_fg6y0"]
 [ext_resource type="PackedScene" path="res://scenes/platforms/heavy_kitchen.tscn" id="7_mcntv"]
@@ -27,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="26_bbh2n"]
 [ext_resource type="Texture2D" uid="uid://dkvvwcnb7mkd7" path="res://sprites/rooms/Roof_Back.png" id="27_jptg0"]
 [ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="27_ojaer"]
+[ext_resource type="PackedScene" path="res://scenes/item_scenes/mug.tscn" id="28_4g377"]
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="28_yuo80"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6psnn"]
@@ -65,9 +65,6 @@ limit_right = 3800
 limit_bottom = 2220
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="teacup" parent="." instance=ExtResource("4_n101i")]
-position = Vector2(1087, 365)
 
 [node name="Thin" parent="." instance=ExtResource("5_av46j")]
 position = Vector2(1115, 474)
@@ -215,3 +212,6 @@ texture = ExtResource("27_jptg0")
 [node name="SceneChanger" parent="." instance=ExtResource("28_yuo80")]
 position = Vector2(3259, 1943)
 target_scene = "res://scenes/rooms/tower.tscn"
+
+[node name="mug" parent="." instance=ExtResource("28_4g377")]
+position = Vector2(1070, 376)

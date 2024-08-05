@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/hazard.gd" id="2_b6vd7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxb6w"]
-size = Vector2(1000, 350)
+size = Vector2(1000, 225)
 
 [node name="FireMd" type="Node2D"]
 
@@ -17,7 +17,7 @@ frame_progress = 0.714471
 script = ExtResource("2_b6vd7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
-position = Vector2(-2, -175)
+position = Vector2(-2, -237.5)
 shape = SubResource("RectangleShape2D_pxb6w")
 
 [connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]

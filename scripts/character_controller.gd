@@ -31,12 +31,10 @@ var direction = 1
 func finish_charge():
 	is_charging = false
 
-#func _ready() -> void():
-	#connect("item_pickup", self, "")
+func _ready() :
+	Get.Gorp = self
 
 func _physics_process(delta):
-	
-	
 	if hitstun : return
 	# Add the gravity.
 	var is_airborne = false

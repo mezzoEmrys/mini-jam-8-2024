@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://t2uar4o5y4rx"]
+[gd_scene load_steps=47 format=3 uid="uid://t2uar4o5y4rx"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="Script" path="res://scenes/rooms/tower.gd" id="1_x47ue"]
@@ -11,19 +11,32 @@
 [ext_resource type="PackedScene" uid="uid://de24nxecpqvo0" path="res://scenes/hazards/icicle_base_3.tscn" id="5_373q1"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="5_us1kf"]
 [ext_resource type="PackedScene" uid="uid://jneln3x2qhgk" path="res://scenes/platforms/box.tscn" id="8_2grjq"]
+[ext_resource type="PackedScene" uid="uid://cajd0tbikj1e0" path="res://scenes/hazards/icicle_base_2.tscn" id="8_5vr1g"]
+[ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="9_0x1xa"]
 [ext_resource type="PackedScene" uid="uid://djndm2ng7o3ap" path="res://scenes/hazards/ghost.tscn" id="9_gjhmm"]
-[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/item_scenes/paw.tscn" id="10_frgne"]
+[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/hazards/paw.tscn" id="10_frgne"]
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="11_530j3"]
 [ext_resource type="PackedScene" uid="uid://ywvkrxabicia" path="res://scenes/platforms/flower.tscn" id="15_18aq2"]
 [ext_resource type="PackedScene" uid="uid://djk4ueqrjq7ri" path="res://scenes/platforms/spice_bottle.tscn" id="16_bp04t"]
-[ext_resource type="PackedScene" uid="uid://cdcgjic7vrtej" path="res://scenes/platforms/thin_kitchen.tscn" id="17_mau2u"]
-[ext_resource type="Texture2D" uid="uid://cw01w8h6o6m1o" path="res://sprites/items/door_icon_alts/Tea Leaf icon.png" id="18_xt5s7"]
-[ext_resource type="Texture2D" uid="uid://2o6mjrxhr1oe" path="res://sprites/items/door_icon_alts/Hot Pepper icon.png" id="19_7v35w"]
-[ext_resource type="Texture2D" uid="uid://c0m7f1f8jwo6r" path="res://sprites/items/door_icon_alts/Tail-cicle-icon.png" id="20_fmc2f"]
-[ext_resource type="Texture2D" uid="uid://b412x0sdabswm" path="res://sprites/items/door_icon_alts/Lemon Battery icon.png" id="21_r61i0"]
-[ext_resource type="Texture2D" uid="uid://bfkx10x1rkkea" path="res://sprites/items/door_icon_alts/Catmint Berry icon.png" id="22_gndeq"]
-[ext_resource type="Texture2D" uid="uid://cqi1ybu05sgsf" path="res://sprites/items/door_icon_alts/Haunted Ginger icon.png" id="23_s2wx4"]
-[ext_resource type="Texture2D" uid="uid://dgk6pjwefmm0n" path="res://sprites/items/door_icon_alts/teacup icon.png" id="24_egvkf"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/thin_kitchen.tscn" id="17_mau2u"]
+[ext_resource type="Texture2D" uid="uid://i7kj2tc0ynik" path="res://sprites/items/door_icon_alts/Tea Leaf icon.png" id="18_xt5s7"]
+[ext_resource type="Texture2D" uid="uid://d2eted66rl0s8" path="res://sprites/items/door_icon_alts/Hot Pepper icon.png" id="19_7v35w"]
+[ext_resource type="Texture2D" uid="uid://bjvh6nqvi2k30" path="res://sprites/items/door_icon_alts/Tail-cicle-icon.png" id="20_fmc2f"]
+[ext_resource type="Texture2D" uid="uid://3js8gwcwr11b" path="res://sprites/items/door_icon_alts/Lemon Battery icon.png" id="21_r61i0"]
+[ext_resource type="Texture2D" uid="uid://cslxw5w4rxfsu" path="res://sprites/items/door_icon_alts/Catmint Berry icon.png" id="22_gndeq"]
+[ext_resource type="Texture2D" uid="uid://cfnxssfwxpvk1" path="res://sprites/items/door_icon_alts/Haunted Ginger icon.png" id="23_s2wx4"]
+[ext_resource type="Texture2D" uid="uid://bn46lj0a4vv1b" path="res://sprites/items/door_icon_alts/teacup icon.png" id="24_egvkf"]
+[ext_resource type="PackedScene" uid="uid://cvl1ieueno46m" path="res://scenes/platforms/freezer_shelf.tscn" id="25_pyklv"]
+[ext_resource type="PackedScene" uid="uid://bekdmvh1ag8qy" path="res://scenes/platforms/yarn.tscn" id="26_7rxr0"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/heavy_electrical.tscn" id="27_7uvg0"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/heavy_kitchen.tscn" id="28_tk7vs"]
+[ext_resource type="PackedScene" uid="uid://ddxkiwbdjhd2d" path="res://scenes/platforms/skull.tscn" id="29_fwgv6"]
+[ext_resource type="PackedScene" uid="uid://bcbvo0p7k7veh" path="res://scenes/platforms/evil_book.tscn" id="30_pa83r"]
+[ext_resource type="PackedScene" path="res://scenes/platforms/heavy_freezer.tscn" id="31_nn2iv"]
+[ext_resource type="PackedScene" uid="uid://d31d1ni8nwdrs" path="res://scenes/platforms/toy.tscn" id="32_3t1uv"]
+[ext_resource type="PackedScene" uid="uid://bhujfbn3o7now" path="res://scenes/platforms/cabinet.tscn" id="33_7nnxu"]
+[ext_resource type="PackedScene" uid="uid://7b5l4ch1g2hl" path="res://scenes/platforms/spice_bottle_empty.tscn" id="34_ev0f7"]
+[ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="35_3x7kb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
@@ -36,9 +49,9 @@ size = Vector2(2183, 117.5)
 
 [sub_resource type="Curve2D" id="Curve2D_er8e4"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 3729.07, 200, 0, 0, 0, 0, 3729.07, 2000, 0, 0, 0, 0, 3729.07, 200)
+"points": PackedVector2Array(0, 0, 0, 0, 4848.67, 292.777, 0, 0, 0, 0, 5072.82, 281.066, 0, 0, 0, 0, 5084.62, 1487.31, 0, 0, 0, 0, 2076.32, 1469.74, 0, 0, 0, 0, 2088.11, 298.633, 0, 0, 0, 0, 4848.67, 292.777)
 }
-point_count = 3
+point_count = 6
 
 [sub_resource type="Curve2D" id="Curve2D_3deic"]
 _data = {
@@ -60,9 +73,9 @@ point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_gogt7"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 830, 200, 0, 0, 0, 0, 830, 679, 0, 0, 0, 0, 830, 200)
+"points": PackedVector2Array(0, 0, 0, 0, 830, 200, 0, 0, 0, 0, 835, 880, 0, 0, 0, 0, 834.371, 590.562, 0, 0, 0, 0, 832.491, 479.703, 0, 0, 0, 0, 830, 200)
 }
-point_count = 3
+point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_kkww6"]
 _data = {
@@ -131,7 +144,25 @@ scale = Vector2(0.055, 0.705)
 position = Vector2(1466, 533)
 scale = Vector2(0.145, 0.355)
 
+[node name="FireSm2" parent="pepper" instance=ExtResource("4_0kfbc")]
+position = Vector2(1429, -5058)
+scale = Vector2(0.192098, 0.5575)
+
+[node name="FireSm3" parent="pepper" instance=ExtResource("4_0kfbc")]
+position = Vector2(852, -4362)
+scale = Vector2(0.111225, 0.239902)
+
 [node name="lemon" type="Node" parent="."]
+
+[node name="Electric" parent="lemon" instance=ExtResource("4_a0rwi")]
+position = Vector2(1376, -972)
+
+[node name="Electric2" parent="lemon" instance=ExtResource("4_a0rwi")]
+position = Vector2(421, -3710)
+
+[node name="Electric3" parent="lemon" instance=ExtResource("4_a0rwi")]
+position = Vector2(950, -4128)
+rotation = -0.785547
 
 [node name="Path2D" type="Path2D" parent="lemon"]
 position = Vector2(72, -477)
@@ -139,8 +170,28 @@ scale = Vector2(0.169531, 0.170778)
 curve = SubResource("Curve2D_er8e4")
 
 [node name="Electric" parent="lemon/Path2D" instance=ExtResource("4_a0rwi")]
-position = Vector2(3729.07, 200)
-rotation = 1.5708
+position = Vector2(4848.67, 292.777)
+rotation = -0.0521989
+scale = Vector2(1, 1)
+
+[node name="Path2D2" type="Path2D" parent="lemon"]
+position = Vector2(698, -2859)
+scale = Vector2(0.169531, 0.170778)
+curve = SubResource("Curve2D_er8e4")
+
+[node name="Electric" parent="lemon/Path2D2" instance=ExtResource("4_a0rwi")]
+position = Vector2(4848.67, 292.777)
+rotation = -0.0521989
+scale = Vector2(1, 1)
+
+[node name="Path2D4" type="Path2D" parent="lemon"]
+position = Vector2(814, -2087)
+scale = Vector2(0.169531, 0.170778)
+curve = SubResource("Curve2D_er8e4")
+
+[node name="Electric" parent="lemon/Path2D4" instance=ExtResource("4_a0rwi")]
+position = Vector2(4848.67, 292.777)
+rotation = -0.0521989
 scale = Vector2(1, 1)
 
 [node name="Path2D3" type="Path2D" parent="lemon"]
@@ -160,6 +211,14 @@ scale = Vector2(1, 1)
 [node name="Icicle3" parent="ice" instance=ExtResource("5_373q1")]
 position = Vector2(1272, 154)
 scale = Vector2(0.41, 0.41)
+
+[node name="Icicle2" parent="ice" instance=ExtResource("8_5vr1g")]
+position = Vector2(1429, -3656)
+scale = Vector2(0.684702, 0.684702)
+
+[node name="Icicle1" parent="ice" instance=ExtResource("9_0x1xa")]
+position = Vector2(1278, -2657)
+scale = Vector2(0.553688, 0.553688)
 
 [node name="catmint" type="Node" parent="."]
 
@@ -207,6 +266,32 @@ speed = 1.0
 [node name="CharacterBody2D" parent="Path2D2/PlatformMovement" instance=ExtResource("5_us1kf")]
 position = Vector2(0, 30)
 
+[node name="Path2D6" type="Path2D" parent="."]
+position = Vector2(127, -1762)
+curve = SubResource("Curve2D_gogt7")
+
+[node name="PlatformMovement" type="PathFollow2D" parent="Path2D6"]
+position = Vector2(830, 200)
+rotates = false
+script = ExtResource("4_tjdkl")
+speed = 1.0
+
+[node name="CharacterBody2D" parent="Path2D6/PlatformMovement" instance=ExtResource("5_us1kf")]
+position = Vector2(0, 30)
+
+[node name="Path2D7" type="Path2D" parent="."]
+position = Vector2(275, -5225)
+curve = SubResource("Curve2D_gogt7")
+
+[node name="PlatformMovement" type="PathFollow2D" parent="Path2D7"]
+position = Vector2(830, 200)
+rotates = false
+script = ExtResource("4_tjdkl")
+speed = 1.0
+
+[node name="CharacterBody2D" parent="Path2D7/PlatformMovement" instance=ExtResource("5_us1kf")]
+position = Vector2(0, 30)
+
 [node name="Path2D5" type="Path2D" parent="."]
 position = Vector2(164, -328)
 curve = SubResource("Curve2D_gogt7")
@@ -244,6 +329,7 @@ position = Vector2(1271, -501)
 position = Vector2(1498, -470)
 
 [node name="Ghost" parent="." instance=ExtResource("9_gjhmm")]
+position = Vector2(1585, 715)
 
 [node name="Paw" parent="." instance=ExtResource("10_frgne")]
 position = Vector2(1509, -512)
@@ -298,6 +384,20 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(936, -414)
 rotation = -0.434601
 
+[node name="Thin18" parent="." instance=ExtResource("17_mau2u")]
+position = Vector2(663, -3376)
+rotation = 0.671281
+
+[node name="Thin13" parent="." instance=ExtResource("17_mau2u")]
+position = Vector2(1644, -626)
+rotation = -0.434601
+scale = Vector2(0.645509, 0.645509)
+
+[node name="Thin14" parent="." instance=ExtResource("17_mau2u")]
+position = Vector2(1094, -932)
+rotation = 0.480608
+scale = Vector2(0.645509, 0.645509)
+
 [node name="SceneChanger8" parent="." instance=ExtResource("11_530j3")]
 position = Vector2(337, 1277)
 target_scene = "res://scenes/rooms/main_room.tscn"
@@ -325,37 +425,149 @@ position = Vector2(1774, -204)
 [node name="Roof" type="Node2D" parent="Entry"]
 position = Vector2(1752, -4667)
 
-[node name="tea-icon" type="Sprite2D" parent="."]
+[node name="tea_icon" type="Sprite2D" parent="."]
 position = Vector2(340.75, -527.625)
 scale = Vector2(0.427083, 0.799793)
 texture = ExtResource("18_xt5s7")
 
-[node name="pepper-icon" type="Sprite2D" parent="."]
+[node name="pepper_icon" type="Sprite2D" parent="."]
 position = Vector2(1864, -546)
 scale = Vector2(0.427, 0.8)
 texture = ExtResource("19_7v35w")
 
-[node name="ice-icon" type="Sprite2D" parent="."]
+[node name="ice_icon" type="Sprite2D" parent="."]
 position = Vector2(1852, -2063)
 scale = Vector2(0.427, 0.8)
 texture = ExtResource("20_fmc2f")
 
-[node name="lemon-icon" type="Sprite2D" parent="."]
+[node name="lemon_icon" type="Sprite2D" parent="."]
 position = Vector2(342, -3586)
 scale = Vector2(0.427, 0.8)
 texture = ExtResource("21_r61i0")
 
-[node name="catmint-icon" type="Sprite2D" parent="."]
+[node name="catmint_icon" type="Sprite2D" parent="."]
 position = Vector2(341, -2038)
 scale = Vector2(0.427, 0.8)
 texture = ExtResource("22_gndeq")
 
-[node name="ginger-icon" type="Sprite2D" parent="."]
+[node name="ginger_icon" type="Sprite2D" parent="."]
 position = Vector2(1855, -3555)
 scale = Vector2(0.427, 0.8)
 texture = ExtResource("23_s2wx4")
 
-[node name="mug-icon" type="Sprite2D" parent="."]
+[node name="mug_icon" type="Sprite2D" parent="."]
 position = Vector2(1864, -5020)
 scale = Vector2(0.427, 0.8)
 texture = ExtResource("24_egvkf")
+
+[node name="Freezer Shelf" parent="." instance=ExtResource("25_pyklv")]
+position = Vector2(1772, -823)
+
+[node name="Spice Bottle2" parent="." instance=ExtResource("16_bp04t")]
+position = Vector2(759, -1604)
+rotation = 1.5693
+scale = Vector2(0.421519, 0.421519)
+
+[node name="Yarn" parent="." instance=ExtResource("26_7rxr0")]
+position = Vector2(610, -1702)
+scale = Vector2(0.557249, 0.557249)
+
+[node name="Thin15" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(918, -1795)
+
+[node name="Thin16" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(903, -2637)
+
+[node name="Thin17" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(931, -3211)
+
+[node name="Thin20" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(1878, -4829)
+rotation = -0.319956
+scale = Vector2(0.668654, 0.668654)
+
+[node name="Thin19" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(1772, -4538)
+
+[node name="Heavy" parent="." instance=ExtResource("27_7uvg0")]
+position = Vector2(1420, -1857)
+scale = Vector2(2.27048, 2.27048)
+
+[node name="Spice Bottle3" parent="." instance=ExtResource("16_bp04t")]
+position = Vector2(1084, -2143)
+rotation = 1.13111
+scale = Vector2(0.317824, 0.317824)
+
+[node name="Spice Bottle4" parent="." instance=ExtResource("16_bp04t")]
+position = Vector2(923, -2239)
+scale = Vector2(0.317824, 0.317824)
+
+[node name="Spice Bottle5" parent="." instance=ExtResource("16_bp04t")]
+position = Vector2(757, -2303)
+scale = Vector2(0.317824, 0.317824)
+
+[node name="Freezer Shelf2" parent="." instance=ExtResource("25_pyklv")]
+position = Vector2(534, -2527)
+
+[node name="Heavy2" parent="." instance=ExtResource("28_tk7vs")]
+position = Vector2(1313, -2671)
+scale = Vector2(1.60659, 1.60659)
+
+[node name="Flower2" parent="." instance=ExtResource("15_18aq2")]
+position = Vector2(1595, -2896)
+scale = Vector2(0.362909, 0.362909)
+
+[node name="Freezer Shelf3" parent="." instance=ExtResource("25_pyklv")]
+position = Vector2(1293, -3090)
+
+[node name="Skull" parent="." instance=ExtResource("29_fwgv6")]
+position = Vector2(932, -3644)
+
+[node name="Evil Book" parent="." instance=ExtResource("30_pa83r")]
+position = Vector2(1796, -3923)
+
+[node name="Heavy3" parent="." instance=ExtResource("31_nn2iv")]
+position = Vector2(1438, -3674)
+scale = Vector2(1.77878, 1.77878)
+
+[node name="Toy" parent="." instance=ExtResource("32_3t1uv")]
+position = Vector2(1294, -4073)
+rotation = 0.399524
+
+[node name="Cabinet" parent="." instance=ExtResource("33_7nnxu")]
+position = Vector2(1482, -4546)
+rotation = 0.168853
+
+[node name="Cabinet2" parent="." instance=ExtResource("33_7nnxu")]
+position = Vector2(1425, -4953)
+
+[node name="Freezer Shelf4" parent="." instance=ExtResource("25_pyklv")]
+position = Vector2(741, -4285)
+
+[node name="Spice Bottle Empty" parent="." instance=ExtResource("34_ev0f7")]
+position = Vector2(533, -3596)
+scale = Vector2(0.573345, 0.573345)
+
+[node name="Checkpoint" parent="." instance=ExtResource("35_3x7kb")]
+position = Vector2(424, 1268)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("35_3x7kb")]
+position = Vector2(397, -194)
+
+[node name="Checkpoint3" parent="." instance=ExtResource("35_3x7kb")]
+position = Vector2(1769, -209)
+
+[node name="Checkpoint4" parent="." instance=ExtResource("35_3x7kb")]
+position = Vector2(432, -1699)
+
+[node name="Checkpoint5" parent="." instance=ExtResource("35_3x7kb")]
+position = Vector2(1778, -1723)
+
+[node name="Checkpoint6" parent="." instance=ExtResource("35_3x7kb")]
+position = Vector2(411, -3192)
+
+[node name="Checkpoint7" parent="." instance=ExtResource("35_3x7kb")]
+position = Vector2(1755, -3218)
+
+[node name="Checkpoint8" parent="." instance=ExtResource("35_3x7kb")]
+position = Vector2(1749, -4673)

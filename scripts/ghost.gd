@@ -5,7 +5,7 @@ extends Area2D
 var is_chasing : bool = false
 var is_awake : bool = false
 var is_flying : bool = false
-@export var speed : float = 600
+@export var speed : float = 5
 @onready var attackchirp = $attackchirp
 @onready var hidechirp = $hidechirp
 
@@ -40,10 +40,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	pass
+
+
+func _physics_process(delta):
 	var facing = 1
 	if (gorp.sprite_2d.flip_h):
 		facing = -1
-
+		
 	if (gorp.position.x > position.x):
 		spr.flip_h = true
 	else:
@@ -60,7 +64,7 @@ func _process(delta):
 		var target_pos = (gorp_pos - position).normalized()
 		#position += (position - gorp.position)
 		if position.distance_to(gorp_pos) > 1:
-			position += (position * target_pos).normalized()
+			position += (position * target_pos).normalized() * speed
 
 func _on_body_entered(body):
 	if(body.name == "Gorp"):

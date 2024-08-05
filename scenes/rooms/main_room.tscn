@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://dok7omvslwslh"]
+[gd_scene load_steps=86 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
 [ext_resource type="Script" path="res://scripts/rooms/main_room.gd" id="1_gduad"]
@@ -67,6 +67,7 @@
 [ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/mug.png" id="62_f4taf"]
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="65_3av0d"]
 [ext_resource type="SpriteFrames" uid="uid://duhapxtro4huy" path="res://sprites/smokes/poof.tres" id="67_xnal2"]
+[ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="69_64p0y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l55qc"]
 size = Vector2(767.5, 33)
@@ -765,6 +766,7 @@ texture = ExtResource("62_f4taf")
 
 [node name="SceneChanger" parent="." instance=ExtResource("65_3av0d")]
 position = Vector2(1673, 1252)
+scale = Vector2(2.39543, 20.5713)
 target_scene = "res://scenes/rooms/tower.tscn"
 
 [node name="Control" type="Control" parent="."]
@@ -784,5 +786,8 @@ animation = &"catmint"
 libraries = {
 "": SubResource("AnimationLibrary_kw3ra")
 }
+
+[node name="Checkpoint" parent="." instance=ExtResource("69_64p0y")]
+position = Vector2(775, 1033)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

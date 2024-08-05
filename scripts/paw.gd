@@ -4,7 +4,6 @@ extends Node2D
 var timer : float = 0
 var is_swiping : bool = false
 @onready var anim = $AnimationPlayer
-@onready var gorp = get_tree().current_scene.get_node("Gorp")
 @onready var hazard = $Hazard
 @onready var sound = $AudioStreamPlayer2D
 
@@ -24,6 +23,7 @@ func _process(delta):
 	
 func _physics_process(_delta):
 	if not is_swiping:
-		position = gorp.position
+		position = Get.Gorp.position
+		
 func meow():
 	sound.play()
