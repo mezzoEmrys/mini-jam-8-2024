@@ -90,18 +90,24 @@ libraries = {
 
 [node name="base" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("3_kpj3w")
+volume_db = -9.972
 
 [node name="fire" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("4_stl70")
+volume_db = -9.616
 
 [node name="electricity" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("5_setno")
+volume_db = -10.685
 
 [node name="jungle" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("8_ykt13")
+volume_db = -9.139
 
 [node name="ghost" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("6_vfeel")
+volume_db = -9.26
 
 [node name="ice" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("7_2scll")
+volume_db = -9.973

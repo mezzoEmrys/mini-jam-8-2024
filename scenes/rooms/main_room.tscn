@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dok7omvslwslh"]
+[gd_scene load_steps=75 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
 [ext_resource type="Script" path="res://scripts/rooms/main_room.gd" id="1_sbaoh"]
@@ -54,6 +54,17 @@
 [ext_resource type="PackedScene" uid="uid://c4ymqblc6s0mc" path="res://scenes/platforms/thin_haunted.tscn" id="50_83mad"]
 [ext_resource type="Script" path="res://scripts/cauldron.gd" id="50_xyctv"]
 [ext_resource type="PackedScene" uid="uid://bo8hgahl1785t" path="res://scenes/item_scenes/catmint.tscn" id="52_fb3xc"]
+[ext_resource type="PackedScene" uid="uid://61jiqhynx030" path="res://scenes/item_scenes/lemon.tscn" id="55_438ba"]
+[ext_resource type="Texture2D" uid="uid://krrry3mlvo7" path="res://sprites/witch_animation/thoughtbubble/3.png" id="55_rxy7u"]
+[ext_resource type="PackedScene" uid="uid://dm767qp3txh34" path="res://scenes/item_scenes/tea.tscn" id="55_w3uy7"]
+[ext_resource type="Texture2D" uid="uid://eeoqyg4grk5g" path="res://sprites/items/Tea Leaf.png" id="56_pd2ra"]
+[ext_resource type="Script" path="res://scenes/rooms/TeaThought.gd" id="56_s8ev3"]
+[ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="57_sjbry"]
+[ext_resource type="Texture2D" uid="uid://derp0khjsce2m" path="res://sprites/items/Haunted Ginger.png" id="58_l7pxy"]
+[ext_resource type="Texture2D" uid="uid://b4nan1vsp3rjm" path="res://sprites/items/Hot Pepper.png" id="59_gvqpq"]
+[ext_resource type="Texture2D" uid="uid://nxu3ldtbu3pa" path="res://sprites/items/Lemon Battery.png" id="60_rpod4"]
+[ext_resource type="Texture2D" uid="uid://cy1sx6ny5j0xe" path="res://sprites/items/Tail-cicle.png" id="61_msa6e"]
+[ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/mug.png" id="62_f4taf"]
 [ext_resource type="SpriteFrames" uid="uid://duhapxtro4huy" path="res://sprites/smokes/poof.tres" id="55_p0w2v"]
 [ext_resource type="PackedScene" uid="uid://dc2by18wc4iyb" path="res://scenes/scene_changer.tscn" id="56_hbg6t"]
 
@@ -281,308 +292,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji4ch"]
 size = Vector2(447, 378.25)
 
-[sub_resource type="Animation" id="Animation_22dm1"]
-resource_name = "RESET"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_ihfso"]
-resource_name = "catmint"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"catmint", &"default"]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["RESET"],
-"method": &"play"
-}]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"catmint", 1.0, false],
-"method": &"play"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_7qh3g"]
-resource_name = "ginger"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"ginger", &"default"]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["RESET"],
-"method": &"play"
-}]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"ginger", 1.0, false],
-"method": &"play"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_b8ebk"]
-resource_name = "ice"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"ice", &"default"]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["RESET"],
-"method": &"play"
-}]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"ice", 1.0, false],
-"method": &"play"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_oemj3"]
-resource_name = "lemon"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"lemon", &"default"]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["RESET"],
-"method": &"play"
-}]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"lemon", 1.0, false],
-"method": &"play"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_oa21b"]
-resource_name = "pepper"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"pepper", &"default"]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["RESET"],
-"method": &"play"
-}]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"pepper", 1.0, false],
-"method": &"play"
-}]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rptyg"]
-_data = {
-"RESET": SubResource("Animation_22dm1"),
-"catmint": SubResource("Animation_ihfso"),
-"ginger": SubResource("Animation_7qh3g"),
-"ice": SubResource("Animation_b8ebk"),
-"lemon": SubResource("Animation_oemj3"),
-"pepper": SubResource("Animation_oa21b")
-}
-
-[node name="MainRoom" type="Node2D"]
-script = ExtResource("1_sbaoh")
+[node name="Node2D" type="Node2D"]
 
 [node name="WitchRoomBackground" type="Sprite2D" parent="."]
 position = Vector2(1282, 723)
@@ -701,32 +411,53 @@ limit_bottom = 1400
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="lemon" parent="." instance=ExtResource("55_438ba")]
+position = Vector2(1496, 1125)
 [node name="Entry" type="Node2D" parent="."]
 position = Vector2(1582, 1251)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -224.0
-offset_top = 74.0
-offset_right = -184.0
-offset_bottom = 114.0
+[node name="tea" parent="." instance=ExtResource("55_w3uy7")]
+position = Vector2(1409, 1262)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
-visible = false
-position = Vector2(966, 901)
-rotation = -1.57221
-scale = Vector2(0.725042, 0.725042)
-sprite_frames = ExtResource("55_p0w2v")
-animation = &"pepper"
+[node name="TeaThought" type="Sprite2D" parent="."]
+position = Vector2(1303, 722)
+scale = Vector2(0.37244, 0.372439)
+texture = ExtResource("55_rxy7u")
+script = ExtResource("56_s8ev3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
-libraries = {
-"": SubResource("AnimationLibrary_rptyg")
-}
+[node name="TeaLeaf" type="Sprite2D" parent="TeaThought"]
+position = Vector2(13.425, -67.125)
+scale = Vector2(2.685, 2.685)
+texture = ExtResource("56_pd2ra")
 
-[node name="SceneChanger" parent="." instance=ExtResource("56_hbg6t")]
-position = Vector2(1709, 1251)
-target_scene = "res://scenes/rooms/tower.tscn"
+[node name="CatmintBerry" type="Sprite2D" parent="TeaThought"]
+position = Vector2(18.7951, 115.455)
+scale = Vector2(1.54853, 1.54853)
+texture = ExtResource("57_sjbry")
+
+[node name="HauntedGinger" type="Sprite2D" parent="TeaThought"]
+position = Vector2(-268.5, 29.5349)
+scale = Vector2(1.28901, 1.28901)
+texture = ExtResource("58_l7pxy")
+
+[node name="HotPepper" type="Sprite2D" parent="TeaThought"]
+position = Vector2(330.255, 34.9047)
+scale = Vector2(0.914457, 0.914457)
+texture = ExtResource("59_gvqpq")
+
+[node name="LemonBattery" type="Sprite2D" parent="TeaThought"]
+position = Vector2(193.32, -177.21)
+scale = Vector2(1.00965, 1.00965)
+texture = ExtResource("60_rpod4")
+
+[node name="Tail-cicle" type="Sprite2D" parent="TeaThought"]
+position = Vector2(-77.865, -150.36)
+scale = Vector2(1.17727, 1.17727)
+texture = ExtResource("61_msa6e")
+
+[node name="Mug" type="Sprite2D" parent="TeaThought"]
+position = Vector2(21.48, -34.905)
+scale = Vector2(2.685, 2.685)
+texture = ExtResource("62_f4taf")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
