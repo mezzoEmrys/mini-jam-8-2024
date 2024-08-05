@@ -8,6 +8,7 @@ var break_time : float = 0.2
 var break_timer : float = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var sprite : AnimatedSprite2D
+@onready var audio = $AudioStreamPlayer2D
 
 func deactivate():
 	for child in get_children():
@@ -41,8 +42,10 @@ func _process(delta):
 			activate()
 	if needs_break:
 		sprite.play("break")
+		
 		break_timer += delta
 		if break_timer >= break_time :
+			audio.play()
 			queue_free()
 
 func _physics_process(delta):
