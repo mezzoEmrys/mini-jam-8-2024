@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw8ghinwy4dnb"]
+
+[ext_resource type="Texture2D" uid="uid://1n0s11gl36m8" path="res://sprites/menus/startscreen/button_credits.png" id="1_5e2ue"]
+[ext_resource type="Texture2D" uid="uid://c3u1d0s6m0m0y" path="res://sprites/menus/startscreen/button_instructions.png" id="2_dtfb5"]
+[ext_resource type="Texture2D" uid="uid://dgf5y4cx4kchi" path="res://sprites/menus/startscreen/button_start.png" id="3_tyiex"]
+[ext_resource type="Texture2D" uid="uid://bay4g1iuewrcc" path="res://sprites/menus/startscreen/teatime trouble bg.png" id="4_n21rj"]
+[ext_resource type="Texture2D" uid="uid://bt30c3noaq8cn" path="res://sprites/menus/startscreen/teatime trouble.png" id="5_1jopn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TeatimeTroubleBg" type="Sprite2D" parent="."]
+position = Vector2(578.5, 323.5)
+scale = Vector2(0.451953, 0.452083)
+texture = ExtResource("4_n21rj")
+
+[node name="TeatimeTrouble" type="Sprite2D" parent="."]
+position = Vector2(882, 322)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("5_1jopn")
+
+[node name="ButtonCredits" type="Sprite2D" parent="."]
+position = Vector2(187, 557)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("1_5e2ue")
+
+[node name="ButtonInstructions" type="Sprite2D" parent="."]
+position = Vector2(431, 494)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("2_dtfb5")
+
+[node name="ButtonStart" type="Sprite2D" parent="."]
+position = Vector2(184, 434)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("3_tyiex")
