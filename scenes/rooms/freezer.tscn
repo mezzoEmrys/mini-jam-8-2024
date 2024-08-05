@@ -25,7 +25,7 @@ position = Vector2(1280, 719)
 texture = ExtResource("1_06jh8")
 
 [node name="Gorp" parent="." instance=ExtResource("2_bp5kl")]
-position = Vector2(1715, 930)
+position = Vector2(319, 1251)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="Gorp"]
@@ -70,57 +70,57 @@ position = Vector2(1280, 719)
 texture = ExtResource("12_cacwc")
 
 [node name="Freezer" parent="." instance=ExtResource("7_6be0d")]
-position = Vector2(1211, 1189)
+position = Vector2(1210, 1190)
 
 [node name="Freezer2" parent="." instance=ExtResource("7_6be0d")]
-position = Vector2(1394, 1014)
+position = Vector2(1087, 1017)
 
 [node name="Freezer3" parent="." instance=ExtResource("7_6be0d")]
-position = Vector2(1522, 846)
+position = Vector2(952, 844)
 
 [node name="Freezer Shelf" parent="." instance=ExtResource("5_cvm28")]
-position = Vector2(1891, 1188)
+position = Vector2(526, 1190)
 
 [node name="Freezer Shelf2" parent="." instance=ExtResource("5_cvm28")]
-position = Vector2(1803, 947)
+position = Vector2(652, 966)
 
 [node name="Freezer Shelf3" parent="." instance=ExtResource("5_cvm28")]
-position = Vector2(1973, 720)
+position = Vector2(524, 733)
 
 [node name="Heavy" parent="." instance=ExtResource("6_qpfdd")]
-position = Vector2(1612, 670)
+position = Vector2(1020, 659)
 
 [node name="Heavy2" parent="." instance=ExtResource("6_qpfdd")]
-position = Vector2(1240, 700)
+position = Vector2(1819, 725)
 
 [node name="Heavy3" parent="." instance=ExtResource("6_qpfdd")]
-position = Vector2(1030, 700)
+position = Vector2(1609, 726)
 
 [node name="Heavy4" parent="." instance=ExtResource("6_qpfdd")]
-position = Vector2(821, 700)
+position = Vector2(1399, 727)
 
 [node name="Heavy5" parent="." instance=ExtResource("6_qpfdd")]
-position = Vector2(192, 934)
+position = Vector2(2269, 925)
 
 [node name="Fish" parent="." instance=ExtResource("7_helx7")]
-position = Vector2(514, 960)
+position = Vector2(1601, 1122)
 rotation = 0.319513
 
 [node name="Fish2" parent="." instance=ExtResource("7_helx7")]
-position = Vector2(857, 1136)
+position = Vector2(1975, 995)
 rotation = -0.145763
 
 [node name="ice" parent="." instance=ExtResource("8_ui0sh")]
-position = Vector2(190, 821)
+position = Vector2(2280, 830)
 
 [node name="Icicle3" parent="." instance=ExtResource("8_s21a6")]
-position = Vector2(1247, 711)
+position = Vector2(1826, 738)
 scale = Vector2(0.355, 0.355)
 
 [node name="Icicle2" parent="." instance=ExtResource("9_oyycp")]
-position = Vector2(1042, 714)
+position = Vector2(1608, 744)
 scale = Vector2(0.495, 0.495)
 
 [node name="Icicle1" parent="." instance=ExtResource("8_xpikh")]
-position = Vector2(833, 711)
+position = Vector2(1409, 739)
 scale = Vector2(0.495, 0.495)
