@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://t2uar4o5y4rx"]
+[gd_scene load_steps=12 format=3 uid="uid://t2uar4o5y4rx"]
 
 [ext_resource type="Texture2D" uid="uid://csnck8h5cixn8" path="res://sprites/rooms/tower.png" id="1_rpc7b"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_rb3fx"]
+[ext_resource type="PackedScene" uid="uid://blps5y1jfdrnu" path="res://scenes/platforms/thin.tscn" id="3_hor6h"]
+[ext_resource type="Script" path="res://scripts/PlatformMovement.gd" id="4_tjdkl"]
+[ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="5_us1kf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl8t"]
 size = Vector2(14.7513, 583.84)
@@ -11,6 +14,24 @@ size = Vector2(10.5665, 586.445)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vaovn"]
 size = Vector2(2183, 117.5)
+
+[sub_resource type="Curve2D" id="Curve2D_u62on"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 830, 679, 0, 0, 0, 0, 1100, 679, 0, 0, 0, 0, 830, 679)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_c0qf5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 830, 200, 0, 0, 0, 0, 830, 679, 0, 0, 0, 0, 830, 200)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_kkww6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 830, 679, 0, 0, 0, 0, 830, -250, 0, 0, 0, 0, 830, 679)
+}
+point_count = 3
 
 [node name="tower" type="Node2D"]
 
@@ -56,3 +77,70 @@ limit_right = 2560
 limit_bottom = 1400
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="pepper" type="Node" parent="."]
+
+[node name="lemon" type="Node" parent="."]
+
+[node name="ginger" type="Node" parent="."]
+
+[node name="ice" type="Node" parent="."]
+
+[node name="catmint" type="Node" parent="."]
+
+[node name="Thin" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(412, -104)
+
+[node name="Thin2" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(1786, -102)
+
+[node name="Thin3" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(409, -1600)
+
+[node name="Thin4" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(1786, -1594)
+
+[node name="Thin5" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(409, -3084)
+
+[node name="Thin6" parent="." instance=ExtResource("3_hor6h")]
+position = Vector2(1781, -3101)
+
+[node name="Path2D4" type="Path2D" parent="."]
+position = Vector2(34, 88)
+curve = SubResource("Curve2D_u62on")
+
+[node name="PlatformMovement" type="PathFollow2D" parent="Path2D4"]
+position = Vector2(830, 679)
+rotates = false
+script = ExtResource("4_tjdkl")
+speed = 1.5
+
+[node name="CharacterBody2D" parent="Path2D4/PlatformMovement" instance=ExtResource("5_us1kf")]
+position = Vector2(0, 30)
+
+[node name="Path2D2" type="Path2D" parent="."]
+position = Vector2(-208, 568)
+curve = SubResource("Curve2D_c0qf5")
+
+[node name="PlatformMovement" type="PathFollow2D" parent="Path2D2"]
+position = Vector2(830, 200)
+rotates = false
+script = ExtResource("4_tjdkl")
+speed = 1.5
+
+[node name="CharacterBody2D" parent="Path2D2/PlatformMovement" instance=ExtResource("5_us1kf")]
+position = Vector2(0, 30)
+
+[node name="Path2D3" type="Path2D" parent="."]
+position = Vector2(431, 93)
+curve = SubResource("Curve2D_kkww6")
+
+[node name="PlatformMovement" type="PathFollow2D" parent="Path2D3"]
+position = Vector2(830, 679)
+rotates = false
+script = ExtResource("4_tjdkl")
+speed = 1.5
+
+[node name="CharacterBody2D" parent="Path2D3/PlatformMovement" instance=ExtResource("5_us1kf")]
+position = Vector2(0, 30)
