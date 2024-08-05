@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bicf2dlhiw2fk" path="res://scenes/platforms/electrical.tscn" id="8_rbakq"]
 [ext_resource type="PackedScene" uid="uid://6hvk07ybypyg" path="res://scenes/platforms/heavy_electrical.tscn" id="9_kk66w"]
 [ext_resource type="PackedScene" uid="uid://1na86hoaag8n" path="res://scenes/hazards/electric.tscn" id="10_ym35r"]
-[ext_resource type="Script" path="res://scenes/rooms/PlatformMovement.gd" id="11_3klsi"]
+[ext_resource type="Script" path="res://scripts/PlatformMovement.gd" id="11_3klsi"]
 [ext_resource type="Texture2D" uid="uid://bu8howskrtda0" path="res://sprites/rooms/Electric Foreground.png" id="12_355ys"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="12_c7pea"]
 

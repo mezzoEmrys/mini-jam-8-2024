@@ -1,12 +1,12 @@
-[gd_scene load_steps=60 format=3 uid="uid://dok7omvslwslh"]
+[gd_scene load_steps=59 format=3 uid="uid://dok7omvslwslh"]
 
 [ext_resource type="Texture2D" uid="uid://tbudqra2lwtd" path="res://sprites/rooms/Witch Room Background.png" id="1_1boqs"]
 [ext_resource type="Texture2D" uid="uid://dpswu4dev2ey5" path="res://sprites/rooms/Witch Room  Chair.png" id="2_rdds6"]
 [ext_resource type="Texture2D" uid="uid://ce8vxmymrv247" path="res://sprites/rooms/Witch Room Cauldron.png" id="3_nlrpj"]
 [ext_resource type="Texture2D" uid="uid://buobpqwpvvcba" path="res://sprites/rooms/Witch Room Light.png" id="4_5jpvh"]
 [ext_resource type="Texture2D" uid="uid://cgdgvogxbj2n8" path="res://sprites/rooms/Witch Room Foreground.png" id="5_w5mfu"]
+[ext_resource type="Script" path="res://scripts/Witch.gd" id="6_4gf8w"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="6_e2cml"]
-[ext_resource type="Script" path="res://scenes/rooms/Witch.gd" id="6_gho7b"]
 [ext_resource type="Texture2D" uid="uid://cwlt34s28s5sd" path="res://sprites/witch_animation/idle/1.png" id="7_ocjqv"]
 [ext_resource type="Texture2D" uid="uid://bg5gwk185ych0" path="res://sprites/witch_animation/idle/2.png" id="8_bt6qv"]
 [ext_resource type="Texture2D" uid="uid://bov4uujg6h2yh" path="res://sprites/witch_animation/idle/3.png" id="9_6tgjt"]
@@ -49,7 +49,6 @@
 [ext_resource type="Texture2D" uid="uid://dev0uv5234huq" path="res://sprites/witch_animation/sneeze/6.png" id="46_odrkw"]
 [ext_resource type="Texture2D" uid="uid://dy20dpvy7ystt" path="res://sprites/witch_animation/sneeze/7.png" id="47_x385r"]
 [ext_resource type="Texture2D" uid="uid://dyerws5wrkqgf" path="res://sprites/witch_animation/sneeze/8.png" id="48_44tq4"]
-[ext_resource type="Texture2D" uid="uid://t5mre12k0mhc" path="res://sprites/rooms/Witch Room Cauldron Ladder.png" id="50_cahhi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l55qc"]
 size = Vector2(767.5, 33)
@@ -342,7 +341,7 @@ shape = SubResource("RectangleShape2D_xd6r1")
 [node name="Witch" type="Node2D" parent="."]
 position = Vector2(555, 682)
 scale = Vector2(0.29, 0.29)
-script = ExtResource("6_gho7b")
+script = ExtResource("6_4gf8w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Witch"]
 position = Vector2(1296.55, 396.552)
@@ -368,8 +367,3 @@ limit_right = 2560
 limit_bottom = 1400
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="WitchRoomCauldronLadder" type="Sprite2D" parent="."]
-z_index = 5
-position = Vector2(1288, 723)
-texture = ExtResource("50_cahhi")
