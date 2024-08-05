@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cer7xu1jo4sry"]
+[gd_scene load_steps=19 format=3 uid="uid://cer7xu1jo4sry"]
 
 [ext_resource type="Texture2D" uid="uid://bqraa6qnndy7o" path="res://sprites/rooms/Electric Background.png" id="1_1ao5c"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_7sxvg"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/PlatformMovement.gd" id="11_3klsi"]
 [ext_resource type="Texture2D" uid="uid://bu8howskrtda0" path="res://sprites/rooms/Electric Foreground.png" id="12_355ys"]
 [ext_resource type="PackedScene" uid="uid://d2chsbrotk84n" path="res://scenes/platforms/moving platforms/moving_thin.tscn" id="12_c7pea"]
+[ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="13_0sf2x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
 size = Vector2(2565.5, 141)
@@ -160,3 +161,9 @@ visibility_layer = 2
 z_index = 5
 position = Vector2(1280, 719)
 texture = ExtResource("12_355ys")
+
+[node name="Checkpoint" parent="." instance=ExtResource("13_0sf2x")]
+position = Vector2(268, 1247)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("13_0sf2x")]
+position = Vector2(1947, 241)

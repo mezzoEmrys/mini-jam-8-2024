@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://de3hx2qn5h21q"]
+[gd_scene load_steps=15 format=3 uid="uid://de3hx2qn5h21q"]
 
 [ext_resource type="Texture2D" uid="uid://c5h1s7u35futh" path="res://sprites/rooms/Freezer Background PNG.png" id="1_06jh8"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_bp5kl"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bbyddwsajiwv8" path="res://scenes/item_scenes/ice.tscn" id="8_ui0sh"]
 [ext_resource type="PackedScene" uid="uid://ce3imkviboe7b" path="res://scenes/hazards/icicle_base_1.tscn" id="8_xpikh"]
 [ext_resource type="PackedScene" uid="uid://cajd0tbikj1e0" path="res://scenes/hazards/icicle_base_2.tscn" id="9_oyycp"]
+[ext_resource type="PackedScene" uid="uid://dwq1papleyw3h" path="res://scenes/checkpoint.tscn" id="12_7v2ks"]
 [ext_resource type="Texture2D" uid="uid://d1gctci571rqx" path="res://sprites/rooms/Freezer Foreground.png" id="12_cacwc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa37l"]
@@ -124,3 +125,9 @@ scale = Vector2(0.495, 0.495)
 [node name="Icicle1" parent="." instance=ExtResource("8_xpikh")]
 position = Vector2(1409, 739)
 scale = Vector2(0.495, 0.495)
+
+[node name="Checkpoint" parent="." instance=ExtResource("12_7v2ks")]
+position = Vector2(334, 1237)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("12_7v2ks")]
+position = Vector2(2261, 820)
