@@ -62,7 +62,7 @@ position = Vector2(2206, -34)
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Wall2"]
-position = Vector2(260, 728)
+position = Vector2(314, 740)
 scale = Vector2(12.665, 12.665)
 shape = SubResource("RectangleShape2D_kpo8e")
 
