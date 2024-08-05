@@ -5,12 +5,14 @@ var timer : float = 0
 var is_swiping : bool = false
 @onready var anim = $AnimationPlayer
 @onready var gorp = get_tree().current_scene.get_node("Gorp")
+@onready var hazard = $Hazard
 
 func swipe_finished():
 	is_swiping = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	hazard.hide()
 	anim.play("RESET")
 
 func _process(delta):

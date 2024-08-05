@@ -1,25 +1,25 @@
 [gd_scene load_steps=28 format=3 uid="uid://rrjw54hw3c3p"]
 
 [ext_resource type="Script" path="res://scripts/paw.gd" id="1_ubdja"]
-[ext_resource type="Texture2D" uid="uid://bmsus5dxefso3" path="res://sprites/hazards_animation/catvine/vine/1.png" id="2_4ig2p"]
-[ext_resource type="Texture2D" uid="uid://dmj5jign3to3w" path="res://sprites/hazards_animation/catvine/vine/2.png" id="3_usswf"]
-[ext_resource type="Texture2D" uid="uid://coefkwbq3vnxr" path="res://sprites/hazards_animation/catvine/vine/3.png" id="4_l6d5i"]
-[ext_resource type="Texture2D" uid="uid://dec4g3yecmnki" path="res://sprites/hazards_animation/catvine/vine/4.png" id="5_mloql"]
-[ext_resource type="Texture2D" uid="uid://dtsm8xy2bx4ka" path="res://sprites/hazards_animation/catvine/vine/5.png" id="6_h13fv"]
-[ext_resource type="Texture2D" uid="uid://cylv6vuudqg8s" path="res://sprites/hazards_animation/catvine/paw/1.png" id="7_8xm62"]
-[ext_resource type="Texture2D" uid="uid://du7cw4ug0b84k" path="res://sprites/hazards_animation/catvine/paw/2.png" id="8_opl75"]
-[ext_resource type="Texture2D" uid="uid://cxs371kkt7voy" path="res://sprites/hazards_animation/catvine/paw/3.png" id="9_guj85"]
-[ext_resource type="Texture2D" uid="uid://dimg5h3l3uoud" path="res://sprites/hazards_animation/catvine/paw/4.png" id="10_4vjg6"]
-[ext_resource type="Texture2D" uid="uid://bxdk66y5s5hae" path="res://sprites/hazards_animation/catvine/paw/5.png" id="11_b3233"]
-[ext_resource type="Texture2D" uid="uid://bw3umnkuttkbv" path="res://sprites/hazards_animation/catvine/paw/6.png" id="12_08lov"]
-[ext_resource type="Texture2D" uid="uid://bqrrsp32dsadw" path="res://sprites/hazards_animation/catvine/paw/7.png" id="13_w1dap"]
-[ext_resource type="Texture2D" uid="uid://kwxi4s8dhq0p" path="res://sprites/hazards_animation/catvine/paw/8.png" id="14_afh2o"]
-[ext_resource type="Texture2D" uid="uid://cp3qw6xa2ive1" path="res://sprites/hazards_animation/catvine/paw/9.png" id="15_erw7q"]
-[ext_resource type="Texture2D" uid="uid://bnyptw31y3vrp" path="res://sprites/hazards_animation/catvine/paw/10.png" id="16_mceqy"]
-[ext_resource type="Texture2D" uid="uid://b0yxt8wo7q0lo" path="res://sprites/hazards_animation/catvine/paw/11.png" id="17_ltl7u"]
-[ext_resource type="Texture2D" uid="uid://cpp1y5sxwdpte" path="res://sprites/hazards_animation/catvine/paw/12.png" id="18_rd24k"]
-[ext_resource type="Texture2D" uid="uid://bws8gjlhq6l10" path="res://sprites/hazards_animation/catvine/paw/13.png" id="19_4gwb2"]
-[ext_resource type="Texture2D" uid="uid://bv667m06vjas6" path="res://sprites/hazards_animation/catvine/paw/14.png" id="20_ik4ro"]
+[ext_resource type="Texture2D" uid="uid://cpwd55bndk75w" path="res://sprites/hazards_animation/catvine/vine/1.png" id="2_4ig2p"]
+[ext_resource type="Texture2D" uid="uid://ex6mo21nv6n5" path="res://sprites/hazards_animation/catvine/vine/2.png" id="3_usswf"]
+[ext_resource type="Texture2D" uid="uid://dlrikf6fqvgbi" path="res://sprites/hazards_animation/catvine/vine/3.png" id="4_l6d5i"]
+[ext_resource type="Texture2D" uid="uid://bqchk0qfiiwxu" path="res://sprites/hazards_animation/catvine/vine/4.png" id="5_mloql"]
+[ext_resource type="Texture2D" uid="uid://i07p7cqdfnnp" path="res://sprites/hazards_animation/catvine/vine/5.png" id="6_h13fv"]
+[ext_resource type="Texture2D" uid="uid://xedpgrcx7h5v" path="res://sprites/hazards_animation/catvine/paw/1.png" id="7_8xm62"]
+[ext_resource type="Texture2D" uid="uid://cscm5vqeey3fs" path="res://sprites/hazards_animation/catvine/paw/2.png" id="8_opl75"]
+[ext_resource type="Texture2D" uid="uid://bg6d8i5f4101p" path="res://sprites/hazards_animation/catvine/paw/3.png" id="9_guj85"]
+[ext_resource type="Texture2D" uid="uid://c1ve8otvo64wl" path="res://sprites/hazards_animation/catvine/paw/4.png" id="10_4vjg6"]
+[ext_resource type="Texture2D" uid="uid://biyb0rqea4jp3" path="res://sprites/hazards_animation/catvine/paw/5.png" id="11_b3233"]
+[ext_resource type="Texture2D" uid="uid://bbpwu6tp5ejwi" path="res://sprites/hazards_animation/catvine/paw/6.png" id="12_08lov"]
+[ext_resource type="Texture2D" uid="uid://b3luare37mmdq" path="res://sprites/hazards_animation/catvine/paw/7.png" id="13_w1dap"]
+[ext_resource type="Texture2D" uid="uid://dlifo0bc217px" path="res://sprites/hazards_animation/catvine/paw/8.png" id="14_afh2o"]
+[ext_resource type="Texture2D" uid="uid://dwpepd55u3sme" path="res://sprites/hazards_animation/catvine/paw/9.png" id="15_erw7q"]
+[ext_resource type="Texture2D" uid="uid://ul5rh4qvsecb" path="res://sprites/hazards_animation/catvine/paw/10.png" id="16_mceqy"]
+[ext_resource type="Texture2D" uid="uid://dlq8g73fuack1" path="res://sprites/hazards_animation/catvine/paw/11.png" id="17_ltl7u"]
+[ext_resource type="Texture2D" uid="uid://lno72ksgx1xe" path="res://sprites/hazards_animation/catvine/paw/12.png" id="18_rd24k"]
+[ext_resource type="Texture2D" uid="uid://b6400l32xe8px" path="res://sprites/hazards_animation/catvine/paw/13.png" id="19_4gwb2"]
+[ext_resource type="Texture2D" uid="uid://dd00fvn2naeyd" path="res://sprites/hazards_animation/catvine/paw/14.png" id="20_ik4ro"]
 [ext_resource type="Script" path="res://scripts/hazard.gd" id="21_6mmh8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xjnee"]
@@ -133,6 +133,46 @@ animations = [{
 "speed": 11.0
 }]
 
+[sub_resource type="Animation" id="Animation_0g4vb"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Leaves:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paw:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hazard/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_37kra"]
 resource_name = "swiping"
 length = 3.2
@@ -218,46 +258,6 @@ tracks/5/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_0g4vb"]
-resource_name = "RESET"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Leaves:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"default"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Paw:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"default"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Hazard/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_45egn"]
 _data = {
 "RESET": SubResource("Animation_0g4vb"),
@@ -265,20 +265,21 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mptj8"]
-size = Vector2(579.5, 492)
+size = Vector2(761.689, 666.81)
 
 [node name="Paw" type="Node2D"]
 position = Vector2(0, -1)
 script = ExtResource("1_ubdja")
 
 [node name="Leaves" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -340)
+position = Vector2(2.94998, -11.1601)
+scale = Vector2(0.42, 0.42)
 sprite_frames = SubResource("SpriteFrames_xjnee")
 
 [node name="Paw" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -340)
+position = Vector2(2.94998, -11.1601)
+scale = Vector2(0.42, 0.42)
 sprite_frames = SubResource("SpriteFrames_okalu")
-frame_progress = 0.798526
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -286,10 +287,13 @@ libraries = {
 }
 
 [node name="Hazard" type="Area2D" parent="."]
-position = Vector2(0, -340)
+position = Vector2(2.94998, -11.1601)
+scale = Vector2(0.42, 0.42)
 script = ExtResource("21_6mmh8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard"]
-position = Vector2(-4, 336)
+position = Vector2(-11.9048, 40.4762)
 shape = SubResource("RectangleShape2D_mptj8")
 disabled = true
+
+[connection signal="body_entered" from="Hazard" to="Hazard" method="_on_body_entered"]
