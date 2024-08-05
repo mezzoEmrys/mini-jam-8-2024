@@ -1,13 +1,13 @@
-[gd_scene load_steps=20 format=3 uid="uid://bgywax4t1ifyd"]
+[gd_scene load_steps=21 format=3 uid="uid://bgywax4t1ifyd"]
 
 [ext_resource type="Script" path="res://scripts/held_item.gd" id="1_v1t6r"]
 [ext_resource type="Texture2D" uid="uid://b0a24ub7o6vbb" path="res://sprites/items/Catmint Berry.png" id="3_ns88y"]
 [ext_resource type="Texture2D" uid="uid://cy1sx6ny5j0xe" path="res://sprites/items/Tail-cicle.png" id="4_g45ed"]
 [ext_resource type="Texture2D" uid="uid://derp0khjsce2m" path="res://sprites/items/Haunted Ginger.png" id="5_c3tn2"]
 [ext_resource type="Texture2D" uid="uid://b4nan1vsp3rjm" path="res://sprites/items/Hot Pepper.png" id="6_6gaeg"]
+[ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/mug.png" id="6_7ilg2"]
 [ext_resource type="Texture2D" uid="uid://nxu3ldtbu3pa" path="res://sprites/items/Lemon Battery.png" id="6_vfbjl"]
 [ext_resource type="Texture2D" uid="uid://eeoqyg4grk5g" path="res://sprites/items/Tea Leaf.png" id="7_whqcx"]
-[ext_resource type="Texture2D" uid="uid://eighsxjcdtbt" path="res://sprites/items/teacup.png" id="8_gfa0r"]
 [ext_resource type="AudioStream" uid="uid://thdooijqh0p" path="res://sounds/item_pickup.mp3" id="9_fikuf"]
 
 [sub_resource type="Animation" id="Animation_x4vb0"]
@@ -85,6 +85,21 @@ tracks/0/keys = {
 "values": [&"lemon"]
 }
 
+[sub_resource type="Animation" id="Animation_cs46b"]
+resource_name = "mug"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"mug"]
+}
+
 [sub_resource type="Animation" id="Animation_22qej"]
 resource_name = "pepper"
 tracks/0/type = "value"
@@ -137,6 +152,7 @@ _data = {
 "ginger": SubResource("Animation_b6ngn"),
 "ice": SubResource("Animation_bmbo1"),
 "lemon": SubResource("Animation_oh8m6"),
+"mug": SubResource("Animation_cs46b"),
 "pepper": SubResource("Animation_22qej"),
 "tea": SubResource("Animation_xcyga"),
 "teacup": SubResource("Animation_ae7qi")
@@ -183,6 +199,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_7ilg2")
+}],
+"loop": true,
+"name": &"mug",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_6gaeg")
 }],
 "loop": true,
@@ -195,14 +219,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"tea",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_gfa0r")
-}],
-"loop": true,
-"name": &"teacup",
 "speed": 5.0
 }]
 
@@ -222,7 +238,7 @@ libraries = {
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x2jrq")
-animation = &"ice"
+animation = &"teacup"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_fikuf")

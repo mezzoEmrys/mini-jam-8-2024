@@ -14,7 +14,15 @@ var next_scene : PackedScene
 var level_container : Node2D
 var transition : AnimationPlayer
 
+@onready var base = $"../Music/base"
+@onready var fire = $"../Music/fire"
+@onready var electricity = $"../Music/electricity"
+@onready var ice = $"../Music/ice"
+@onready var ghost = $"../Music/ghost"
+@onready var jungle = $"../Music/jungle"
+
 func _ready():
+	base.play()
 	pass
 	
 func load_containers():
@@ -38,6 +46,7 @@ func load_scene(scene: PackedScene):
 	next_scene = scene
 	
 func activate_hazards(item):
+	stop_music()
 	match item:
 		"catmint":
 			catmint_active = true
@@ -53,4 +62,30 @@ func activate_hazards(item):
 			tea_active = true
 		"mug":
 			mug_active = true
+			load_scene(load("res://scenes/win_cutscene.tscn"))
+	play_music()
+
+func stop_music():
+	base.stop()
+	fire.stop()
+	electricity.stop()
+	ice.stop()
+	ghost.stop()
+	jungle.stop()
+	
+func play_music():
+	base.play()
+	if pepper_active:
+		fire.play()
+	if lemon_active:
+		electricity.play()
+	if ice_active:
+		ice.play()
+	if ginger_active:
+		ghost.play()
+	if catmint_active:
+		jungle.play()
+	
+
+	
 

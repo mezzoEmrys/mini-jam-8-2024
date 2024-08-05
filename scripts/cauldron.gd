@@ -14,6 +14,8 @@ func _on_body_entered(body):
 			print("Cauldroning " + item_name)
 			Get.cauldron_item = item_name
 			print(Get.cauldron_item)
-			Get.SceneManager.load_scene(load("res://scenes/soup_cutscene.tscn"))
+			Get.SceneManager.activate_hazards(item_name)
+			if item_name != "mug":
+				Get.SceneManager.load_scene(load("res://scenes/soup_cutscene.tscn"))
 			
 			
