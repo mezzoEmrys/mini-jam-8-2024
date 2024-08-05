@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://h7ob0x2as02"]
+[gd_scene load_steps=25 format=3 uid="uid://h7ob0x2as02"]
 
 [ext_resource type="Texture2D" uid="uid://yoytorv1y23k" path="res://sprites/rooms/Roof Background.png" id="1_oga0b"]
 [ext_resource type="Texture2D" uid="uid://bxorusp3x857e" path="res://sprites/rooms/Roof Forground.png" id="2_xn0yc"]
@@ -20,6 +20,16 @@
 [ext_resource type="PackedScene" uid="uid://djk4ueqrjq7ri" path="res://scenes/platforms/spice_bottle.tscn" id="18_76v31"]
 [ext_resource type="PackedScene" uid="uid://7b5l4ch1g2hl" path="res://scenes/platforms/spice_bottle_empty.tscn" id="19_dcj1g"]
 [ext_resource type="PackedScene" uid="uid://bekdmvh1ag8qy" path="res://scenes/platforms/yarn.tscn" id="20_xdpqe"]
+[ext_resource type="PackedScene" path="res://scenes/hazards/paw.tscn" id="21_7yjnc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6psnn"]
+size = Vector2(3827.75, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fv0ld"]
+size = Vector2(10.6593, 177.26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fsfr"]
+size = Vector2(7.71023, 174.523)
 
 [node name="roof" type="Node2D"]
 
@@ -55,54 +65,81 @@ position = Vector2(551, 316)
 position = Vector2(583, 410)
 
 [node name="Skull" parent="." instance=ExtResource("6_fg6y0")]
-position = Vector2(2742, 1017)
+position = Vector2(2776, 963)
 
 [node name="Heavy" parent="." instance=ExtResource("7_mcntv")]
-position = Vector2(1190, 714)
+position = Vector2(1244, 522)
 
 [node name="Fish" parent="." instance=ExtResource("8_yfnkq")]
-position = Vector2(2122, 1416)
+position = Vector2(2153, 1662)
 
 [node name="Flower" parent="." instance=ExtResource("9_hrtb2")]
-position = Vector2(1224, 1296)
+position = Vector2(1303, 1078)
 
 [node name="Cabinet" parent="." instance=ExtResource("10_12w8u")]
 position = Vector2(2567, 1826)
 
 [node name="Batter" parent="." instance=ExtResource("11_5qcui")]
-position = Vector2(579, 1797)
+position = Vector2(434, 1546)
 
 [node name="Bones" parent="." instance=ExtResource("12_bm4jb")]
-position = Vector2(1461, 959)
+position = Vector2(1759, 514)
 
 [node name="Catfood" parent="." instance=ExtResource("13_yyx07")]
-position = Vector2(892, 1963)
+position = Vector2(2119, 951)
 
 [node name="Freezer" parent="." instance=ExtResource("14_cq8fe")]
-position = Vector2(912, 1575)
+position = Vector2(1112, 1539)
 
 [node name="Freezer Shelf" parent="." instance=ExtResource("15_kfdte")]
-position = Vector2(574, 1419)
+position = Vector2(744, 1736)
 
 [node name="Freezer Shelf2" parent="." instance=ExtResource("15_kfdte")]
-position = Vector2(509, 1081)
+position = Vector2(747, 1511)
 
 [node name="Lemon" parent="." instance=ExtResource("16_y2k27")]
 position = Vector2(2876, 1901)
 
 [node name="Mushroom" parent="." instance=ExtResource("17_v5wf4")]
-position = Vector2(1164, 1857)
+position = Vector2(1188, 1908)
 
 [node name="Spice Bottle" parent="." instance=ExtResource("18_76v31")]
-position = Vector2(1557, 1588)
+position = Vector2(1520, 1556)
 rotation = -1.56054
 
 [node name="Spice Bottle Empty" parent="." instance=ExtResource("19_dcj1g")]
-position = Vector2(1881, 1108)
+position = Vector2(1759, 1108)
 rotation = 1.5708
 
 [node name="Thin2" parent="." instance=ExtResource("5_av46j")]
-position = Vector2(1862, 1592)
+position = Vector2(1848, 1723)
 
 [node name="Yarn" parent="." instance=ExtResource("20_xdpqe")]
-position = Vector2(2378, 542)
+position = Vector2(2502, 451)
+
+[node name="Paw" parent="." instance=ExtResource("21_7yjnc")]
+position = Vector2(1838, 1957)
+
+[node name="Ground" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1884.13, 2178)
+shape = SubResource("RectangleShape2D_6psnn")
+
+[node name="Wall" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(62.5, 1102.5)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_fv0ld")
+
+[node name="Wall2" type="RigidBody2D" parent="."]
+position = Vector2(2206, -34)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(1554, 1139.84)
+scale = Vector2(12.665, 12.665)
+shape = SubResource("RectangleShape2D_7fsfr")

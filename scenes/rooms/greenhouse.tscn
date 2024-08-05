@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d0vo2uul7hxm7" path="res://sprites/rooms/Greenhouse.png" id="1_bwij5"]
 [ext_resource type="PackedScene" uid="uid://dvkqbwaa5ros2" path="res://scenes/gorp.tscn" id="2_a7tiy"]
-[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/hazards/paw.tscn" id="3_7ta7l"]
+[ext_resource type="PackedScene" uid="uid://rrjw54hw3c3p" path="res://scenes/item_scenes/paw.tscn" id="3_7ta7l"]
 [ext_resource type="PackedScene" uid="uid://d31d1ni8nwdrs" path="res://scenes/platforms/toy.tscn" id="4_roxjx"]
 [ext_resource type="PackedScene" uid="uid://bekdmvh1ag8qy" path="res://scenes/platforms/yarn.tscn" id="5_d7d2s"]
 [ext_resource type="PackedScene" uid="uid://oym303ilumtr" path="res://scenes/platforms/catfood.tscn" id="6_8xbs2"]
