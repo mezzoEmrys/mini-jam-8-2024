@@ -3,12 +3,12 @@ extends Node
 var SceneManager
 var Gorp
 var cauldron_item
-var next_scene : PackedScene
+var next_scene : String
 
 func set_next_scene(scene):
 	next_scene = scene
 	
-func get_next_scene() -> PackedScene :
+func get_next_scene() -> String :
 	return next_scene
 
 func _ready():

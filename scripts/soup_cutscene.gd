@@ -8,7 +8,7 @@ func _ready():
 	pass # Replace with function body.
 
 func end_cutscene():
-	Get.SceneManager.load_scene(load("res://scenes/rooms/main_room.tscn"))
+	Get.SceneManager.load_scene_named("res://scenes/rooms/main_room.tscn")
 
 func play_smoke():
 	smoke.play(Get.cauldron_item)

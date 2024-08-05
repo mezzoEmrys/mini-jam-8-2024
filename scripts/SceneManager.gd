@@ -30,7 +30,7 @@ func load_containers():
 
 func stage_hidden():
 	var next = Get.get_next_scene()
-	var scene = next.instantiate()
+	var scene = load(next).instantiate()
 	load_containers()
 	for child in level_container.get_children():
 		level_container.remove_child(child)
@@ -40,15 +40,10 @@ func stage_hidden():
 	transition.play_backwards('dissolve')
 
 func load_scene_named(scene: String):
-	print(scene)
-	var out = load(scene)
-	load_scene(out)
-
-func load_scene(scene: PackedScene):
 	from = get_tree().current_scene.get_node("LevelScene").get_child(0).name
 	load_containers()
-	Get.set_next_scene(scene)
 	transition.play("dissolve")
+	Get.set_next_scene(scene)
 	
 func activate_hazards(item):
 	stop_music()
@@ -67,7 +62,7 @@ func activate_hazards(item):
 			tea_active = true
 		"mug":
 			mug_active = true
-			load_scene(load("res://scenes/win_cutscene.tscn"))
+			load_scene_named("res://scenes/win_cutscene.tscn")
 	play_music()
 
 func stop_music():

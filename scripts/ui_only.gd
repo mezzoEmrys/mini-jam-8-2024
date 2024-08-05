@@ -10,4 +10,4 @@ func _process(delta):
 		_on_button_pressed()
 
 func _on_button_pressed():
-	Get.SceneManager.load_scene(load("res://scenes/main_menu.tscn"))
+	Get.SceneManager.load_scene_named("res://scenes/main_menu.tscn")

@@ -7,7 +7,7 @@ func _ready():
 	pass # Replace with function body.
 
 func end_cutscene():
-	Get.SceneManager.load_scene(load("res://scenes/main_menu.tscn"))
+	Get.SceneManager.load_scene_named("res://scenes/main_menu.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
